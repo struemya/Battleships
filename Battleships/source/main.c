@@ -9,7 +9,7 @@
 int main(void) {
 	
     consoleDemoInit();
-    printf("\nHello World!\n");
+    P_InitNDS();
 
     while(1)
         swiWaitForVBlank();	

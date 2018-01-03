@@ -1,4 +1,6 @@
-main.o: /home/nds/files/Project/workspace/Battleships/source/main.c \
+P_Map16x16.o:  \
+ /home/nds/files/Project/workspace/Battleships/source/P_Map16x16.c \
+  /home/nds/files/Project/workspace/Battleships/source/P_Map16x16.h \
   /opt/devkitPro/libnds/include/nds.h \
   /opt/devkitPro/libnds/include/nds/libversion.h \
   /opt/devkitPro/libnds/include/nds/ndstypes.h \
@@ -46,7 +48,11 @@ main.o: /home/nds/files/Project/workspace/Battleships/source/main.c \
   /opt/devkitPro/libnds/include/nds/arm9/videoGL.h \
   /opt/devkitPro/libnds/include/nds/arm9/sprite.h \
   /opt/devkitPro/libnds/include/nds/system.h \
-  /opt/devkitPro/libnds/include/nds/arm9/decompress.h
+  /opt/devkitPro/libnds/include/nds/arm9/decompress.h \
+  /home/nds/files/Project/workspace/Battleships/source/P_Graphics.h \
+  /home/nds/files/Project/workspace/Battleships/build/background.h
+
+/home/nds/files/Project/workspace/Battleships/source/P_Map16x16.h:
 
 /opt/devkitPro/libnds/include/nds.h:
 
@@ -143,3 +149,7 @@ main.o: /home/nds/files/Project/workspace/Battleships/source/main.c \
 /opt/devkitPro/libnds/include/nds/system.h:
 
 /opt/devkitPro/libnds/include/nds/arm9/decompress.h:
+
+/home/nds/files/Project/workspace/Battleships/source/P_Graphics.h:
+
+/home/nds/files/Project/workspace/Battleships/build/background.h:

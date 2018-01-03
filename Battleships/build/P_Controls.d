@@ -1,4 +1,6 @@
-main.o: /home/nds/files/Project/workspace/Battleships/source/main.c \
+P_Controls.o:  \
+ /home/nds/files/Project/workspace/Battleships/source/P_Controls.c \
+  /home/nds/files/Project/workspace/Battleships/source/P_Controls.h \
   /opt/devkitPro/libnds/include/nds.h \
   /opt/devkitPro/libnds/include/nds/libversion.h \
   /opt/devkitPro/libnds/include/nds/ndstypes.h \
@@ -47,6 +49,8 @@ main.o: /home/nds/files/Project/workspace/Battleships/source/main.c \
   /opt/devkitPro/libnds/include/nds/arm9/sprite.h \
   /opt/devkitPro/libnds/include/nds/system.h \
   /opt/devkitPro/libnds/include/nds/arm9/decompress.h
+
+/home/nds/files/Project/workspace/Battleships/source/P_Controls.h:
 
 /opt/devkitPro/libnds/include/nds.h:
 

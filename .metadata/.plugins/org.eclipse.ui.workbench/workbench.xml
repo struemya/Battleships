@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="17" version="2.0">
+<workbench progressCount="3" version="2.0">
 <workbenchAdvisor/>
 <window height="940" maximized="true" width="1676" x="87" y="24">
 <fastViewData fastViewLocation="1024"/>
@@ -16,13 +16,13 @@
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="116" y="34"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="100" y="34"/>
 <coolItem id="org.eclipse.ui.WorkingSetActionSet" itemType="typeToolBarContribution" x="52" y="34"/>
-<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="92" y="34"/>
+<coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="140" y="34"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="172" y="34"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.cdt.make.editor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -31,10 +31,46 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" partName="main.c" path="/home/nds/files/Project/workspace/Battleships/source/main.c" title="main.c" tooltip="Battleships/source/main.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Battleships/source/main.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="6"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="P_Controls.c" partName="P_Controls.c" path="/home/nds/files/Project/workspace/Battleships/source/P_Controls.c" title="P_Controls.c" tooltip="Battleships/source/P_Controls.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Battleships/source/P_Controls.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="P_Controls.h" partName="P_Controls.h" path="/home/nds/files/Project/workspace/Battleships/source/P_Controls.h" title="P_Controls.h" tooltip="Battleships/source/P_Controls.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Battleships/source/P_Controls.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="P_Graphics.c" partName="P_Graphics.c" path="/home/nds/files/Project/workspace/Battleships/source/P_Graphics.c" title="P_Graphics.c" tooltip="Battleships/source/P_Graphics.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Battleships/source/P_Graphics.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="201" selectionTopPixel="2631"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="P_Initializer.c" partName="P_Initializer.c" path="/home/nds/files/Project/workspace/Battleships/source/P_Initializer.c" title="P_Initializer.c" tooltip="Battleships/source/P_Initializer.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Battleships/source/P_Initializer.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="182"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="P_Map16x16.c" partName="P_Map16x16.c" path="/home/nds/files/Project/workspace/Battleships/source/P_Map16x16.c" title="P_Map16x16.c" tooltip="Battleships/source/P_Map16x16.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Battleships/source/P_Map16x16.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="190" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="P_Graphics.h" partName="P_Graphics.h" path="/home/nds/files/Project/workspace/Battleships/source/P_Graphics.h" title="P_Graphics.h" tooltip="Battleships/source/P_Graphics.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Battleships/source/P_Graphics.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="616"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -48,8 +84,11 @@
 <filters>
 <filter element=".*" isEnabled="false"/>
 </filters>
+<expanded>
+<element path="/Battleships"/>
+</expanded>
 <selection>
-<element path="/Template_arm9"/>
+<element path="/Battleships/data"/>
 </selection>
 </viewState>
 </view>
@@ -298,7 +337,44 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Battleships/source/main.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Battleships/source/P_Controls.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Battleships/source/P_Controls.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Battleships/source/P_Graphics.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Battleships/source/P_Initializer.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Battleships/source/P_Map16x16.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Battleships/source/P_Graphics.h"/>
+</editors>
+<item historyLabel="main.c" index="0">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="P_Controls.c" index="1">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="P_Controls.h" index="2">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="P_Graphics.c" index="3">
+<position info="not_deleted" x="201" y="0"/>
+</item>
+<item historyLabel="P_Initializer.c" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="P_Map16x16.c" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="P_Graphics.c" index="3">
+<position info="not_deleted" x="201" y="0"/>
+</item>
+<item historyLabel="P_Graphics.h" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="P_Map16x16.c" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -315,6 +391,33 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="/opt/devkitPro/desmume-glade-gdb" name="Battleships.nds" tooltip="Battleships/Battleships.nds">
+<persistable path="/Battleships/Battleships.nds"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="/opt/devkitPro/desmume-glade" name="Template_arm9.nds" tooltip="Battleships/Template_arm9.nds">
+<persistable path="/Battleships/Template_arm9.nds"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="P_Graphics.h" tooltip="Battleships/source/P_Graphics.h">
+<persistable path="/Battleships/source/P_Graphics.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="P_Map16x16.c" tooltip="Battleships/source/P_Map16x16.c">
+<persistable path="/Battleships/source/P_Map16x16.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="P_Initializer.c" tooltip="Battleships/source/P_Initializer.c">
+<persistable path="/Battleships/source/P_Initializer.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="P_Graphics.c" tooltip="Battleships/source/P_Graphics.c">
+<persistable path="/Battleships/source/P_Graphics.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="P_Controls.h" tooltip="Battleships/source/P_Controls.h">
+<persistable path="/Battleships/source/P_Controls.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="P_Controls.c" tooltip="Battleships/source/P_Controls.c">
+<persistable path="/Battleships/source/P_Controls.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Battleships/source/main.c">
+<persistable path="/Battleships/source/main.c"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="Template_arm9/source/main.c">
 <persistable path="/Template_arm9/source/main.c"/>
 </file>
@@ -332,33 +435,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="/home/braojos/workspace/desmume-glade" name="13_ECG.nds" tooltip="13_ECG/13_ECG.nds">
 <persistable path="/13_ECG/13_ECG.nds"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="main.c" tooltip="13_ECG/source/main.c">
-<persistable path="/13_ECG/source/main.c"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ECG_Data.h" tooltip="13_ECG/source/ECG_Data.h">
-<persistable path="/13_ECG/source/ECG_Data.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="data" tooltip="13_ECG/data">
-<persistable path="/13_ECG/data"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="data.h" tooltip="13_ECG/source/data.h">
-<persistable path="/13_ECG/source/data.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.binaryEditor" name="13_ECG.elf" tooltip="13_ECG/13_ECG.elf">
-<persistable path="/13_ECG/13_ECG.elf"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.make.editor" name="Makefile" tooltip="13_ECG/Makefile">
-<persistable path="/13_ECG/Makefile"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="ECGPoint.h" tooltip="13_ECG/source/ECGPoint.h">
-<persistable path="/13_ECG/source/ECGPoint.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="device_compatibility.h" tooltip="13_ECG/source/device_compatibility.h">
-<persistable path="/13_ECG/source/device_compatibility.h"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="dns_impl.h" tooltip="13_ECG/source/dns_impl.h">
-<persistable path="/13_ECG/source/dns_impl.h"/>
 </file>
 </mruList>
 </workbench>
