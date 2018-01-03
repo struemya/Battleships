@@ -1,0 +1,247 @@
+#include <nds.h>
+#include <stdio.h>
+#include <stdlib.h>
+#include "letters.h"
+
+
+volatile unsigned short buff[256*5];
+int lastValue = -1;
+unsigned short *fb;
+
+void drawLineFast(unsigned short *fb, int y0, int x0, int y1, int x1, unsigned short color)
+/*
+From http://www.cs.unc.edu/~mcmillan/comp136/Lecture6/Lines.html
+*/
+{
+    int dy = y1 - y0;
+    int dx = x1 - x0;
+    int stepx, stepy;
+
+    if (dy < 0) { dy = -dy;  stepy = -256; } else { stepy = 256; }
+    if (dx < 0) { dx = -dx;  stepx = -1; } else { stepx = 1; }
+    dy <<= 1;
+    dx <<= 1;
+
+    y0 *= 256;
+    y1 *= 256;
+    fb[x0+y0] = color;
+    if (dx > dy) {
+	int fraction = dy - (dx >> 1);
+	while (x0 != x1) {
+	    if (fraction >= 0) {
+		y0 += stepy;
+		fraction -= dx;
+	    }
+	    x0 += stepx;
+	    fraction += dy;
+	    fb[x0+y0] = color;
+	}
+    } else {
+	int fraction = dx - (dy >> 1);
+	while (y0 != y1) {
+	    if (fraction >= 0) {
+		x0 += stepx;
+		fraction -= dy;
+	    }
+	    y0 += stepy;
+	    fraction += dx;
+	    fb[x0+y0] = color;
+	}
+    }
+}
+
+
+
+void borrarPantalla(unsigned short *fb)
+{
+    int i;
+    for(i=0;i<256*192;i++)
+      fb[i] = BACKGROUND_COLOR;
+}
+
+
+void timeout()
+{
+    static int cont_timer;
+    int i;
+
+    //Buffer shifting by 4 pixels
+    for(i = 0;i<192;i++)
+    {
+      dmaCopy((void*)&fb[256*i],(void*)buff,256*2);
+      dmaCopy((void*)&buff[4],(void*)&fb[256*i],252*2);
+      buff[252] = buff[253] = buff[254] = buff[255] = RGB15(31,31,31);
+    }
+    
+    if(lastValue && cont_timer++ == 0)
+    {
+      volatile unsigned short color;
+      //Random point and rescaling of the point
+      int r = (rand() % 170) + 1;
+      switch(rand()%10){
+	case 0: //QRS
+	  color = RGB15(31,0,0);
+	  printletter(fb,Q,5,228,color);
+	  printletter(fb,R,5,236,color);
+	  printletter(fb,S,5,244,color);
+	  drawLineFast(fb,15,240,(192-r-4),240,color);
+	break;
+	case 1: //P
+	  color = RGB15(31,18,0);
+	  printletter(fb,BLANK,5,228,color);
+	  printletter(fb,R,5,236,color);
+	  printletter(fb,BLANK,5,244,color);
+	  drawLineFast(fb,15,240,(192-r-4),240,color);
+	break;
+	case 2: //T
+	  color = RGB15(31,0,31);
+	  printletter(fb,BLANK,5,228,color);
+	  printletter(fb,T,5,236,color);
+	  printletter(fb,BLANK,5,244,color);
+	  drawLineFast(fb,15,240,(192-r-4),240,color);
+	break;
+	default:
+	break;
+      }
+      drawLineFast(fb, (192-lastValue-4), 216,(192-r-4),240,RGB15(0,0,31));
+      lastValue = r;
+    }
+    cont_timer %= 6;
+    drawLineFast(fb, 138, 240, 138, 255, RGB15(0,0,0));
+}
+
+int main() 
+{
+    int lastx, lasty;
+
+    lastx = lasty = -1;
+    consoleDemoInit();
+
+
+/*************************
+  Utilizando Rotoscale
+*************************/
+//   REG_DISPCNT = MODE_5_2D | DISPLAY_BG2_ACTIVE;
+//   VRAM_A_CR = VRAM_ENABLE | VRAM_A_MAIN_BG ;
+//   BGCTRL[2] = BG_MAP_BASE(0) | BgSize_B16_256x256;
+//   uint16 *fb = BG_GFX;
+// 
+//   bgTransform[2]-> xdx = 1<<8;
+//   bgTransform[2]-> ydx = 0;
+//   bgTransform[2]-> xdy = 0;
+//   bgTransform[2]-> ydy = 1<<8;
+//   bgTransform[2]-> dx  = 0<<8;
+//   bgTransform[2]-> dy  = 0<<8;
+
+
+/*************************
+  Utilizando Framebuffer
+*************************/
+    // Configuracion de pantalla principal
+    REG_DISPCNT = MODE_FB0 ;      // Framebuffer
+    // Configuracion de bloque A de la VRAM
+    VRAM_A_CR = VRAM_ENABLE       // Habilitar
+      | VRAM_A_LCD ;              // Asignar a LCD
+    fb = VRAM_A;
+
+    printf(" \n \
+\n \
+- 'B' = Borrar pantalla \n \
+\n \
+- 'A' = Intercambiar pantallas \n \
+\n \
+- 'Up' = Aumentar frec.\n \
+\n \
+- 'Down' = Disminuir frec. \n \
+\n \
+\n \
+\n\
+ Pinta con el touch-screen!!");
+
+    int i;
+    int freq = 10;
+    borrarPantalla(fb);
+    srand(time(NULL));
+        
+    drawLineFast(fb, 138, 0, 138, 244, RGB15(0,0,0));
+
+//Timer
+    irqSet(IRQ_TIMER0, &timeout);
+    irqEnable(IRQ_TIMER0);
+    TIMER_DATA(0) = TIMER_FREQ_1024(freq);
+    TIMER_CR(0) = TIMER_DIV_1024 | TIMER_ENABLE | TIMER_IRQ_REQ;
+
+    for(;;)
+    {
+	scanKeys();
+	if(keysHeld() & KEY_TOUCH) 
+	  {
+	    touchPosition touch;
+	    touchRead(&touch);
+	    if(lastx != -1 && (touch.px != 0 && touch.py != 0)) 
+	    {
+		drawLineFast(fb,lasty,lastx,touch.py,touch.px, RGB15(0,0,0));
+	    }
+	    lastx = touch.px;
+	    lasty = touch.py;
+	  } 
+      else
+	{
+	  unsigned key = keysUp();
+	  if(key & KEY_A)
+	  {
+	    lcdSwap();
+	  }
+	  else if (key & KEY_DOWN)
+	  {
+	    if(freq > 1) freq--;
+	    TIMER_DATA(0) = TIMER_FREQ_1024(freq);
+	    TIMER_CR(0) = TIMER_DIV_1024 | TIMER_ENABLE | TIMER_IRQ_REQ;
+// 	    dmaCopy((void *)fb,(void *)buff,256*5*2);
+// 	    dmaCopy((void *)&fb[256*5],(void *)fb,256*187*2);
+// 	    dmaCopy((void *)buff,(void *)&fb[256*187],256*5*2);
+	  }
+	  else if (key &	 KEY_UP)
+	  {
+	    if(freq < 40) freq++;
+	    TIMER_DATA(0) = TIMER_FREQ_1024(freq);
+	    TIMER_CR(0) = TIMER_DIV_1024 | TIMER_ENABLE | TIMER_IRQ_REQ;
+// 	    dmaCopy((void *)&fb[256*188],(void *)buff,256*4*2);
+// 	    for(i=188;i>3;i-=4)
+// 	    {
+// 	      dmaCopy((void *)&fb[256*(i-4)],(void *)&fb[256*i],256*4*2);
+// 	    }
+// 	    dmaCopy((void *)buff,(void *)fb,256*4*2);
+	  }
+	  else if (key & KEY_LEFT)
+	  {
+// 	    for(i = 0;i<192;i++)
+// 	    {
+// 	      dmaCopy((void*)&fb[256*i],(void*)buff,256*2);
+// 	      dmaCopy((void*)buff,(void*)&fb[256*i+5],251*2);
+// 	      dmaCopy((void*)&buff[251],(void*)&fb[256*i],10);
+// 	    }
+	  }
+	  else if (key & KEY_RIGHT)
+	  {
+// 	    for(i = 0;i<192;i++)
+// 	    {
+// 	      dmaCopy((void*)&fb[256*i],(void*)buff,256*2);
+// 	      dmaCopy((void*)&buff[5],(void*)&fb[256*i],251*2);
+// 	      dmaCopy((void*)buff,(void*)&fb[256*i+251],10);
+// 	    }
+	  }
+	  else if (key & KEY_B)
+	  {
+	    borrarPantalla(fb);
+	    lastx = lasty = -1;
+	  }
+	  else
+	  {
+	    lastx = lasty = -1;
+	  }
+	}
+      swiWaitForVBlank();
+    }
+    return 0;
+}

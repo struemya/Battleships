@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;Template_arm9&apos; to &apos;Battleships&apos;" description="Rename resource &apos;Template_arm9&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="/Template_arm9" name="Battleships" stamp="1514992688381" updateReferences="true"/>
+</session>

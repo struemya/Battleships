@@ -1,0 +1,1228 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extensions>
+	<bundle bundleID="2" schema="3.0">
+		<extension-point id="propertyContributor" name="%ExtPoint.propertyContributor" schema="schema/propertyContributor.exsd" line="5"/>
+		<extension-point id="propertyTabs" name="%ExtPoint.propertyTabs" schema="schema/propertyTabs.exsd" line="6"/>
+		<extension-point id="propertySections" name="%ExtPoint.propertySections" schema="schema/propertySections.exsd" line="7"/>
+	</bundle>
+	<bundle bundleID="4" schema="3.0">
+		<extension-point id="classpathProviders" name="%classpathProviders" schema="schema/classpathProviders.exsd" line="7"/>
+		<extension-point id="runtimeClasspathEntryResolvers" name="%runtimeClasspathEntryResolvers" schema="schema/runtimeClasspathEntryResolvers.exsd" line="8"/>
+		<extension-point id="runtimeClasspathEntries" name="%runtimeClasspathEntries" schema="schema/runtimeClasspathEntries.exsd" line="9"/>
+		<extension-point id="vmConnectors" name="%vmConnectors" schema="schema/vmConnectors.exsd" line="10"/>
+		<extension-point id="vmInstallTypes" name="%vmInstallTypes" schema="schema/vmInstallTypes.exsd" line="11"/>
+		<extension-point id="executionEnvironments" name="%executionEnvironments" schema="schema/executionEnvironments.exsd" line="12"/>
+		<extension-point id="vmInstalls" name="%vmInstalls" schema="schema/vmInstalls.exsd" line="13"/>
+		<extension point="org.eclipse.jdt.launching.vmInstallTypes" line="17"/>
+		<extension point="org.eclipse.debug.core.launchConfigurationTypes" line="28"/>
+		<extension point="org.eclipse.debug.core.sourceLocators" line="58"/>
+		<extension point="org.eclipse.jdt.launching.vmConnectors" line="66"/>
+		<extension point="org.eclipse.jdt.core.classpathVariableInitializer" line="73"/>
+		<extension point="org.eclipse.jdt.core.classpathContainerInitializer" line="88"/>
+		<extension point="org.eclipse.jdt.launching.runtimeClasspathEntryResolvers" line="95"/>
+		<extension point="org.eclipse.jdt.launching.runtimeClasspathEntries" line="109"/>
+		<extension point="org.eclipse.debug.core.launchConfigurationComparators" line="120"/>
+		<extension point="org.eclipse.debug.core.sourceContainerTypes" line="134"/>
+		<extension point="org.eclipse.debug.core.sourcePathComputers" line="160"/>
+		<extension point="org.eclipse.debug.core.sourceLocators" line="166"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="174"/>
+		<extension point="org.eclipse.core.expressions.propertyTesters" line="178"/>
+		<extension point="org.eclipse.core.resources.markers" id="jreContainerMarker" name="%jreContainerMarkerProblemName" line="189"/>
+	</bundle>
+	<bundle bundleID="5" schema="3.0">
+		<extension-point id="builders" name="%buildersName" schema="schema/builders.exsd" line="5"/>
+		<extension-point id="markers" name="%markersName" schema="schema/markers.exsd" line="6"/>
+		<extension-point id="natures" name="%naturesName" schema="schema/natures.exsd" line="7"/>
+		<extension-point id="fileModificationValidator" name="%validatorName" schema="schema/fileModificationValidator.exsd" line="8"/>
+		<extension-point id="moveDeleteHook" name="%hookName" schema="schema/moveDeleteHook.exsd" line="9"/>
+		<extension-point id="teamHook" name="%teamHookName" schema="schema/teamHook.exsd" line="10"/>
+		<extension-point id="refreshProviders" name="%refreshProvidersName" schema="schema/refreshProviders.exsd" line="11"/>
+		<extension-point id="modelProviders" name="%modelProviders" schema="schema/modelProviders.exsd" line="12"/>
+		<extension point="org.eclipse.core.runtime.preferences" id="preferences" name="%preferencesExtPtName" line="14"/>
+		<extension point="org.eclipse.core.runtime.contentTypes" line="19"/>
+		<extension point="org.eclipse.core.resources.markers" id="marker" name="%markerName" line="32"/>
+		<extension point="org.eclipse.core.resources.markers" id="problemmarker" name="%problemName" line="40"/>
+		<extension point="org.eclipse.core.resources.markers" id="taskmarker" name="%taskName" line="60"/>
+		<extension point="org.eclipse.core.resources.markers" id="bookmark" name="%bookmarkName" line="83"/>
+		<extension point="org.eclipse.core.resources.markers" id="textmarker" name="%textName" line="100"/>
+		<extension point="org.eclipse.ant.core.antTasks" line="116"/>
+		<extension point="org.eclipse.ant.core.extraClasspathEntries" line="135"/>
+		<extension point="org.eclipse.core.runtime.adapters" id="org.eclipse.core.resources.resourceMappingAdapters" line="143"/>
+		<extension point="org.eclipse.core.resources.modelProviders" id="modelProvider" name="%resourceModelName" line="153"/>
+		<extension point="org.eclipse.core.expressions.propertyTesters" line="162"/>
+	</bundle>
+	<bundle bundleID="6" schema="3.0">
+		<extension-point id="config" name="%config" schema="schema/config.exsd" line="12"/>
+		<extension-point id="configExtension" name="%configExtension" schema="schema/configExtension.exsd" line="18"/>
+		<extension point="org.eclipse.ui.intro.configExtension" line="21"/>
+		<extension point="org.eclipse.help.base.luceneSearchParticipants" line="29"/>
+	</bundle>
+	<bundle bundleID="7" schema="3.0">
+		<extension point="org.eclipse.ui.intro.configExtension" line="6"/>
+		<extension point="org.eclipse.ui.cheatsheets.cheatSheetContent" line="25"/>
+		<extension point="org.eclipse.core.runtime.contentTypes" line="53"/>
+	</bundle>
+	<bundle bundleID="8" schema="3.0">
+		<extension-point id="fileTypes" name="%FileTypesRegistry" schema="schema/fileTypes.exsd" line="5"/>
+		<extension-point id="ignore" name="%GlobalIgnoreRegistry" schema="schema/ignore.exsd" line="6"/>
+		<extension-point id="projectSets" name="%TeamProjectSets" schema="schema/projectSets.exsd" line="7"/>
+		<extension-point id="repository" name="%Repository" schema="schema/repository.exsd" line="8"/>
+		<extension-point id="defaultFileModificationValidator" name="%DefaultValidator" schema="schema/defaultFileModificationValidator.exsd" line="9"/>
+		<extension-point id="storageMergers" name="%StorageMergers" schema="schema/storageMergers.exsd" line="10"/>
+		<extension point="org.eclipse.team.core.fileTypes" line="14"/>
+		<extension point="org.eclipse.core.resources.fileModificationValidator" id="FileValidator" line="130"/>
+		<extension point="org.eclipse.core.resources.moveDeleteHook" id="MoveDeleteHook" line="137"/>
+		<extension point="org.eclipse.core.resources.teamHook" id="TeamHook" line="144"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="150"/>
+	</bundle>
+	<bundle bundleID="9" schema="3.0">
+		<extension-point id="quickDiffReferenceProvider" name="%ExtPoint.referenceProvider" schema="schema/quickDiffReferenceProvider.exsd" line="5"/>
+		<extension-point id="spellingEngine" name="%SpellingEngine" schema="schema/spellingEngine.exsd" line="6"/>
+		<extension point="org.eclipse.ui.commands" line="9"/>
+		<extension point="org.eclipse.ui.bindings" line="408"/>
+		<extension point="org.eclipse.ui.actionSets" line="961"/>
+	</bundle>
+	<bundle bundleID="10" schema="3.0">
+		<extension-point id="server" name="%server" schema="schema/server.exsd" line="5"/>
+	</bundle>
+	<bundle bundleID="14" schema="3.0">
+		<extension-point id="configurationWizards" name="%configurationWizards" schema="schema/configurationWizards.exsd" line="5"/>
+		<extension-point id="synchronizeParticipants" name="%synchronizeParticipants" schema="schema/synchronizeParticipants.exsd" line="6"/>
+		<extension-point id="synchronizeWizards" name="%synchronizeWizards" schema="schema/synchronizeWizards.exsd" line="7"/>
+		<extension-point id="teamContentProviders" name="%TeamContentProvider" schema="schema/teamContentProviders.exsd" line="8"/>
+		<extension-point id="teamDecorators" name="%TeamDecorators" schema="schema/teamDecorators.exsd" line="9"/>
+		<extension point="org.eclipse.ui.keywords" line="13"/>
+		<extension point="org.eclipse.ui.preferencePages" line="22"/>
+		<extension point="org.eclipse.ui.popupMenus" line="51"/>
+		<extension point="org.eclipse.ui.views" line="144"/>
+		<extension point="org.eclipse.ui.perspectives" line="176"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="188"/>
+		<extension point="org.eclipse.ui.newWizards" line="199"/>
+		<extension point="org.eclipse.ui.importWizards" line="205"/>
+		<extension point="org.eclipse.ui.exportWizards" line="227"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="248"/>
+		<extension point="org.eclipse.ui.commands" line="258"/>
+		<extension point="org.eclipse.ui.actionSets" line="310"/>
+		<extension point="org.eclipse.team.core.defaultFileModificationValidator" line="339"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="346"/>
+		<extension point="org.eclipse.ui.navigator.navigatorContent" line="366"/>
+		<extension point="org.eclipse.ui.navigator.viewer" line="388"/>
+		<extension point="org.eclipse.team.ui.synchronizeParticipants" line="421"/>
+		<extension point="org.eclipse.team.ui.teamContentProviders" id="teamContentProvider" line="432"/>
+		<extension point="org.eclipse.team.core.storageMergers" line="440"/>
+	</bundle>
+	<bundle bundleID="15" schema="3.0">
+		<extension point="org.eclipse.help.toc" line="13"/>
+		<extension point="org.eclipse.help.toc" line="24"/>
+		<extension point="org.eclipse.pde.core.javadoc" line="45">
+			<javadoc path="reference/api">
+				<plugin id="org.eclipse.ant.core"/>
+				<plugin id="org.eclipse.compare"/>
+				<plugin id="org.eclipse.core.commands"/>
+				<plugin id="org.eclipse.core.contenttype"/>
+				<plugin id="org.eclipse.core.expressions"/>
+				<plugin id="org.eclipse.core.filebuffers"/>
+				<plugin id="org.eclipse.core.filesystem"/>
+				<plugin id="org.eclipse.core.jobs"/>
+				<plugin id="org.eclipse.core.resources"/>
+				<plugin id="org.eclipse.core.runtime"/>
+				<plugin id="org.eclipse.core.variables"/>
+				<plugin id="org.eclipse.debug.core"/>
+				<plugin id="org.eclipse.debug.ui"/>
+				<plugin id="org.eclipse.equinox.common"/>
+				<plugin id="org.eclipse.equinox.preferences"/>
+				<plugin id="org.eclipse.equinox.registry"/>
+				<plugin id="org.eclipse.help"/>
+				<plugin id="org.eclipse.help.base"/>
+				<plugin id="org.eclipse.help.ui"/>
+				<plugin id="org.eclipse.jface"/>
+				<plugin id="org.eclipse.jface.text"/>
+				<plugin id="org.eclipse.ltk.core.refactoring"/>
+				<plugin id="org.eclipse.ltk.ui.refactoring"/>
+				<plugin id="org.eclipse.osgi"/>
+				<plugin id="org.eclipse.search"/>
+				<plugin id="org.eclipse.swt"/>
+				<plugin id="org.eclipse.team.core"/>
+				<plugin id="org.eclipse.team.ui"/>
+				<plugin id="org.eclipse.text"/>
+				<plugin id="org.eclipse.ui.browser"/>
+				<plugin id="org.eclipse.ui.cheatsheets"/>
+				<plugin id="org.eclipse.ui.console"/>
+				<plugin id="org.eclipse.ui.editors"/>
+				<plugin id="org.eclipse.ui.forms"/>
+				<plugin id="org.eclipse.ui.ide"/>
+				<plugin id="org.eclipse.ui.intro"/>
+				<plugin id="org.eclipse.ui.intro.universal"/>
+				<plugin id="org.eclipse.ui.navigator"/>
+				<plugin id="org.eclipse.ui.navigator.resources"/>
+				<plugin id="org.eclipse.ui.views"/>
+				<plugin id="org.eclipse.ui.views.properties.tabbed"/>
+				<plugin id="org.eclipse.ui.workbench"/>
+				<plugin id="org.eclipse.ui.workbench.texteditor"/>
+				<plugin id="org.eclipse.update.configurator"/>
+				<plugin id="org.eclipse.update.core"/>
+			</javadoc>
+		</extension>
+	</bundle>
+	<bundle bundleID="17" schema="3.0">
+		<extension point="org.eclipse.help.toc" line="16"/>
+		<extension point="org.eclipse.help.toc" line="26"/>
+		<extension point="org.eclipse.help.contexts" line="39"/>
+		<extension point="org.eclipse.help.contexts" line="43"/>
+		<extension point="org.eclipse.help.contexts" line="48"/>
+		<extension point="org.eclipse.help.contexts" line="52"/>
+		<extension point="org.eclipse.help.contexts" line="56"/>
+	</bundle>
+	<bundle bundleID="20" schema="3.0">
+		<extension-point id="navigatorContent" name="%ExtPoint_navigatorContent" schema="schema/navigatorContent.exsd" line="5"/>
+		<extension-point id="viewer" name="%ExtPoint_navigatorViewer" schema="schema/viewer.exsd" line="6"/>
+		<extension-point id="linkHelper" name="%Link_Helper" schema="schema/linkHelper.exsd" line="7"/>
+		<extension point="org.eclipse.ui.dropActions" line="10"/>
+	</bundle>
+	<bundle bundleID="21" schema="3.0">
+		<extension-point id="jdiclient" name="%virtualMachineManagerImpl" schema="schema/jdiclient.exsd" line="7"/>
+		<extension-point id="javaLogicalStructures" name="%javaLogicalStructures" schema="schema/javaLogicalStructures.exsd" line="8"/>
+		<extension point="org.eclipse.debug.core.breakpoints" line="12"/>
+		<extension point="org.eclipse.core.resources.markers" id="javaBreakpointMarker" line="70"/>
+		<extension point="org.eclipse.core.resources.markers" id="javaClassPrepareBreakpointMarker" line="77"/>
+		<extension point="org.eclipse.core.resources.markers" id="commonJavaLineBreakpointMarker" line="87"/>
+		<extension point="org.eclipse.core.resources.markers" id="javaLineBreakpointMarker" line="112"/>
+		<extension point="org.eclipse.core.resources.markers" id="javaPatternBreakpointMarker" line="122"/>
+		<extension point="org.eclipse.core.resources.markers" id="javaTargetPatternBreakpointMarker" line="138"/>
+		<extension point="org.eclipse.core.resources.markers" id="javaExceptionBreakpointMarker" line="151"/>
+		<extension point="org.eclipse.core.resources.markers" id="javaWatchpointMarker" line="170"/>
+		<extension point="org.eclipse.core.resources.markers" id="javaMethodBreakpointMarker" line="192"/>
+		<extension point="org.eclipse.core.resources.markers" id="javaMethodEntryBreakpointMarker" line="217"/>
+		<extension point="org.eclipse.core.resources.markers" id="javaStratumLineBreakpointMarker" line="233"/>
+		<extension point="org.eclipse.core.expressions.propertyTesters" line="255"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="265"/>
+		<extension point="org.eclipse.jdt.debug.javaLogicalStructures" line="269"/>
+		<extension point="org.eclipse.debug.core.logicalStructureProviders" line="298"/>
+	</bundle>
+	<bundle bundleID="22" schema="3.0">
+		<extension-point id="configurationDuplicationMaps" name="%ExtPoint.configurationDuplicationMaps" schema="schema/configurationDuplicationMaps.exsd" line="7"/>
+		<extension point="org.eclipse.ui.actionSets" line="12"/>
+		<extension point="org.eclipse.ui.commands" line="52"/>
+		<extension point="org.eclipse.ui.preferencePages" line="67"/>
+		<extension point="org.eclipse.ui.propertyPages" line="76"/>
+		<extension point="org.eclipse.core.resources.builders" id="ExternalToolBuilder" name="%Builder.externalTools" line="92"/>
+		<extension point="org.eclipse.debug.core.launchConfigurationTypes" line="102"/>
+		<extension point="org.eclipse.ui.externaltools.configurationDuplicationMaps" line="119"/>
+		<extension point="org.eclipse.debug.ui.launchConfigurationTabGroups" line="126"/>
+		<extension point="org.eclipse.debug.ui.launchConfigurationTypeImages" line="143"/>
+		<extension point="org.eclipse.debug.ui.launchGroups" line="156"/>
+		<extension point="org.eclipse.core.variables.dynamicVariables" line="178"/>
+		<extension point="org.eclipse.debug.core.launchConfigurationComparators" line="199"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="207"/>
+	</bundle>
+	<bundle bundleID="23" schema="3.0">
+		<extension point="org.eclipse.help.base.webapp" line="6"/>
+	</bundle>
+	<bundle bundleID="24" schema="3.0">
+		<extension point="org.eclipse.pde.core.source" line="5">
+			<location path="src"/>
+		</extension>
+	</bundle>
+	<bundle bundleID="25" schema="3.0">
+		<extension-point id="propertyTesters" name="%propertyTesterExtensionPoint" schema="schema/propertyTesters.exsd" line="5"/>
+	</bundle>
+	<bundle bundleID="26" schema="3.0">
+		<extension point="org.eclipse.ui.intro" line="19">
+			<intro class="org.eclipse.ui.intro.config.CustomizableIntroPart" icon="$nl$/icons/welcome16.gif" id="org.eclipse.ui.intro.universal"/>
+		</extension>
+		<extension point="org.eclipse.ui.intro.config" line="26"/>
+		<extension point="org.eclipse.ui.intro.configExtension" line="51"/>
+	</bundle>
+	<bundle bundleID="27" schema="3.0">
+		<extension point="org.eclipse.ui.editors" line="5"/>
+		<extension point="org.eclipse.debug.core.launchConfigurationTypes" line="17"/>
+		<extension point="org.eclipse.jdt.launching.classpathProviders" line="37"/>
+		<extension point="org.eclipse.jdt.launching.runtimeClasspathEntries" line="44"/>
+		<extension point="org.eclipse.ui.views" line="55"/>
+		<extension point="org.eclipse.ui.contexts" line="71"/>
+		<extension point="org.eclipse.ui.commands" line="86"/>
+		<extension point="org.eclipse.ui.bindings" line="129"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="186"/>
+		<extension point="org.eclipse.ui.preferencePages" line="249"/>
+		<extension point="org.eclipse.ui.popupMenus" line="293"/>
+		<extension point="org.eclipse.ui.editorActions" line="337"/>
+		<extension point="org.eclipse.ant.core.extraClasspathEntries" line="352"/>
+		<extension point="org.eclipse.debug.ui.consoleColorProviders" line="362"/>
+		<extension point="org.eclipse.ui.externaltools.configurationDuplicationMaps" line="370"/>
+		<extension point="org.eclipse.debug.ui.launchConfigurationTabGroups" line="377"/>
+		<extension point="org.eclipse.debug.ui.launchConfigurationTypeImages" line="394"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="406"/>
+		<extension point="org.eclipse.debug.ui.launchShortcuts" line="434"/>
+		<extension point="org.eclipse.debug.ui.consoleLineTrackers" line="494"/>
+		<extension point="org.eclipse.debug.core.statusHandlers" line="502"/>
+		<extension point="org.eclipse.debug.core.processFactories" line="511"/>
+		<extension point="org.eclipse.ui.editors.templates" line="519"/>
+		<extension point="org.eclipse.core.resources.markers" id="buildFileProblem" name="%Ant.marker.label" line="552"/>
+		<extension point="org.eclipse.ui.newWizards" line="558"/>
+		<extension point="org.eclipse.core.filebuffers.documentSetup" id="org.eclipse.ant.ui.AntDocumentSetupParticipant" name="%antDocumentSetupParticipant.name" line="577"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="585"/>
+		<extension point="org.eclipse.core.filebuffers.annotationModelCreation" line="589"/>
+		<extension point="org.eclipse.debug.core.sourceLocators" line="597"/>
+		<extension point="org.eclipse.debug.core.sourcePathComputers" line="605"/>
+		<extension point="org.eclipse.debug.ui.debugModelPresentations" line="612"/>
+		<extension point="org.eclipse.debug.core.breakpoints" line="620"/>
+		<extension point="org.eclipse.core.resources.markers" id="antLineBreakpointMarker" line="629"/>
+		<extension point="org.eclipse.ui.editorActions" line="635"/>
+		<extension point="org.eclipse.ui.popupMenus" line="648"/>
+		<extension point="org.eclipse.ui.console.consolePatternMatchListeners" line="679"/>
+		<extension point="org.eclipse.ui.exportWizards" line="710"/>
+		<extension point="org.eclipse.ui.actionSets" line="726"/>
+		<extension point="org.eclipse.ui.actionSetPartAssociations" line="752"/>
+		<extension point="org.eclipse.ui.keywords" line="762"/>
+		<extension point="org.eclipse.ltk.core.refactoring.renameParticipants" line="785"/>
+	</bundle>
+	<bundle bundleID="28" schema="3.0">
+		<extension point="org.eclipse.pde.core.source" line="5">
+			<location path="src"/>
+		</extension>
+	</bundle>
+	<bundle bundleID="29" schema="3.0">
+		<extension-point id="luceneAnalyzer" name="%lucene_analyzer" schema="schema/luceneAnalyzer.exsd" line="6"/>
+		<extension-point id="webapp" name="%webapp_extension_point_name" schema="schema/webapp.exsd" line="7"/>
+		<extension-point id="browser" name="%browser_extension_point_name" schema="schema/browser.exsd" line="8"/>
+		<extension-point id="activitySupport" name="%activity_extension_point_name" schema="schema/activitySupport.exsd" line="9"/>
+		<extension-point id="luceneSearchParticipants" name="%search_participant_extension_point_name" schema="schema/luceneSearchParticipants.exsd" line="10"/>
+		<extension point="org.eclipse.core.runtime.applications" id="infocenterApplication" line="15"/>
+		<extension point="org.eclipse.core.runtime.applications" id="helpApplication" line="29"/>
+		<extension point="org.eclipse.core.runtime.applications" id="indexTool" line="43"/>
+		<extension point="org.eclipse.help.base.luceneAnalyzer" id="org.eclipse.help.base.Analyzer_en" line="53"/>
+		<extension point="org.eclipse.help.base.luceneAnalyzer" id="org.eclipse.help.base.Analyzer_de" line="61"/>
+		<extension point="org.eclipse.help.base.browser" line="69"/>
+		<extension point="org.eclipse.core.runtime.preferences" id="org.eclipse.help.base.preferences" name="%preferences" line="141"/>
+		<extension point="org.eclipse.ant.core.antTasks" line="146"/>
+		<extension point="org.eclipse.ant.core.extraClasspathEntries" line="156"/>
+		<extension point="org.eclipse.help.base.luceneSearchParticipants" line="164"/>
+	</bundle>
+	<bundle bundleID="32" schema="3.0">
+		<extension-point id="documentCreation" name="%documentCreationPoint" schema="schema/documentCreation.exsd" line="5"/>
+		<extension-point id="documentSetup" name="%documentSetupPoint" schema="schema/documentSetup.exsd" line="6"/>
+		<extension-point id="annotationModelCreation" name="%annotationModelCreationPoint" schema="schema/annotationModelCreation.exsd" line="7"/>
+	</bundle>
+	<bundle bundleID="33" schema="3.0">
+		<extension-point id="renameParticipants" name="%renameParticipantsExtensionPoint" schema="schema/renameParticipants.exsd" line="4"/>
+		<extension-point id="moveParticipants" name="%moveParticipantsExtensionPoint" schema="schema/moveParticipants.exsd" line="5"/>
+		<extension-point id="createParticipants" name="%createParticipantsExtensionPoint" schema="schema/createParticipants.exsd" line="6"/>
+		<extension-point id="deleteParticipants" name="%deleteParticipantsExtensionPoint" schema="schema/deleteParticipants.exsd" line="7"/>
+		<extension-point id="copyParticipants" name="%copyParticipantsExtensionPoint" schema="schema/copyParticipants.exsd" line="8"/>
+		<extension-point id="refactoringContributions" name="%refactoringContributionsExtensionPoint" schema="schema/refactoringContributions.exsd" line="9"/>
+		<extension point="org.eclipse.team.core.fileTypes" line="11"/>
+		<extension point="org.eclipse.core.runtime.contentTypes" line="20"/>
+	</bundle>
+	<bundle bundleID="35" schema="3.0">
+		<extension-point id="testRunListeners" name="%testRunListeners.name" schema="schema/testRunListeners.exsd" line="5"/>
+		<extension-point id="junitLaunchConfigs" name="%junitLaunchConfigs.name" schema="schema/junitLaunchConfigs.exsd" line="6"/>
+		<extension-point id="internal_testKinds" name="%testKinds.name" schema="schema/internal_testKinds.exsd" line="7"/>
+		<extension point="org.eclipse.ui.views" line="10"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="21"/>
+		<extension point="org.eclipse.ui.preferencePages" line="51"/>
+		<extension point="org.eclipse.ui.keywords" line="61"/>
+		<extension point="org.eclipse.debug.core.launchConfigurationTypes" line="67"/>
+		<extension point="org.eclipse.debug.core.launchConfigurationComparators" line="86"/>
+		<extension point="org.eclipse.debug.ui.launchConfigurationTypeImages" line="94"/>
+		<extension point="org.eclipse.debug.ui.launchConfigurationTabGroups" line="102"/>
+		<extension point="org.eclipse.ui.newWizards" line="120"/>
+		<extension point="org.eclipse.ui.popupMenus" line="155"/>
+		<extension point="org.eclipse.ui.actionSets" line="170"/>
+		<extension point="org.eclipse.ui.actionSetPartAssociations" line="198"/>
+		<extension point="org.eclipse.core.resources.markers" id="junit_task" name="%Task.name" line="233"/>
+		<extension point="org.eclipse.debug.ui.launchShortcuts" line="242"/>
+		<extension point="org.eclipse.jdt.core.classpathVariableInitializer" line="291"/>
+		<extension point="org.eclipse.jdt.ui.quickFixProcessors" line="302"/>
+		<extension point="org.eclipse.core.expressions.propertyTesters" line="310"/>
+		<extension point="org.eclipse.ltk.core.refactoring.renameParticipants" line="320"/>
+		<extension point="org.eclipse.jdt.junit.junitLaunchConfigs" line="363"/>
+		<extension point="org.eclipse.ui.commands" line="370"/>
+		<extension point="org.eclipse.ui.bindings" line="399"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="412"/>
+		<extension point="org.eclipse.jdt.core.classpathContainerInitializer" line="419"/>
+		<extension point="org.eclipse.jdt.ui.classpathContainerPage" line="427"/>
+		<extension point="org.eclipse.jdt.junit.internal_testKinds" line="436"/>
+		<extension point="org.eclipse.jdt.junit.internal_testKinds" line="448"/>
+	</bundle>
+	<bundle bundleID="36" schema="3.0">
+		<extension-point id="consoleColorProviders" name="%ConsoleColorProvidersExtensionName" schema="schema/consoleColorProviders.exsd" line="7"/>
+		<extension-point id="consoleLineTrackers" name="%ConsoleLineTrackersExtensionName" schema="schema/consoleLineTrackers.exsd" line="8"/>
+		<extension-point id="debugModelPresentations" name="%DebugModelPresentationExtensionName" schema="schema/debugModelPresentations.exsd" line="9"/>
+		<extension-point id="launchConfigurationTabGroups" name="%LaunchConfigurationTabGroupExtensionName" schema="schema/launchConfigurationTabGroups.exsd" line="10"/>
+		<extension-point id="launchConfigurationTypeImages" name="%LaunchConfigurationTypeImageExtensionName" schema="schema/launchConfigurationTypeImages.exsd" line="11"/>
+		<extension-point id="launchGroups" name="%LaunchGroupsExtensionName" schema="schema/launchGroups.exsd" line="12"/>
+		<extension-point id="launchShortcuts" name="%LaunchShortcutsName" schema="schema/launchShortcuts.exsd" line="13"/>
+		<extension-point id="stringVariablePresentations" name="%StringVariablePresentationsName" schema="schema/stringVariablePresentations.exsd" line="14"/>
+		<extension-point id="sourceContainerPresentations" name="%SourceContainerPresentationsName" schema="schema/sourceContainerPresentations.exsd" line="15"/>
+		<extension-point id="debugModelContextBindings" name="%DebugModelContextBindingsName" schema="schema/debugModelContextBindings.exsd" line="16"/>
+		<extension-point id="contextViewBindings" name="%ContextViewBindingsName" schema="schema/contextViewBindings.exsd" line="17"/>
+		<extension-point id="memoryRenderings" name="%memoryRenderingsExtensionPointName" schema="schema/memoryRenderings.exsd" line="18"/>
+		<extension-point id="breakpointOrganizers" name="%BreakpointOrganizersName" schema="schema/breakpointOrganizers.exsd" line="19"/>
+		<extension-point id="variableValueEditors" name="%VariableValueEditorsName" schema="schema/variableValueEditors.exsd" line="20"/>
+		<extension point="org.eclipse.ui.perspectives" line="24"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="36"/>
+		<extension point="org.eclipse.ui.views" line="48"/>
+		<extension point="org.eclipse.ui.preferencePages" line="98"/>
+		<extension point="org.eclipse.ui.actionSets" line="149"/>
+		<extension point="org.eclipse.ui.actionSets" line="266"/>
+		<extension point="org.eclipse.ui.actionSets" line="383"/>
+		<extension point="org.eclipse.ui.actionSets" line="454"/>
+		<extension point="org.eclipse.ui.viewActions" line="519"/>
+		<extension point="org.eclipse.ui.popupMenus" line="823"/>
+		<extension point="org.eclipse.ui.popupMenus" line="1172"/>
+		<extension point="org.eclipse.ui.elementFactories" line="1265"/>
+		<extension point="org.eclipse.ui.editors" line="1276"/>
+		<extension point="org.eclipse.debug.core.statusHandlers" line="1286"/>
+		<extension point="org.eclipse.debug.ui.launchGroups" line="1334"/>
+		<extension point="org.eclipse.ui.propertyPages" line="1361"/>
+		<extension point="org.eclipse.ui.commands" line="1393"/>
+		<extension point="org.eclipse.ui.bindings" line="1590"/>
+		<extension point="org.eclipse.ui.editors.annotationTypes" line="1696"/>
+		<extension point="org.eclipse.ui.editors.markerAnnotationSpecification" line="1709"/>
+		<extension point="org.eclipse.core.variables.dynamicVariables" line="1760"/>
+		<extension point="org.eclipse.debug.ui.stringVariablePresentations" line="1834"/>
+		<extension point="org.eclipse.debug.core.launchConfigurationComparators" line="1853"/>
+		<extension point="org.eclipse.ui.editors" line="1863"/>
+		<extension point="org.eclipse.debug.core.sourceContainerTypes" line="1875"/>
+		<extension point="org.eclipse.debug.ui.sourceContainerPresentations" line="1886"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="1938"/>
+		<extension point="org.eclipse.ui.popupMenus" line="1979"/>
+		<extension point="org.eclipse.core.expressions.propertyTesters" line="2026"/>
+		<extension point="org.eclipse.ui.contexts" line="2050"/>
+		<extension point="org.eclipse.debug.ui.contextViewBindings" line="2076"/>
+		<extension point="org.eclipse.ui.themes" line="2101"/>
+		<extension point="org.eclipse.ui.console.consolePageParticipants" line="2132"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="2142"/>
+		<extension point="org.eclipse.debug.ui.breakpointOrganizers" line="2146"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="2178"/>
+		<extension point="org.eclipse.ui.elementFactories" line="2203"/>
+		<extension point="org.eclipse.ui.popupMenus" line="2209"/>
+		<extension point="org.eclipse.ui.workingSets" line="2230"/>
+		<extension point="org.eclipse.debug.ui.memoryRenderings" line="2241"/>
+		<extension point="org.eclipse.ui.workingSets" line="2260"/>
+		<extension point="org.eclipse.ui.keywords" line="2268"/>
+		<extension point="org.eclipse.ui.importWizards" line="2292"/>
+		<extension point="org.eclipse.ui.exportWizards" line="2306"/>
+	</bundle>
+	<bundle bundleID="38" schema="3.0">
+		<extension-point id="contexts" name="%contexts_extension_point_name" schema="schema/contexts.exsd" line="5"/>
+		<extension-point id="toc" name="%toc_extension_point_name" schema="schema/toc.exsd" line="6"/>
+		<extension-point id="contentProducer" name="%content_producer_extension_point_name" schema="schema/contentProducer.exsd" line="7"/>
+		<extension-point id="index" name="%index_extension_point_name" schema="schema/index.exsd" line="8"/>
+		<extension-point id="contentExtension" name="%content_extension_point_name" schema="schema/contentExtension.exsd" line="9"/>
+		<extension point="org.eclipse.help.contentProducer" id="dynamic" line="13"/>
+	</bundle>
+	<bundle bundleID="39" schema="3.0">
+		<extension-point id="contentTypes" name="%contentTypesName" schema="schema/contentTypes.exsd" line="4"/>
+		<extension point="org.eclipse.core.contenttype.contentTypes" line="6"/>
+	</bundle>
+	<bundle bundleID="40" schema="3.0">
+		<extension-point id="extraClasspathEntries" name="%classpathName" schema="schema/extraClasspathEntries.exsd" line="5"/>
+		<extension-point id="antTasks" name="%tasksName" schema="schema/antTasks.exsd" line="6"/>
+		<extension-point id="antTypes" name="%typesName" schema="schema/antTypes.exsd" line="7"/>
+		<extension-point id="antProperties" name="%propertiesName" schema="schema/antProperties.exsd" line="8"/>
+		<extension point="org.eclipse.core.runtime.applications" id="antRunner" line="13"/>
+		<extension point="org.eclipse.ant.core.extraClasspathEntries" line="22"/>
+		<extension point="org.eclipse.ant.core.antProperties" line="28"/>
+		<extension point="org.eclipse.core.runtime.contentTypes" line="40"/>
+	</bundle>
+	<bundle bundleID="42" schema="3.0">
+		<extension-point id="searchEngine" name="%searchEngine" schema="schema/searchEngine.exsd" line="5"/>
+		<extension point="org.eclipse.ui.helpSupport" line="9"/>
+		<extension point="org.eclipse.ui.preferencePages" line="16"/>
+		<extension point="org.eclipse.ui.keywords" line="32"/>
+		<extension point="org.eclipse.help.base.browser" line="42"/>
+		<extension point="org.eclipse.help.base.browser" line="50"/>
+		<extension point="org.eclipse.ui.views" line="59"/>
+		<extension point="org.eclipse.help.ui.searchEngine" line="78"/>
+		<extension point="org.eclipse.ui.commands" line="120"/>
+		<extension point="org.eclipse.ui.bindings" line="130"/>
+	</bundle>
+	<bundle bundleID="43" schema="3.0">
+		<extension-point id="authenticator" name="%Authenticator" schema="schema/authenticator.exsd" line="7"/>
+		<extension-point id="connectionmethods" name="%ConnectionMethods" schema="schema/connectionmethods.exsd" line="8"/>
+		<extension-point id="filemodificationvalidator" name="%FileModificationValidator" schema="schema/filemodificationvalidator.exsd" line="9"/>
+		<extension point="org.eclipse.team.cvs.core.connectionmethods" id="pserver" line="14"/>
+		<extension point="org.eclipse.team.cvs.core.connectionmethods" id="ext" line="27"/>
+		<extension point="org.eclipse.team.core.repository" line="40"/>
+		<extension point="org.eclipse.team.core.ignore" line="51"/>
+		<extension point="org.eclipse.team.core.fileTypes" line="204"/>
+		<extension point="org.eclipse.core.filesystem.filesystems" line="211"/>
+		<extension point="org.eclipse.core.resources.modelProviders" id="changeSetModel" name="%ChangeSets" line="219"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="225"/>
+	</bundle>
+	<bundle bundleID="45" schema="3.0">
+		<extension point="org.eclipse.ui.propertyPages" line="6"/>
+		<extension point="org.eclipse.ui.preferencePages" line="45"/>
+		<extension point="org.eclipse.ui.keywords" line="55"/>
+	</bundle>
+	<bundle bundleID="46" schema="3.0">
+		<extension-point id="cheatSheetContent" name="%CHEAT_SHEET_CONTENT" schema="schema/cheatSheetContent.exsd" line="16"/>
+		<extension-point id="cheatSheetItemExtension" name="%CHEAT_SHEET_ITEM_EXTENSION" schema="schema/cheatSheetItemExtension.exsd" line="26"/>
+		<extension point="org.eclipse.ui.views" line="31"/>
+		<extension point="org.eclipse.ui.commands" line="48"/>
+		<extension point="org.eclipse.ui.commandImages" line="166"/>
+		<extension point="org.eclipse.ui.bindings" line="175"/>
+		<extension point="org.eclipse.ui.activitySupport" line="182"/>
+		<extension point="org.eclipse.help.base.luceneSearchParticipants" line="190"/>
+		<extension point="org.eclipse.ui.cheatsheets.cheatSheetContent" line="198"/>
+	</bundle>
+	<bundle bundleID="47" schema="3.0">
+		<extension point="org.eclipse.ui.views" line="7"/>
+		<extension point="org.eclipse.ui.navigator.viewer" line="17"/>
+		<extension point="org.eclipse.ui.navigator.navigatorContent" line="75"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="282"/>
+		<extension point="org.eclipse.ui.views.properties.tabbed.propertyContributor" line="290"/>
+		<extension point="org.eclipse.ui.views.properties.tabbed.propertyTabs" line="301"/>
+		<extension point="org.eclipse.ui.views.properties.tabbed.propertySections" line="310"/>
+		<extension point="org.eclipse.ui.navigator.linkHelper" line="321"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="334"/>
+	</bundle>
+	<bundle bundleID="49" schema="3.0">
+		<extension point="org.eclipse.ui.presentationFactories" line="6"/>
+	</bundle>
+	<bundle bundleID="50" schema="3.0">
+		<extension point="org.eclipse.pde.core.source" line="5">
+			<location path="src"/>
+		</extension>
+	</bundle>
+	<bundle bundleID="51" schema="3.0">
+		<extension-point id="realmfactory" name="%realmfactory" schema="schema/org.eclipse.tomcat.realmfactory.exsd" line="5"/>
+		<extension point="org.eclipse.help.appserver.server" id="appserver" name="%appserver" line="10"/>
+	</bundle>
+	<bundle bundleID="52" schema="3.0">
+		<extension-point id="filesystems" name="%fileSystemsName" schema="schema/filesystems.exsd" line="4"/>
+		<extension point="org.eclipse.core.filesystem.filesystems" id="org.eclipse.core.filesystem.local" line="7"/>
+		<extension point="org.eclipse.core.filesystem.filesystems" id="org.eclipse.core.filesystem.null" line="14"/>
+	</bundle>
+	<bundle bundleID="53" schema="3.0">
+		<extension point="org.eclipse.ui.views" line="6"/>
+	</bundle>
+	<bundle bundleID="56" schema="3.0">
+		<extension-point id="featureTypes" name="%featureTypes.name" schema="schema/featureTypes.exsd" line="5"/>
+		<extension-point id="siteTypes" name="%siteTypes.name" schema="schema/siteTypes.exsd" line="6"/>
+		<extension-point id="installHandlers" name="%installHandlers.name" schema="schema/installHandlers.exsd" line="7"/>
+		<extension-point id="deltaHandler" name="%deltaHandler.name" line="9"/>
+		<extension point="org.eclipse.core.runtime.preferences" id="preferenceInitializer" line="13"/>
+		<extension point="org.eclipse.update.core.featureTypes" id="packaged" line="19"/>
+		<extension point="org.eclipse.update.core.featureTypes" id="installed" line="26"/>
+		<extension point="org.eclipse.update.core.siteTypes" id="http" line="33"/>
+		<extension point="org.eclipse.update.core.siteTypes" id="file" line="40"/>
+		<extension point="org.eclipse.update.core.installHandlers" id="DefaultInstallHandler" line="47"/>
+		<extension point="org.eclipse.update.core.installHandlers" id="DeltaInstallHandler" line="54"/>
+		<extension point="org.eclipse.update.core.installHandlers" id="JarDeltaInstallHandler" line="61"/>
+		<extension point="org.eclipse.core.runtime.applications" id="standaloneUpdate" line="68"/>
+		<extension point="org.eclipse.core.runtime.applications" id="siteOptimizer" line="77"/>
+		<extension point="org.eclipse.core.runtime.products" id="updateCoreProductProvider" name="%productProviderName" line="87">
+			<provider>
+				<run class="org.eclipse.update.internal.core.ProductProvider"/>
+			</provider>
+		</extension>
+	</bundle>
+	<bundle bundleID="57" schema="3.0">
+		<extension point="org.eclipse.core.runtime.applications" id="uitestapplication" line="7"/>
+		<extension point="org.eclipse.core.runtime.applications" id="coretestapplication" line="16"/>
+	</bundle>
+	<bundle bundleID="58" schema="3.0">
+		<extension-point id="pluginContent" name="%expoint.pluginContent.name" schema="schema/pluginContent.exsd" line="7"/>
+		<extension-point id="newExtension" name="%expoint.newExtension.name" schema="schema/newExtension.exsd" line="8"/>
+		<extension-point id="templates" name="%expoint.templates.name" schema="schema/templates.exsd" line="9"/>
+		<extension-point id="samples" name="%expoint.samples.name" schema="schema/samples.exsd" line="10"/>
+		<extension point="org.eclipse.ui.perspectives" line="14"/>
+		<extension point="org.eclipse.ui.preferencePages" line="26"/>
+		<extension point="org.eclipse.ui.keywords" line="60"/>
+		<extension point="org.eclipse.ui.newWizards" line="78"/>
+		<extension point="org.eclipse.ui.importWizards" line="187"/>
+		<extension point="org.eclipse.ui.exportWizards" line="213"/>
+		<extension point="org.eclipse.pde.ui.pluginContent" line="274"/>
+		<extension point="org.eclipse.pde.ui.newExtension" line="425"/>
+		<extension point="org.eclipse.ui.editors" line="572"/>
+		<extension point="org.eclipse.ui.views" line="650"/>
+		<extension point="org.eclipse.ui.commands" line="671"/>
+		<extension point="org.eclipse.ui.popupMenus" line="735"/>
+		<extension point="org.eclipse.debug.core.launchConfigurationTypes" line="1158"/>
+		<extension point="org.eclipse.debug.ui.launchConfigurationTypeImages" line="1202"/>
+		<extension point="org.eclipse.debug.ui.launchConfigurationTabGroups" line="1225"/>
+		<extension point="org.eclipse.jdt.junit.junitLaunchConfigs" line="1284"/>
+		<extension point="org.eclipse.debug.ui.launchShortcuts" line="1290"/>
+		<extension point="org.eclipse.ui.decorators" line="1459"/>
+		<extension point="org.eclipse.ui.elementFactories" line="1499"/>
+		<extension point="org.eclipse.pde.ui.templates" line="1506"/>
+		<extension point="org.eclipse.jdt.ui.javaElementFilters" line="1578"/>
+		<extension point="org.eclipse.jdt.ui.classpathContainerPage" line="1597"/>
+		<extension point="org.eclipse.search.searchPages" line="1605"/>
+		<extension point="org.eclipse.search.searchResultViewPages" line="1618"/>
+		<extension point="org.eclipse.jdt.launching.classpathProviders" line="1629"/>
+		<extension point="org.eclipse.debug.core.sourcePathComputers" line="1635"/>
+		<extension point="org.eclipse.ui.intro.configExtension" line="1642"/>
+		<extension point="org.eclipse.ui.propertyPages" line="1650"/>
+		<extension point="org.eclipse.ui.workingSets" line="1686"/>
+		<extension point="org.eclipse.ui.elementFactories" line="1694"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="1700"/>
+		<extension point="org.eclipse.ui.bindings" line="1704"/>
+		<extension point="org.eclipse.ltk.core.refactoring.renameParticipants" line="1747"/>
+		<extension point="org.eclipse.ltk.core.refactoring.moveParticipants" line="1776"/>
+		<extension point="org.eclipse.ui.ide.markerResolution" line="1805"/>
+		<extension point="org.eclipse.jdt.ui.queryParticipants" line="1812"/>
+		<extension point="org.eclipse.core.filebuffers.annotationModelCreation" line="1820"/>
+		<extension point="org.eclipse.core.filebuffers.annotationModelCreation" line="1826"/>
+		<extension point="org.eclipse.core.filebuffers.annotationModelCreation" line="1832"/>
+		<extension point="org.eclipse.core.filebuffers.annotationModelCreation" line="1838"/>
+		<extension point="org.eclipse.compare.structureMergeViewers" line="1844"/>
+		<extension point="org.eclipse.compare.contentMergeViewers" line="1861"/>
+		<extension point="org.eclipse.ui.themes" line="1878"/>
+		<extension point="org.eclipse.debug.core.sourceLocators" line="1901"/>
+	</bundle>
+	<bundle bundleID="60" schema="3.0">
+		<extension point="org.eclipse.core.runtime.products" id="ide" line="5">
+			<product name="%productName" application="org.eclipse.ui.ide.workbench" description="%productBlurb">
+				<property name="windowImages" value="eclipse.gif,eclipse32.gif,eclipse48.gif,eclipse.png,eclipse32.png,eclipse48.png"/>
+				<property name="aboutImage" value="eclipse_lg.gif"/>
+				<property name="aboutText" value="%productBlurb"/>
+				<property name="appName" value="Eclipse"/>
+				<property name="preferenceCustomization" value="plugin_customization.ini"/>
+				<property name="startupForegroundColor" value="C8D5EA"/>
+				<property name="startupMessageRect" value="7,220,441,20"/>
+				<property name="startupProgressRect" value="0,280,455,15"/>
+				<property name="introTitle" value="%productIntroTitle"/>
+				<property name="introBrandingImage" value="product:intro-eclipse.png"/>
+				<property name="introBrandingImageText" value="%productIntroBrandingText"/>
+				<property name="introDescription-overview" value="%introDescription-overview"/>
+				<property name="introDescription-tutorials" value="%introDescription-tutorials"/>
+				<property name="introDescription-samples" value="%introDescription-samples"/>
+			</product>
+		</extension>
+		<extension point="org.eclipse.ui.intro" line="43">
+			<introProductBinding introId="org.eclipse.ui.intro.universal" productId="org.eclipse.sdk.ide"/>
+		</extension>
+		<extension point="org.eclipse.ui.activities" line="51"/>
+		<extension point="org.eclipse.ui.newWizards" line="192"/>
+		<extension point="org.eclipse.ui.preferencePages" line="210"/>
+		<extension point="org.eclipse.help.base.activitySupport" line="227"/>
+		<extension point="org.eclipse.ui.activitySupport" line="241"/>
+		<extension point="org.eclipse.ui.activitySupport" line="254"/>
+		<extension point="org.eclipse.help.ui.searchEngine" line="261"/>
+		<extension point="org.eclipse.ui.actionSets" line="291"/>
+	</bundle>
+	<bundle bundleID="62" schema="3.0">
+		<extension-point id="breakpoints" name="%breakpointExtensionPointName" schema="schema/breakpoints.exsd" line="7"/>
+		<extension-point id="launchConfigurationComparators" name="%launchConfigurationComparatorsExtensionPointName" schema="schema/launchConfigurationComparators.exsd" line="8"/>
+		<extension-point id="launchConfigurationTypes" name="%launchConfigurationTypeNameExtensionPointName" schema="schema/launchConfigurationTypes.exsd" line="9"/>
+		<extension-point id="launchModes" name="%launchModesExtensionPointName" schema="schema/launchModes.exsd" line="10"/>
+		<extension-point id="launchDelegates" name="%launchDelegatesExtensionPointName" schema="schema/launchDelegates.exsd" line="11"/>
+		<extension-point id="launchers" name="%launcherExtensionPointName" schema="schema/launchers.exsd" line="12"/>
+		<extension-point id="sourceLocators" name="%sourceLocatorsExtensionPointName" schema="schema/sourceLocators.exsd" line="13"/>
+		<extension-point id="statusHandlers" name="%statusHandlerExtensionPointName" schema="schema/statusHandlers.exsd" line="14"/>
+		<extension-point id="watchExpressionDelegates" name="%watchExpressionDelegatesName" schema="schema/watchExpressionDelegates.exsd" line="15"/>
+		<extension-point id="processFactories" name="%processFactoriesExtensionPointName" schema="schema/processFactories.exsd" line="16"/>
+		<extension-point id="logicalStructureTypes" name="%logicalStructureTypesExtensionPointName" schema="schema/logicalStructureTypes.exsd" line="17"/>
+		<extension-point id="sourceContainerTypes" name="%sourceContainerTypesName" schema="schema/sourceContainerTypes.exsd" line="18"/>
+		<extension-point id="sourcePathComputers" name="%sourcePathComputersName" schema="schema/sourcePathComputers.exsd" line="19"/>
+		<extension-point id="logicalStructureProviders" name="%logicalStructureProvidersExtensionPointName" schema="schema/logicalStructureProviders.exsd" line="20"/>
+		<extension point="org.eclipse.core.resources.markers" id="breakpointMarker" line="25"/>
+		<extension point="org.eclipse.core.resources.markers" id="lineBreakpointMarker" line="47"/>
+		<extension point="org.eclipse.team.core.fileTypes" line="59"/>
+		<extension point="org.eclipse.debug.core.launchModes" line="66"/>
+		<extension point="org.eclipse.core.variables.dynamicVariables" line="85"/>
+		<extension point="org.eclipse.debug.core.sourceContainerTypes" line="107"/>
+		<extension point="org.eclipse.debug.core.launchConfigurationComparators" line="156"/>
+	</bundle>
+	<bundle bundleID="64" schema="3.0">
+		<extension-point id="browsers" name="%browser_extension_point_name" schema="schema/browsers.exsd" line="5"/>
+		<extension point="org.eclipse.ui.preferencePages" line="7"/>
+		<extension point="org.eclipse.ui.keywords" line="17"/>
+		<extension point="org.eclipse.ui.browserSupport" line="23"/>
+		<extension point="org.eclipse.ui.views" line="29"/>
+		<extension point="org.eclipse.ui.editors" line="39"/>
+		<extension point="org.eclipse.ui.browser.browsers" line="72"/>
+		<extension point="org.eclipse.ui.commands" line="205"/>
+		<extension point="org.eclipse.ui.commandImages" line="231"/>
+	</bundle>
+	<bundle bundleID="66" schema="3.0">
+		<extension point="org.eclipse.team.cvs.core.connectionmethods" id="ssh2" line="19"/>
+		<extension point="org.eclipse.team.cvs.core.connectionmethods" id="pserverssh2" line="27"/>
+		<extension point="org.eclipse.ui.preferencePages" line="39"/>
+	</bundle>
+	<bundle bundleID="67" schema="3.0">
+		<extension point="org.eclipse.ui.intro.configExtension" line="6"/>
+		<extension point="org.eclipse.ui.cheatsheets.cheatSheetContent" line="24"/>
+	</bundle>
+	<bundle bundleID="68" schema="3.0">
+		<extension-point id="searchPages" name="%searchPages" schema="schema/searchPages.exsd" line="11"/>
+		<extension-point id="searchResultSorters" name="%searchResultSorters" schema="schema/searchResultSorters.exsd" line="12"/>
+		<extension-point id="searchResultViewPages" name="%searchResultViewPages" schema="schema/searchResultViewPages.exsd" line="13"/>
+		<extension-point id="textSearchEngine" name="%textSearchEngine" schema="schema/textSearchEngine.exsd" line="14"/>
+		<extension-point id="textSearchQueryProvider" name="%textSearchQueryProvider" schema="schema/textSearchQueryProvider.exsd" line="15"/>
+		<extension point="org.eclipse.core.resources.markers" id="searchmarker" name="%searchMarker" line="20"/>
+		<extension point="org.eclipse.ui.editors.annotationTypes" line="26"/>
+		<extension point="org.eclipse.ui.ide.markerImageProviders" line="34"/>
+		<extension point="org.eclipse.core.resources.markers" id="filteredsearchmarker" name="%filteredSearchMarker" line="42"/>
+		<extension point="org.eclipse.ui.editors.annotationTypes" line="48"/>
+		<extension point="org.eclipse.ui.ide.markerImageProviders" line="56"/>
+		<extension point="org.eclipse.ui.commands" line="64"/>
+		<extension point="org.eclipse.ui.bindings" line="126"/>
+		<extension point="org.eclipse.ui.actionSets" line="158"/>
+		<extension point="org.eclipse.ui.views" line="243"/>
+		<extension point="org.eclipse.search.searchResultViewPages" id="FileSearchPage" line="264"/>
+		<extension point="org.eclipse.search.searchPages" line="272"/>
+		<extension point="org.eclipse.ui.preferencePages" line="287"/>
+		<extension point="org.eclipse.ui.keywords" line="305"/>
+		<extension point="org.eclipse.ui.editors.markerAnnotationSpecification" line="312"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="359"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="368"/>
+	</bundle>
+	<bundle bundleID="69" schema="3.0">
+		<extension point="org.eclipse.pde.core.source" line="5">
+			<location path="src"/>
+		</extension>
+	</bundle>
+	<bundle bundleID="71" schema="3.0">
+		<extension-point id="classpathVariableInitializer" name="%classpathVariableInitializersName" schema="schema/classpathVariableInitializer.exsd" line="24"/>
+		<extension-point id="classpathContainerInitializer" name="%classpathContainerInitializersName" schema="schema/classpathContainerInitializer.exsd" line="32"/>
+		<extension-point id="codeFormatter" name="%codeFormattersName" schema="schema/codeFormatter.exsd" line="40"/>
+		<extension-point id="compilationParticipant" name="%compilationParticipantsName" schema="schema/compilationParticipant.exsd" line="48"/>
+		<extension point="org.eclipse.core.resources.natures" id="javanature" name="%javaNatureName" line="57"/>
+		<extension point="org.eclipse.core.resources.builders" id="javabuilder" name="%javaBuilderName" line="72"/>
+		<extension point="org.eclipse.core.resources.markers" id="problem" name="%javaProblemName" line="82"/>
+		<extension point="org.eclipse.core.resources.markers" id="buildpath_problem" name="%buildPathProblemName" line="95"/>
+		<extension point="org.eclipse.core.resources.markers" id="transient_problem" name="%transientJavaProblemName" line="107"/>
+		<extension point="org.eclipse.core.resources.markers" id="task" name="%javaTaskName" line="118"/>
+		<extension point="org.eclipse.ant.core.extraClasspathEntries" line="127"/>
+		<extension point="org.eclipse.ant.core.antTasks" line="136"/>
+		<extension point="org.eclipse.jdt.core.classpathContainerInitializer" line="148"/>
+		<extension point="org.eclipse.team.core.fileTypes" line="158"/>
+		<extension point="org.eclipse.core.runtime.applications" id="JavaCodeFormatter" line="173"/>
+		<extension point="org.eclipse.core.runtime.contentTypes" line="182"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="219"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="223"/>
+	</bundle>
+	<bundle bundleID="72" schema="3.0">
+		<extension point="org.eclipse.ui.views" line="8"/>
+		<extension point="org.eclipse.ui.commands" line="29"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="44"/>
+	</bundle>
+	<bundle bundleID="73" schema="3.0">
+		<extension point="org.eclipse.core.runtime.products" id="ide" line="5">
+			<product name="%productName" application="org.eclipse.ui.ide.workbench" description="%productBlurb">
+				<property name="windowImages" value="eclipse.gif,eclipse32.gif,eclipse48.gif,eclipse.png,eclipse32.png,eclipse48.png"/>
+				<property name="aboutImage" value="eclipse_lg.gif"/>
+				<property name="aboutText" value="%productBlurb"/>
+				<property name="appName" value="Eclipse"/>
+				<property name="preferenceCustomization" value="plugin_customization.ini"/>
+				<property name="startupForegroundColor" value="C8D5EA"/>
+				<property name="startupMessageRect" value="7,220,441,20"/>
+				<property name="startupProgressRect" value="0,280,455,15"/>
+				<property name="introTitle" value="%productIntroTitle"/>
+				<property name="introBrandingImage" value="product:intro-eclipse.png"/>
+				<property name="introBrandingImageText" value="%productIntroBrandingText"/>
+				<property name="introDescription-overview" value="%introDescription-overview"/>
+				<property name="introDescription-tutorials" value="%introDescription-tutorials"/>
+				<property name="introDescription-samples" value="%introDescription-samples"/>
+			</product>
+		</extension>
+		<extension point="org.eclipse.ui.intro" line="43">
+			<introProductBinding introId="org.eclipse.ui.intro.universal" productId="org.eclipse.platform.ide"/>
+		</extension>
+		<extension point="org.eclipse.ui.cheatsheets.cheatSheetContent" line="51"/>
+		<extension point="org.eclipse.ui.intro.configExtension" line="78"/>
+		<extension point="org.eclipse.ui.preferencePages" line="101"/>
+	</bundle>
+	<bundle bundleID="77" schema="3.0">
+		<extension point="org.eclipse.core.runtime.preferences" id="preferences" name="%preferences" line="5"/>
+		<extension point="org.eclipse.ui.startup" line="9"/>
+		<extension point="org.eclipse.ui.startup" line="14"/>
+		<extension point="org.eclipse.ui.preferencePages" line="19"/>
+		<extension point="org.eclipse.ui.keywords" line="30"/>
+	</bundle>
+	<bundle bundleID="78" schema="3.0">
+		<extension point="org.eclipse.team.ui.synchronizeWizards" line="8"/>
+		<extension point="org.eclipse.ui.console.consoleFactories" line="18"/>
+		<extension point="org.eclipse.ui.console.consolePageParticipants" line="25"/>
+		<extension point="org.eclipse.team.ui.synchronizeParticipants" line="37"/>
+		<extension point="org.eclipse.ui.navigator.viewer" line="78"/>
+		<extension point="org.eclipse.team.cvs.core.authenticator" line="188"/>
+		<extension point="org.eclipse.team.cvs.core.filemodificationvalidator" line="197"/>
+		<extension point="org.eclipse.team.core.projectSets" line="205"/>
+		<extension point="org.eclipse.team.ui.configurationWizards" line="210"/>
+		<extension point="org.eclipse.ui.propertyPages" line="220"/>
+		<extension point="org.eclipse.ui.popupMenus" line="269"/>
+		<extension point="org.eclipse.ui.views" line="746"/>
+		<extension point="org.eclipse.ui.keywords" line="776"/>
+		<extension point="org.eclipse.ui.preferencePages" line="791"/>
+		<extension point="org.eclipse.ui.preferencePages" line="801"/>
+		<extension point="org.eclipse.ui.preferencePages" line="811"/>
+		<extension point="org.eclipse.ui.preferencePages" line="821"/>
+		<extension point="org.eclipse.ui.preferencePages" line="831"/>
+		<extension point="org.eclipse.ui.preferencePages" line="841"/>
+		<extension point="org.eclipse.ui.preferencePages" line="851"/>
+		<extension point="org.eclipse.ui.preferencePages" line="861"/>
+		<extension point="org.eclipse.ui.preferencePages" line="871"/>
+		<extension point="org.eclipse.ui.preferencePages" line="882"/>
+		<extension point="org.eclipse.ui.decorators" line="895"/>
+		<extension point="org.eclipse.ui.viewActions" line="914"/>
+		<extension point="org.eclipse.ui.perspectives" line="930"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="943"/>
+		<extension point="org.eclipse.ui.actionSets" line="994"/>
+		<extension point="org.eclipse.ui.commands" line="1174"/>
+		<extension point="org.eclipse.ui.themes" line="1374"/>
+		<extension point="org.eclipse.ui.workbench.texteditor.quickDiffReferenceProvider" line="1452"/>
+		<extension point="org.eclipse.ui.newWizards" line="1462"/>
+		<extension point="org.eclipse.ui.importWizards" line="1480"/>
+		<extension point="org.eclipse.ui.preferenceTransfer" line="1496"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="1510"/>
+		<extension point="org.eclipse.team.ui.teamDecorators" line="1543"/>
+		<extension point="org.eclipse.ui.dropActions" line="1550"/>
+		<extension point="org.eclipse.ui.navigator.navigatorContent" line="1556"/>
+		<extension point="org.eclipse.team.ui.teamContentProviders" line="1582"/>
+		<extension point="org.eclipse.ui.preferencePages" line="1589"/>
+	</bundle>
+	<bundle bundleID="79" schema="3.0">
+		<extension-point id="acceleratorConfigurations" name="%ExtPoint.acceleratorConfigurations" schema="schema/acceleratorConfigurations.exsd" line="7"/>
+		<extension-point id="acceleratorScopes" name="%ExtPoint.acceleratorScopes" schema="schema/acceleratorScopes.exsd" line="8"/>
+		<extension-point id="acceleratorSets" name="%ExtPoint.acceleratorSets" schema="schema/acceleratorSets.exsd" line="9"/>
+		<extension-point id="actionDefinitions" name="%ExtPoint.actionDefinitions" schema="schema/actionDefinitions.exsd" line="10"/>
+		<extension-point id="activities" name="%ExtPoint.activities" schema="schema/activities.exsd" line="11"/>
+		<extension-point id="activitySupport" name="%ExtPoint.activitySupport" schema="schema/activitySupport.exsd" line="12"/>
+		<extension-point id="actionSetPartAssociations" name="%ExtPoint.actionSetPartAssociations" schema="schema/actionSetPartAssociations.exsd" line="13"/>
+		<extension-point id="actionSets" name="%ExtPoint.actionSets" schema="schema/actionSets.exsd" line="14"/>
+		<extension-point id="bindings" name="%ExtPoint.bindings" schema="schema/bindings.exsd" line="15"/>
+		<extension-point id="commands" name="%ExtPoint.commands" schema="schema/commands.exsd" line="16"/>
+		<extension-point id="commandImages" name="%ExtPoint.commandImages" schema="schema/commandImages.exsd" line="17"/>
+		<extension-point id="contexts" name="%ExtPoint.contexts" schema="schema/contexts.exsd" line="18"/>
+		<extension-point id="handlers" name="%ExtPoint.handlers" schema="schema/handlers.exsd" line="19"/>
+		<extension-point id="decorators" name="%ExtPoint.decorators" schema="schema/decorators.exsd" line="20"/>
+		<extension-point id="dropActions" name="%ExtPoint.dropActions" schema="schema/dropActions.exsd" line="21"/>
+		<extension-point id="editorActions" name="%ExtPoint.editorActions" schema="schema/editorActions.exsd" line="22"/>
+		<extension-point id="editors" name="%ExtPoint.editors" schema="schema/editors.exsd" line="23"/>
+		<extension-point id="elementFactories" name="%ExtPoint.elementFactories" schema="schema/elementFactories.exsd" line="24"/>
+		<extension-point id="encodings" name="%ExtPoint.encodings" schema="schema/encodings.exsd" line="25"/>
+		<extension-point id="exportWizards" name="%ExtPoint.exportWizards" schema="schema/exportWizards.exsd" line="26"/>
+		<extension-point id="fontDefinitions" name="%ExtPoint.fontDefinitions" schema="schema/fontDefinitions.exsd" line="27"/>
+		<extension-point id="helpSupport" name="%ExtPoint.helpSupport" schema="schema/helpSupport.exsd" line="28"/>
+		<extension-point id="importWizards" name="%ExtPoint.importWizards" schema="schema/importWizards.exsd" line="29"/>
+		<extension-point id="intro" name="%ExtPoint.intro" schema="schema/intro.exsd" line="30"/>
+		<extension-point id="keywords" name="%ExtPoint.keywords" schema="schema/keywords.exsd" line="31"/>
+		<extension-point id="menus" name="%ExtPoint.menus" schema="schema/menus.exsd" line="32"/>
+		<extension-point id="newWizards" name="%ExtPoint.newWizards" schema="schema/newWizards.exsd" line="33"/>
+		<extension-point id="perspectiveExtensions" name="%ExtPoint.perspectiveExtensions" schema="schema/perspectiveExtensions.exsd" line="34"/>
+		<extension-point id="perspectives" name="%ExtPoint.perspectives" schema="schema/perspectives.exsd" line="35"/>
+		<extension-point id="popupMenus" name="%ExtPoint.popupMenus" schema="schema/popupMenus.exsd" line="36"/>
+		<extension-point id="preferencePages" name="%ExtPoint.preferencePages" schema="schema/preferencePages.exsd" line="37"/>
+		<extension-point id="preferenceTransfer" name="%ExtPoint.preferenceTransfer" schema="schema/preferenceTransfer.exsd" line="38"/>
+		<extension-point id="presentationFactories" name="%ExtPoint.presentationFactories" schema="schema/presentationFactories.exsd" line="39"/>
+		<extension-point id="propertyPages" name="%ExtPoint.propertyPages" schema="schema/propertyPages.exsd" line="40"/>
+		<extension-point id="startup" name="%ExtPoint.startup" schema="schema/startup.exsd" line="41"/>
+		<extension-point id="systemSummarySections" name="%ExtPoint.systemSummarySections" schema="schema/systemSummarySections.exsd" line="42"/>
+		<extension-point id="themes" name="%ExtPoint.themes" schema="schema/themes.exsd" line="43"/>
+		<extension-point id="viewActions" name="%ExtPoint.viewActions" schema="schema/viewActions.exsd" line="44"/>
+		<extension-point id="views" name="%ExtPoint.views" schema="schema/views.exsd" line="45"/>
+		<extension-point id="workingSets" name="%ExtPoint.workingSets" schema="schema/workingSets.exsd" line="46"/>
+		<extension-point id="browserSupport" name="%ExtPoint.browserSupport" schema="schema/browserSupport.exsd" line="47"/>
+		<extension point="org.eclipse.ui.contexts" line="50"/>
+		<extension point="org.eclipse.ui.bindings" line="88"/>
+		<extension point="org.eclipse.ui.commands" line="465"/>
+		<extension point="org.eclipse.ui.commandImages" line="881"/>
+		<extension point="org.eclipse.ui.views" line="906"/>
+		<extension point="org.eclipse.ui.elementFactories" line="923"/>
+		<extension point="org.eclipse.ui.themes" line="930"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="1204"/>
+		<extension point="org.eclipse.ui.systemSummarySections" line="1210"/>
+		<extension point="org.eclipse.ui.presentationFactories" line="1218"/>
+		<extension point="org.eclipse.ui.encodings" line="1230"/>
+		<extension point="org.eclipse.ui.activitySupport" line="1240"/>
+		<extension point="org.eclipse.ui.menus" line="1265"/>
+	</bundle>
+	<bundle bundleID="80" schema="3.0">
+		<extension point="org.eclipse.pde.core.source" line="5">
+			<location path="src"/>
+		</extension>
+	</bundle>
+	<bundle bundleID="81" schema="3.0">
+		<extension-point id="documentProviders" name="%ExtPoint.documentProviders" schema="schema/documentProviders.exsd" line="5"/>
+		<extension-point id="markerUpdaters" name="%ExtPoint.markerUpdaters" schema="schema/markerUpdaters.exsd" line="6"/>
+		<extension-point id="markerAnnotationSpecification" name="%ExtPoint.markerAnnotationSpecification" schema="schema/markerAnnotationSpecification.exsd" line="7"/>
+		<extension-point id="annotationTypes" name="%ExtPoint.annotationTypes" schema="schema/annotationTypes.exsd" line="8"/>
+		<extension-point id="templates" name="%ExtPoint.editorTemplate" schema="schema/templates.exsd" line="9"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="11"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="15"/>
+		<extension point="org.eclipse.ui.commands" line="24"/>
+		<extension point="org.eclipse.ui.handlers" line="118"/>
+		<extension point="org.eclipse.ui.bindings" line="126"/>
+		<extension point="org.eclipse.ui.editors" line="171"/>
+		<extension point="org.eclipse.ui.preferencePages" line="184"/>
+		<extension point="org.eclipse.ui.keywords" line="230"/>
+		<extension point="org.eclipse.ui.editors.documentProviders" line="251"/>
+		<extension point="org.eclipse.ui.editors.markerUpdaters" line="269"/>
+		<extension point="org.eclipse.ui.workbench.texteditor.quickDiffReferenceProvider" line="276"/>
+		<extension point="org.eclipse.ui.popupMenus" line="284"/>
+		<extension point="org.eclipse.ui.editorActions" line="327"/>
+		<extension point="org.eclipse.ui.newWizards" line="348"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="363"/>
+		<extension point="org.eclipse.ui.actionSets" line="373"/>
+		<extension point="org.eclipse.ui.editors.markerAnnotationSpecification" line="478"/>
+		<extension point="org.eclipse.ui.editors.annotationTypes" line="837"/>
+		<extension point="org.eclipse.core.filebuffers.annotationModelCreation" line="868"/>
+	</bundle>
+	<bundle bundleID="82" schema="3.2">
+		<extension-point id="source" name="%expoint.source.name" schema="schema/source.exsd" line="5"/>
+		<extension-point id="javadoc" name="%expoint.javadoc.name" schema="schema/javadoc.exsd" line="6"/>
+		<extension-point id="targets" name="%expoint.target.name" schema="schema/targets.exsd" line="7"/>
+		<extension-point id="executionEnvironments" name="%executionEnvExtPoint" schema="schema/executionEnvironments.exsd" line="8"/>
+		<extension point="org.eclipse.jdt.core.classpathVariableInitializer" line="11"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="18"/>
+		<extension point="org.eclipse.team.core.repository" line="22"/>
+		<extension point="org.eclipse.jdt.core.classpathContainerInitializer" line="29"/>
+		<extension point="org.eclipse.team.core.fileTypes" line="38"/>
+		<extension point="org.eclipse.jdt.launching.executionEnvironments" line="49"/>
+		<extension point="org.eclipse.pde.core.targets" line="85"/>
+		<extension point="org.eclipse.core.resources.natures" id="org.eclipse.pde.PluginNature" name="%natures.pluginNature.name" line="110"/>
+		<extension point="org.eclipse.core.resources.natures" id="org.eclipse.pde.FeatureNature" name="%natures.featureNature.name" line="120"/>
+		<extension point="org.eclipse.core.resources.natures" id="org.eclipse.pde.UpdateSiteNature" name="%natures.siteNature.name" line="130"/>
+		<extension point="org.eclipse.core.resources.builders" id="org.eclipse.pde.ManifestBuilder" name="%builders.manifestBuilder.name" line="144"/>
+		<extension point="org.eclipse.core.resources.builders" id="org.eclipse.pde.SchemaBuilder" name="%builders.schemaBuilder.name" line="154"/>
+		<extension point="org.eclipse.core.resources.builders" id="org.eclipse.pde.FeatureBuilder" name="%builders.featureBuilder.name" line="164"/>
+		<extension point="org.eclipse.core.resources.builders" id="org.eclipse.pde.UpdateSiteBuilder" name="%builders.siteBuilder.name" line="174"/>
+		<extension point="org.eclipse.core.resources.markers" id="org.eclipse.pde.validation-marker" name="%builders.marker.label" line="188"/>
+		<extension point="org.eclipse.ant.core.antTasks" line="199"/>
+		<extension point="org.eclipse.ant.core.extraClasspathEntries" line="218"/>
+		<extension point="org.eclipse.core.variables.dynamicVariables" line="224"/>
+	</bundle>
+	<bundle bundleID="83" schema="3.0">
+		<extension-point id="vmInstallTypePage" name="%vmInstallTypePage" schema="schema/vmInstallTypePage.exsd" line="7"/>
+		<extension point="org.eclipse.core.expressions.propertyTesters" line="10"/>
+		<extension point="org.eclipse.debug.core.watchExpressionDelegates" line="20"/>
+		<extension point="org.eclipse.jdt.ui.javaEditorTextHovers" line="26"/>
+		<extension point="org.eclipse.ui.editors" id="editors" line="36"/>
+		<extension point="org.eclipse.ui.editorActions" line="48"/>
+		<extension point="org.eclipse.ui.actionSets" line="71"/>
+		<extension point="org.eclipse.ui.views" line="243"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="253"/>
+		<extension point="org.eclipse.ui.popupMenus" line="319"/>
+		<extension point="org.eclipse.ui.viewActions" line="627"/>
+		<extension point="org.eclipse.debug.ui.debugModelPresentations" line="902"/>
+		<extension point="org.eclipse.ui.popupMenus" line="910"/>
+		<extension point="org.eclipse.ui.editorActions" line="1648"/>
+		<extension point="org.eclipse.ui.propertyPages" line="1700"/>
+		<extension point="org.eclipse.ui.preferencePages" line="1746"/>
+		<extension point="org.eclipse.debug.ui.launchConfigurationTypeImages" line="1798"/>
+		<extension point="org.eclipse.debug.ui.launchConfigurationTabGroups" line="1816"/>
+		<extension point="org.eclipse.debug.core.statusHandlers" line="1856"/>
+		<extension point="org.eclipse.debug.core.sourceLocators" line="1888"/>
+		<extension point="org.eclipse.debug.ui.launchShortcuts" line="1896"/>
+		<extension point="org.eclipse.ui.commands" line="1977"/>
+		<extension point="org.eclipse.ui.bindings" line="2052"/>
+		<extension point="org.eclipse.jdt.ui.classpathContainerPage" line="2101"/>
+		<extension point="org.eclipse.jdt.debug.ui.vmInstallTypePage" line="2109"/>
+		<extension point="org.eclipse.team.core.fileTypes" line="2122"/>
+		<extension point="org.eclipse.ui.ide.markerResolution" line="2129"/>
+		<extension point="org.eclipse.ui.actionSetPartAssociations" line="2137"/>
+		<extension point="org.eclipse.ui.actionSetPartAssociations" line="2167"/>
+		<extension point="org.eclipse.ltk.core.refactoring.renameParticipants" line="2199"/>
+		<extension point="org.eclipse.ltk.core.refactoring.moveParticipants" line="2322"/>
+		<extension point="org.eclipse.ui.contexts" line="2387"/>
+		<extension point="org.eclipse.debug.ui.debugModelContextBindings" line="2396"/>
+		<extension point="org.eclipse.debug.ui.contextViewBindings" line="2403"/>
+		<extension point="org.eclipse.debug.ui.sourceContainerPresentations" line="2413"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="2438"/>
+		<extension point="org.eclipse.core.variables.dynamicVariables" line="2463"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="2472"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="2481"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="2500"/>
+		<extension point="org.eclipse.ui.newWizards" line="2531"/>
+		<extension point="org.eclipse.core.filebuffers.documentSetup" id="org.eclipse.jdt.debug.ui.SnippetDocumentSetupParticipant" name="%snippetDocumentSetupParticipant.name" line="2552"/>
+		<extension point="org.eclipse.jdt.launching.classpathProviders" line="2560"/>
+		<extension point="org.eclipse.ui.console.consoleFactories" line="2569"/>
+		<extension point="org.eclipse.ui.console.consolePatternMatchListeners" line="2579"/>
+		<extension point="org.eclipse.ui.console.consolePageParticipants" line="2621"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="2630"/>
+		<extension point="org.eclipse.ui.themes" line="2635"/>
+		<extension point="org.eclipse.debug.ui.variableValueEditors" line="2646"/>
+		<extension point="org.eclipse.ui.keywords" line="2652"/>
+		<extension point="org.eclipse.ui.preferenceTransfer" line="2670"/>
+		<extension point="org.eclipse.core.variables.dynamicVariables" line="2686"/>
+		<extension point="org.eclipse.ui.ide.markerSupport" line="2694"/>
+	</bundle>
+	<bundle bundleID="84" schema="3.0">
+		<extension-point id="consolePatternMatchListeners" name="%ConsolePatternMatchListenerName" schema="schema/consolePatternMatchListeners.exsd" line="5"/>
+		<extension-point id="consolePageParticipants" name="%ConsolePageParticipantName" schema="schema/consolePageParticipants.exsd" line="6"/>
+		<extension-point id="consoleFactories" name="%ConsoleFactoryName" schema="schema/consoleFactories.exsd" line="7"/>
+		<extension point="org.eclipse.ui.views" line="11"/>
+		<extension point="org.eclipse.ui.commands" line="29"/>
+		<extension point="org.eclipse.ui.bindings" line="37"/>
+		<extension point="org.eclipse.core.expressions.propertyTesters" line="45"/>
+		<extension point="org.eclipse.ui.console.consoleFactories" line="54"/>
+	</bundle>
+	<bundle bundleID="86" schema="3.0">
+		<extension-point id="valueVariables" name="%valueVariablesExtensionPointName" schema="schema/valueVariables.exsd" line="5"/>
+		<extension-point id="dynamicVariables" name="%dynamicVariablesExtensionPointName" schema="schema/dynamicVariables.exsd" line="6"/>
+		<extension point="org.eclipse.core.variables.dynamicVariables" line="8"/>
+	</bundle>
+	<bundle bundleID="87" schema="3.0">
+		<extension point="org.eclipse.pde.core.source" line="5">
+			<location path="src"/>
+		</extension>
+	</bundle>
+	<bundle bundleID="89" schema="3.0">
+		<extension point="org.eclipse.pde.core.source" line="5">
+			<location path="src"/>
+		</extension>
+	</bundle>
+	<bundle bundleID="90" schema="3.0">
+		<extension point="org.eclipse.core.runtime.preferences" line="6"/>
+	</bundle>
+	<bundle bundleID="91" schema="3.0">
+		<extension-point id="statusContextViewers" name="%statusViewerExtensionPoint" schema="schema/statusContextViewers.exsd" line="4"/>
+		<extension-point id="changePreviewViewers" name="%changeViewerExtensionPoint" schema="schema/changePreviewViewers.exsd" line="5"/>
+		<extension point="org.eclipse.ltk.ui.refactoring.statusContextViewers" line="6"/>
+		<extension point="org.eclipse.ltk.ui.refactoring.changePreviewViewers" line="15"/>
+		<extension point="org.eclipse.ui.propertyPages" line="25"/>
+		<extension point="org.eclipse.ui.keywords" line="42"/>
+		<extension point="org.eclipse.compare.streamMergers" line="48"/>
+		<extension point="org.eclipse.compare.contentMergeViewers" line="63"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="70"/>
+		<extension point="org.eclipse.team.core.storageMergers" line="78"/>
+		<extension point="org.eclipse.core.expressions.propertyTesters" line="93"/>
+	</bundle>
+	<bundle bundleID="92" schema="3.0">
+		<extension-point id="streamMergers" name="%streamMergers" schema="schema/streamMergers.exsd" line="6"/>
+		<extension-point id="structureCreators" name="%structureCreators" schema="schema/structureCreators.exsd" line="7"/>
+		<extension-point id="structureMergeViewers" name="%structureMergeViewers" schema="schema/structureMergeViewers.exsd" line="8"/>
+		<extension-point id="contentMergeViewers" name="%contentMergeViewers" schema="schema/contentMergeViewers.exsd" line="9"/>
+		<extension-point id="contentViewers" name="%contentViewers" schema="schema/contentViewers.exsd" line="10"/>
+		<extension point="org.eclipse.ui.themes" line="14"/>
+		<extension point="org.eclipse.core.resources.markers" id="rejectedPatchMarker" name="%rejectedPatchMarker.name" line="69"/>
+		<extension point="org.eclipse.ui.editors" line="78"/>
+		<extension point="org.eclipse.ui.preferencePages" line="89"/>
+		<extension point="org.eclipse.ui.keywords" line="100"/>
+		<extension point="org.eclipse.ui.commands" line="108"/>
+		<extension point="org.eclipse.ui.popupMenus" line="153"/>
+		<extension point="org.eclipse.compare.streamMergers" line="270"/>
+		<extension point="org.eclipse.compare.structureCreators" line="283"/>
+		<extension point="org.eclipse.compare.contentMergeViewers" line="292"/>
+		<extension point="org.eclipse.compare.contentViewers" line="315"/>
+	</bundle>
+	<bundle bundleID="93" schema="3.0">
+		<extension point="org.eclipse.help.toc" line="16"/>
+		<extension point="org.eclipse.help.toc" line="25"/>
+		<extension point="org.eclipse.pde.core.javadoc" line="36">
+			<javadoc path="reference/api">
+				<plugin id="org.eclipse.jdt.core"/>
+				<plugin id="org.eclipse.jdt.core.manipulation"/>
+				<plugin id="org.eclipse.jdt.debug"/>
+				<plugin id="org.eclipse.jdt.debug.ui"/>
+				<plugin id="org.eclipse.jdt.launching"/>
+				<plugin id="org.eclipse.jdt.ui"/>
+				<plugin id="org.eclipse.jdt.apt.ui"/>
+				<plugin id="org.eclipse.jdt.apt.core"/>
+				<plugin id="org.eclipse.jdt.junit"/>
+			</javadoc>
+		</extension>
+	</bundle>
+	<bundle bundleID="94" schema="3.0">
+		<extension-point id="markerHelp" name="%ExtPoint.markerHelp" schema="schema/markerHelp.exsd" line="7"/>
+		<extension-point id="markerImageProviders" name="%ExtPoint.markerImageProviders" schema="schema/markerImageProviders.exsd" line="8"/>
+		<extension-point id="markerResolution" name="%ExtPoint.markerResolution" schema="schema/markerResolution.exsd" line="9"/>
+		<extension-point id="projectNatureImages" name="%ExtPoint.projectNatureImages" schema="schema/projectNatureImages.exsd" line="10"/>
+		<extension-point id="resourceFilters" name="%ExtPoint.resourceFilters" schema="schema/resourceFilters.exsd" line="11"/>
+		<extension-point id="markerSupport" name="%ExtPoint.markerSupport" schema="schema/markerSupport.exsd" line="12"/>
+		<extension-point id="filesystemSupport" name="%ExtPoint.fileSystemSupport" schema="schema/filesystemSupport.exsd" line="13"/>
+		<extension point="org.eclipse.core.runtime.applications" id="workbench" line="17"/>
+		<extension point="org.eclipse.ui.perspectives" line="25"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="37"/>
+		<extension point="org.eclipse.ui.importWizards" line="46"/>
+		<extension point="org.eclipse.ui.exportWizards" line="101"/>
+		<extension point="org.eclipse.ui.ide.markerImageProviders" line="146"/>
+		<extension point="org.eclipse.ui.newWizards" line="164"/>
+		<extension point="org.eclipse.ui.editors" line="212"/>
+		<extension point="org.eclipse.ui.elementFactories" line="222"/>
+		<extension point="org.eclipse.ui.workingSets" line="241"/>
+		<extension point="org.eclipse.ui.actionSets" line="251"/>
+		<extension point="org.eclipse.ui.decorators" line="305"/>
+		<extension point="org.eclipse.ui.keywords" line="325"/>
+		<extension point="org.eclipse.ui.preferencePages" line="364"/>
+		<extension point="org.eclipse.ui.views" line="481"/>
+		<extension point="org.eclipse.ui.ide.resourceFilters" line="520"/>
+		<extension point="org.eclipse.ui.propertyPages" line="527"/>
+		<extension point="org.eclipse.ui.commands" line="544"/>
+		<extension point="org.eclipse.ui.commandImages" line="711"/>
+		<extension point="org.eclipse.ui.bindings" line="718"/>
+		<extension point="org.eclipse.ui.systemSummarySections" line="829"/>
+		<extension point="org.eclipse.ui.actionSets" line="839"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="876"/>
+		<extension point="org.eclipse.ui.preferenceTransfer" line="881"/>
+		<extension point="org.eclipse.core.runtime.adapters" id="org.eclipse.ui.ide.resourceMappingAdapters" line="903"/>
+		<extension point="org.eclipse.ui.activitySupport" line="932"/>
+		<extension point="org.eclipse.ui.ide.markerSupport" line="941"/>
+	</bundle>
+	<bundle bundleID="99" schema="3.0">
+		<extension point="org.eclipse.help.toc" line="10"/>
+		<extension point="org.eclipse.help.toc" line="21"/>
+		<extension point="org.eclipse.help.contexts" line="29"/>
+		<extension point="org.eclipse.pde.core.javadoc" line="39">
+			<javadoc path="reference/api">
+				<plugin id="org.eclipse.pde.core"/>
+				<plugin id="org.eclipse.pde.ui"/>
+			</javadoc>
+		</extension>
+	</bundle>
+	<bundle bundleID="100" schema="3.0">
+		<extension-point id="preferences" name="%preferencesName" schema="schema/preferences.exsd" line="4"/>
+	</bundle>
+	<bundle bundleID="101" schema="3.0">
+		<extension-point id="javaElementFilters" name="%elementFiltersName" schema="schema/javaElementFilters.exsd" line="5"/>
+		<extension-point id="javaEditorTextHovers" name="%javaEditorTextHoversName" schema="schema/javaEditorTextHovers.exsd" line="6"/>
+		<extension-point id="javadocCompletionProcessor" name="%javadocCompletionProcessor" schema="schema/javadocCompletionProcessor.exsd" line="7"/>
+		<extension-point id="quickFixProcessors" name="%quickFixProcessorExtensionPoint" schema="schema/quickFixProcessors.exsd" line="8"/>
+		<extension-point id="quickAssistProcessors" name="%quickAssistProcessorExtensionPoint" schema="schema/quickAssistProcessors.exsd" line="9"/>
+		<extension-point id="classpathContainerPage" name="%classpathContainerPageExtensionPoint" schema="schema/classpathContainerPage.exsd" line="10"/>
+		<extension-point id="foldingStructureProviders" name="%foldingStructureProvidersExtensionPoint" schema="schema/foldingStructureProviders.exsd" line="11"/>
+		<extension-point id="queryParticipants" name="%queryParticipantsExtensionPoint" schema="schema/queryParticipants.exsd" line="12"/>
+		<extension-point id="javaCompletionProposalComputer" name="%javaCompletionProposalComputer" schema="schema/javaCompletionProposalComputer.exsd" line="13"/>
+		<extension-point id="javaCompletionProposalSorters" name="%javaCompletionProposalSorters" schema="schema/javaCompletionProposalSorters.exsd" line="14"/>
+		<extension-point id="internal_refactoringElementFilter" name="%internal_refactoringElementFilter" schema="schema/internal_refactoringElementFilter.exsd" line="15"/>
+		<extension point="org.eclipse.ui.decorators" line="19"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="82"/>
+		<extension point="org.eclipse.jdt.ui.classpathContainerPage" line="153"/>
+		<extension point="org.eclipse.jdt.ui.quickFixProcessors" line="161"/>
+		<extension point="org.eclipse.jdt.ui.quickAssistProcessors" line="177"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer" id="javaTypeProposalCategory" name="%JavaTypesCategory" line="195"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer" id="javaNoTypeProposalCategory" name="%JavaProposalCategory" line="202"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer" id="defaultProposalCategory" name="%DefaultProposalCategory" line="209"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer" id="templateProposalCategory" name="%TemplateProposalCategory" line="215"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer" id="textProposalCategory" name="%TextProposalCategory" line="222"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer" id="JavaTypeCompletionProposalComputer" line="230"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer" id="JavaNoTypeCompletionProposalComputer" line="240"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer" id="LegacyJavadocCompletionProposalComputer" line="251"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer" id="JavadocCompletionProposalComputer" line="260"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer" id="JavadocHTMLCompletionProposalComputer" line="269"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer" id="TemplateProposalComputer" line="279"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalComputer" id="HippieCompletionProposalComputer" line="291"/>
+		<extension point="org.eclipse.ui.commands" line="304"/>
+		<extension point="org.eclipse.jdt.ui.javaCompletionProposalSorters" line="320"/>
+		<extension point="org.eclipse.ui.commands" line="333"/>
+		<extension point="org.eclipse.jdt.ui.javaEditorTextHovers" line="378"/>
+		<extension point="org.eclipse.ui.perspectives" line="417"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="439"/>
+		<extension point="org.eclipse.ui.ide.projectNatureImages" line="498"/>
+		<extension point="org.eclipse.ui.views" line="506"/>
+		<extension point="org.eclipse.ui.newWizards" line="527"/>
+		<extension point="org.eclipse.ui.propertyPages" line="615"/>
+		<extension point="org.eclipse.ui.elementFactories" line="929"/>
+		<extension point="org.eclipse.ui.editors" id="javaeditor" line="941"/>
+		<extension point="org.eclipse.ui.themes" line="989"/>
+		<extension point="org.eclipse.ui.editors.annotationTypes" line="1031"/>
+		<extension point="org.eclipse.ui.editors.markerAnnotationSpecification" line="1058"/>
+		<extension point="org.eclipse.ui.actionSets" line="1224"/>
+		<extension point="org.eclipse.core.filebuffers.documentSetup" id="JavaDocumentSetupParticipant" name="%javaDocumentSetupParticipant" line="1248"/>
+		<extension point="org.eclipse.core.filebuffers.documentSetup" id="PropertiesFileDocumentSetupParticipant" name="%propertiesFileDocumentSetupParticipant" line="1258"/>
+		<extension point="org.eclipse.ui.preferencePages" line="1266"/>
+		<extension point="org.eclipse.ui.keywords" line="1454"/>
+		<extension point="org.eclipse.ui.actionSets" line="1552"/>
+		<extension point="org.eclipse.search.searchPages" line="1590"/>
+		<extension point="org.eclipse.search.searchResultViewPages" id="JavaSearchResultPage" line="1605"/>
+		<extension point="org.eclipse.search.searchResultViewPages" id="OccurrencesSearchResultPage" line="1614"/>
+		<extension point="org.eclipse.search.searchResultViewPages" id="NLSSearchResultPage" line="1623"/>
+		<extension point="org.eclipse.ui.themes" line="1635"/>
+		<extension point="org.eclipse.ui.popupMenus" line="1657"/>
+		<extension point="org.eclipse.compare.structureCreators" line="1741"/>
+		<extension point="org.eclipse.compare.contentViewers" line="1762"/>
+		<extension point="org.eclipse.compare.contentViewers" line="1774"/>
+		<extension point="org.eclipse.compare.contentMergeViewers" line="1786"/>
+		<extension point="org.eclipse.compare.contentMergeViewers" line="1798"/>
+		<extension point="org.eclipse.compare.structureMergeViewers" line="1810"/>
+		<extension point="org.eclipse.ui.ide.resourceFilters" line="1822"/>
+		<extension point="org.eclipse.ui.exportWizards" line="1833"/>
+		<extension point="org.eclipse.ui.exportWizards" line="1844"/>
+		<extension point="org.eclipse.ui.popupMenus" line="1860"/>
+		<extension point="org.eclipse.ui.exportWizards" line="1892"/>
+		<extension point="org.eclipse.ui.popupMenus" line="1909"/>
+		<extension point="org.eclipse.debug.ui.consoleLineTrackers" line="1928"/>
+		<extension point="org.eclipse.ui.perspectives" line="1940"/>
+		<extension point="org.eclipse.ui.perspectiveExtensions" line="1952"/>
+		<extension point="org.eclipse.ui.views" line="1991"/>
+		<extension point="org.eclipse.ui.actionSets" line="2029"/>
+		<extension point="org.eclipse.ui.actionSets" line="2073"/>
+		<extension point="org.eclipse.ui.actionSetPartAssociations" line="2105"/>
+		<extension point="org.eclipse.ui.actionSets" line="2145"/>
+		<extension point="org.eclipse.ui.actionSetPartAssociations" line="2610"/>
+		<extension point="org.eclipse.ui.actionSets" line="2642"/>
+		<extension point="org.eclipse.ui.actionSetPartAssociations" line="2895"/>
+		<extension point="org.eclipse.ui.actionSetPartAssociations" line="2929"/>
+		<extension point="org.eclipse.ui.popupMenus" line="2950"/>
+		<extension point="org.eclipse.ui.editorActions" line="2973"/>
+		<extension point="org.eclipse.ui.popupMenus" line="3020"/>
+		<extension point="org.eclipse.ui.workingSets" line="3038"/>
+		<extension point="org.eclipse.ui.workingSets" line="3050"/>
+		<extension point="org.eclipse.ui.contexts" line="3063"/>
+		<extension point="org.eclipse.ui.commands" line="3073"/>
+		<extension point="org.eclipse.ui.bindings" line="3857"/>
+		<extension point="org.eclipse.ui.ide.markerResolution" line="4368"/>
+		<extension point="org.eclipse.ui.ide.markerResolution" line="4375"/>
+		<extension point="org.eclipse.ui.ide.markerSupport" line="4382"/>
+		<extension point="org.eclipse.jdt.ui.javaElementFilters" line="4457"/>
+		<extension point="org.eclipse.ui.views" line="4821"/>
+		<extension point="org.eclipse.ui.editors.templates" line="4835"/>
+		<extension point="org.eclipse.core.expressions.propertyTesters" line="4860"/>
+		<extension point="org.eclipse.ltk.ui.refactoring.statusContextViewers" line="4870"/>
+		<extension point="org.eclipse.ltk.ui.refactoring.changePreviewViewers" line="4883"/>
+		<extension point="org.eclipse.ltk.core.refactoring.refactoringContributions" line="4894"/>
+		<extension point="org.eclipse.ui.views" line="5002"/>
+		<extension point="org.eclipse.ui.views" line="5012"/>
+		<extension point="org.eclipse.jdt.ui.classpathContainerPage" line="5025"/>
+		<extension point="org.eclipse.ui.popupMenus" line="5034"/>
+		<extension point="org.eclipse.jdt.ui.foldingStructureProviders" line="5050"/>
+		<extension point="org.eclipse.debug.core.launchConfigurationTypes" line="5059"/>
+		<extension point="org.eclipse.ui.workbench.texteditor.spellingEngine" line="5069"/>
+		<extension point="org.eclipse.core.runtime.preferences" line="5079"/>
+		<extension point="org.eclipse.core.resources.modelProviders" id="modelProvider" name="%JavaModelProvider.name" line="5086"/>
+		<extension point="org.eclipse.core.runtime.adapters" line="5096"/>
+		<extension point="org.eclipse.team.ui.teamContentProviders" id="jdtContentProvider" line="5117"/>
+		<extension point="org.eclipse.ui.navigator.viewer" line="5125"/>
+		<extension point="org.eclipse.ui.navigator.navigatorContent" line="5136"/>
+		<extension point="org.eclipse.ui.navigator.viewer" line="5189"/>
+		<extension point="org.eclipse.ui.navigator.navigatorContent" line="5201"/>
+		<extension point="org.eclipse.ui.navigator.linkHelper" line="5542"/>
+	</bundle>
+	<bundle bundleID="102" schema="3.0">
+		<extension point="org.eclipse.help.toc" line="16"/>
+		<extension point="org.eclipse.help.toc" line="25"/>
+		<extension point="org.eclipse.help.contexts" line="36"/>
+		<extension point="org.eclipse.help.contexts" line="40"/>
+		<extension point="org.eclipse.help.contexts" line="44"/>
+		<extension point="org.eclipse.help.contexts" line="48"/>
+		<extension point="org.eclipse.help.contexts" line="52"/>
+		<extension point="org.eclipse.help.contexts" line="56"/>
+		<extension point="org.eclipse.help.contexts" line="60"/>
+		<extension point="org.eclipse.help.contexts" line="64"/>
+		<extension point="org.eclipse.help.contexts" line="68"/>
+		<extension point="org.eclipse.help.contexts" line="72"/>
+		<extension point="org.eclipse.help.contexts" line="76"/>
+		<extension point="org.eclipse.help.contexts" line="80"/>
+		<extension point="org.eclipse.help.contexts" line="84"/>
+		<extension point="org.eclipse.help.contexts" line="88"/>
+		<extension point="org.eclipse.help.contexts" line="92"/>
+		<extension point="org.eclipse.help.contexts" line="96"/>
+		<extension point="org.eclipse.help.contentProducer" line="105"/>
+		<extension point="org.eclipse.help.base.luceneSearchParticipants" line="110"/>
+	</bundle>
+	<bundle bundleID="104" schema="3.0">
+		<extension-point id="applications" name="%applicationsName" schema="schema/applications.exsd" line="4"/>
+		<extension-point id="products" name="%productsName" schema="schema/products.exsd" line="5"/>
+		<extension-point id="adapters" name="%adaptersName" schema="schema/adapters.exsd" line="6"/>
+		<extension-point id="preferences" name="%preferencesName" schema="schema/preferences.exsd" line="7"/>
+		<extension-point id="contentTypes" name="%contentTypesName" schema="schema/contentTypes.exsd" line="8"/>
+		<extension-point id="initializers" name="%initializersName" schema="schema/initializers.exsd" line="9"/>
+		<extension point="org.eclipse.core.runtime.applications" id="initializer" name="%initializerApp" line="11"/>
+		<extension point="org.eclipse.core.runtime.initializers" id="fileInitializer" line="16"/>
+	</bundle>
+	<bundle bundleID="107" schema="3.0">
+		<extension-point id="fetchFactories" name="%fetchFactories.name" schema="schema/fetchFactories.exsd" line="4"/>
+		<extension point="org.eclipse.ant.core.antTasks" line="7"/>
+		<extension point="org.eclipse.ant.core.extraClasspathEntries" line="67"/>
+		<extension point="org.eclipse.update.core.siteTypes" id="buildtimesite" line="74"/>
+		<extension point="org.eclipse.update.core.featureTypes" id="BuildTimeFeatureFactory" line="81"/>
+		<extension point="org.eclipse.core.runtime.applications" id="Build" line="88"/>
+		<extension point="org.eclipse.pde.build.fetchFactories" line="95"/>
+		<extension point="org.eclipse.ant.core.antProperties" line="105"/>
+	</bundle>
+</extensions>

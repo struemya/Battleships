@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<launchConfiguration type="org.eclipse.pde.ui.RuntimeWorkbench">
+  <stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+  <stringAttribute key="templateConfig" value="${target_home}/configuration/config.ini"/>
+  <booleanAttribute key="org.eclipse.debug.ui.ATTR_LAUNCH_IN_BACKGROUND" value="true"/>
+  <booleanAttribute key="includeOptional" value="true"/>
+  <stringAttribute key="checked" value="[NONE]"/>
+  <booleanAttribute key="clearws" value="false"/>
+  <booleanAttribute key="askclear" value="true"/>
+  <booleanAttribute key="usefeatures" value="false"/>
+  <stringAttribute key="bootstrap" value=""/>
+  <booleanAttribute key="clearConfig" value="false"/>
+  <booleanAttribute key="tracing" value="false"/>
+  <stringAttribute key="product" value="org.eclipse.sdk.ide"/>
+  <stringAttribute key="pde.version" value="3.2a"/>
+  <booleanAttribute key="default" value="true"/>
+  <stringAttribute key="location" value="${workspace_loc}/../runtime-New_configuration(1)"/>
+  <booleanAttribute key="useDefaultConfigArea" value="true"/>
+  <booleanAttribute key="useDefaultConfig" value="true"/>
+  <booleanAttribute key="automaticAdd" value="true"/>
+  <booleanAttribute key="useProduct" value="true"/>
+</launchConfiguration>

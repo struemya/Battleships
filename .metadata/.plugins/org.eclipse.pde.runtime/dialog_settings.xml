@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.pde.internal.runtime.logview.LogView">
+		<item key="limit" value="50"/>
+		<item key="error" value="true"/>
+		<item key="warning" value="true"/>
+		<item key="useLimit" value="true"/>
+		<item key="allSessions" value="true"/>
+		<item key="info" value="true"/>
+	</section>
+</section>

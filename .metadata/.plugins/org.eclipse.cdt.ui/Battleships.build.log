@@ -1,0 +1,12 @@
+
+**** Build of configuration Debug for project Battleships ****
+
+make 
+cp: cannot stat `/home/nds/files/Project/workspace/Battleships/build/../precompiled/*': No such file or directory
+linking Battleships.elf
+built ... Battleships.arm9
+
+ndstool -c /home/nds/files/Project/workspace/Battleships/Battleships.nds -9 /home/nds/files/Project/workspace/Battleships/Battleships.arm9 -b /opt/devkitPro/libnds/icon.bmp "Battleships;www.devkitpro.org;www.drunkencoders.com" 
+Nintendo DS rom tool 1.40 - Apr 13 2009
+by Rafael Vuijk, Dave Murphy, Alexei Karpenko
+built ... Battleships.nds

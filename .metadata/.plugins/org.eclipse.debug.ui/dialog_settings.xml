@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="org.eclipse.debug.ui.SELECT_LAUNCHERS_DIALOG">
+		<item value="463" key="DIALOG_WIDTH"/>
+		<item value="20" key="DIALOG_Y_ORIGIN"/>
+		<item value="204" key="DIALOG_X_ORIGIN"/>
+		<item value="555" key="DIALOG_HEIGHT"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.debug.ui.LAUNCH_CONFIGURATION_PROPERTIES_DIALOG_SECTION">
+		<item value="814" key="DIALOG_WIDTH"/>
+		<item value="0" key="DIALOG_Y_ORIGIN"/>
+		<item value="26" key="DIALOG_X_ORIGIN"/>
+		<item value="689" key="DIALOG_HEIGHT"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="org.eclipse.debug.ui.LAUNCH_CONFIGURATIONS_DIALOG_SECTION">
+		<item value="1047" key="DIALOG_WIDTH"/>
+		<item value="14" key="DIALOG_Y_ORIGIN"/>
+		<item value="org.eclipse.ui.externaltools.ProgramLaunchConfigurationType, org.eclipse.pde.ui.RuntimeWorkbench, org.eclipse.cdt.launch.applicationLaunchType, " key="org.eclipse.debug.ui.EXPANDED_NODES"/>
+		<item value="113" key="DIALOG_X_ORIGIN"/>
+		<item value="752" key="DIALOG_HEIGHT"/>
+		<item value="298" key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_1"/>
+		<item value="1|Sans|11.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+		<item value="701" key="org.eclipse.debug.ui.DIALOG_SASH_WEIGHTS_2"/>
+	</section>
+	<section name="ExportLaunchConfigurations">
+		<item value="/home/ruben/NDS/workspace" key="import_config_oldpath"/>
+		<item value="false" key="overwrite"/>
+		<item value="false" key="import_config_overwrite"/>
+		<item value="/home/ruben/NDS/workspace" key="oldpath"/>
+	</section>
+	<section name="org.eclipse.debug.ui.SELECT_CONFIGURATION_TYPE_DIALOG">
+		<item value="350" key="DIALOG_WIDTH"/>
+		<item value="64" key="DIALOG_Y_ORIGIN"/>
+		<item value="230" key="DIALOG_X_ORIGIN"/>
+		<item value="350" key="DIALOG_HEIGHT"/>
+		<item value="1|Sans|10.0|0|GTK|1|" key="DIALOG_FONT_NAME"/>
+	</section>
+</section>

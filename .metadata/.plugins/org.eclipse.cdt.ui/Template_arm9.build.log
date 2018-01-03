@@ -1,0 +1,6 @@
+
+**** Build of configuration Debug for project Template_arm9 ****
+
+make 
+cp: cannot stat `/home/nds/files/Project/workspace/Template_arm9/build/../precompiled/*': No such file or directory
+make[1]: `/home/nds/files/Project/workspace/Template_arm9/Template_arm9.nds' is up to date.
