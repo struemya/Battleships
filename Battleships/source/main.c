@@ -5,6 +5,8 @@
 
 #include <nds.h>
 #include <stdio.h>
+#include "WiFi_minilib.h"
+
 
 int main(void) {
 	
