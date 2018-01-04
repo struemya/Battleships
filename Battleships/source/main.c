@@ -11,7 +11,21 @@
 int main(void) {
 	
     consoleDemoInit();
-    printf("\nHello World!\n");
+
+    //Initialize WiFi
+    if(initWiFi())
+    	printf("WiFi initialised!\n");
+    else
+    	printf("WiFi initialisation error\n");
+
+    //Open Socket
+    if(openSocket())
+    	printf("Socket open!\n");
+    else
+    	printf("Socket error\n");
+
+
+
 
     while(1)
         swiWaitForVBlank();	
