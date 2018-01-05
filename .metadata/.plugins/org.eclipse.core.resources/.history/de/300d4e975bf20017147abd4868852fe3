@@ -41,7 +41,7 @@ void tryToFlip(Ship* ship) {
 int isTooClose(Gameboard* gameboard, Ship* ship) {
 			int overlapping;
 			int i;
-			for(i=0;i<gameboard->shipCount-1;i++){
+			for(i=0;i<gameboard->shipCount;i++){
 				overlapping = isOverlapping(gameboard->ships[i],ship);
 				if(overlapping) return overlapping;
 			}

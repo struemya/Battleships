@@ -60,11 +60,8 @@ void Gameplay_handleInput(enum ACTION a)
             x--;
             break;
         case SELECT:
-        	if (!isTooClose(gameboard, activeShip)) {
-        		placeShips();
-        		return;
-        	}
-
+        	if (!isTooClose(activeShip)) placeShips();
+        	return;
             break;
         case FLIP:
              tryToFlip(activeShip);

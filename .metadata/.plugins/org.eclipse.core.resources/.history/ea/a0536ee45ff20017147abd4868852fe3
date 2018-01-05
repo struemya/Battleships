@@ -67,7 +67,7 @@ int minDistance(Ship* ship, int x, int y) {
 
 		int xMargin =abs(shipX-x);
 		int yMargin =abs(shipY-y);
-		if (xMargin <= 1 && yMargin <=1) temp = 0;
+		if (xMargin <= 1 || yMargin <=1) temp = 0;
 		else temp =xMargin+yMargin;
 		distance =min(temp, distance);
 		incrementShipCoordinates(ship->horizontal, &shipX, &shipY);

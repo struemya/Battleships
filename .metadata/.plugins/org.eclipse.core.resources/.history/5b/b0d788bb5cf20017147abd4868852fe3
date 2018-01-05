@@ -31,6 +31,5 @@ void incrementShipCoordinates(int horizontal, int* shipX,int* shipY);
 void drawShip(Ship* ship);
 int absMin(int a, int b);
 int abs(int a);
-int min(int a, int b);
 
 #endif /* SHIP_H_ */

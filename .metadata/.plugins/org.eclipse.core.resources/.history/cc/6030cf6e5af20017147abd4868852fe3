@@ -38,18 +38,9 @@ void tryToFlip(Ship* ship) {
 		flip(ship);
 	}
 }
-int isTooClose(Gameboard* gameboard, Ship* ship) {
-			int overlapping;
-			int i;
-			for(i=0;i<gameboard->shipCount-1;i++){
-				overlapping = isOverlapping(gameboard->ships[i],ship);
-				if(overlapping) return overlapping;
-			}
-			return 0;
-}
 void tryToMoveShipTo(Gameboard* gameboard, Ship* ship, int x, int y){
 	if(originDistance(ship,x,y)==1) {
-
+		int i;
 
 		if(x>=0 && y>=0) {
 			if((ship->horizontal && x<=10-ship->length && y<10) ||
@@ -61,7 +52,15 @@ void tryToMoveShipTo(Gameboard* gameboard, Ship* ship, int x, int y){
 
 
 	}
+int isTooClose(Gameboard* gameboard, Ship* ship) {
+			int overlapping;
 
+			for(i=0;i<gameboard->shipCount;i++){
+				overlapping = isOverlapping(gameboard->ships[i],ship);
+				if(overlapping) return overlapping;
+			}
+			return 0;
+}
 
 void drawBoard(Gameboard* gameboard) {
 	int i;

@@ -46,7 +46,7 @@ int isOverlapping(Ship* ship1, Ship* ship2) {
 		int i =0;
 		while(i<ship2->length) {
 			distance = minDistance(ship1,shipX,shipY);
-			if (distance==0) { //two ships cannot touch each other, hence they need a distance of at least 2
+			if (distance<=1) { //two ships cannot touch each other, hence they need a distance of at least 2
 				return 1;
 			}
 			incrementShipCoordinates(ship2->horizontal, &shipX, &shipY);
@@ -56,7 +56,7 @@ int isOverlapping(Ship* ship1, Ship* ship2) {
 		return 0;
 }
 
-int minDistance(Ship* ship, int x, int y) {
+minDistance(Ship* ship, int x, int y) {
 	int i=0;
 	int distance=10;
 	int temp;
@@ -67,7 +67,7 @@ int minDistance(Ship* ship, int x, int y) {
 
 		int xMargin =abs(shipX-x);
 		int yMargin =abs(shipY-y);
-		if (xMargin <= 1 && yMargin <=1) temp = 0;
+		if (xMargin <= 1 || yMargin <=1) temp = 0;
 		else temp =xMargin+yMargin;
 		distance =min(temp, distance);
 		incrementShipCoordinates(ship->horizontal, &shipX, &shipY);
