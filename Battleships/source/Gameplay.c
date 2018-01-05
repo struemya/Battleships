@@ -9,15 +9,27 @@
 
 Gameboard* gameboard;
 Ship* activeShip;
-
+int count =0;
+int lengths[10]={2,2,2,2,3,3,4,4,5};
 
 void placeShips() {
-Ship* ship =new_Ship(2);
-activeShip =ship;
-addShip(gameboard,activeShip);
-draw(gameboard);
-//tryToMoveShipTo(gameboard,activeShip,2,0);
+Ship* ship =new_Ship(lengths[count++]);
+
+addShip(gameboard,ship);
+
+//tryToMoveShipTo(gameboard,ship,0,1);
+//tryToMoveShipTo(gameboard,ship,0,2);
 //draw(gameboard);
+activeShip =ship;
+
+/*
+Ship* ship2 =new_Ship(3);
+
+addShip(gameboard,ship2);
+tryToMoveShipTo(gameboard,ship2,1,0);
+tryToMoveShipTo(gameboard,ship,0,3);*/
+draw(gameboard);
+
 
 
 
@@ -49,7 +61,11 @@ void Gameplay_handleInput(enum ACTION a)
             break;
         case SELECT:
         	placeShips();
-            return;
+        	return;
+            break;
+        case FLIP:
+             tryToFlip(activeShip);
+             break;
         default:
             break;
 

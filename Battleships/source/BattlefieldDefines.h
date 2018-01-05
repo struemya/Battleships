@@ -15,5 +15,6 @@ enum ACTION
     UP,
     RIGHT,
     SELECT,
+    FLIP
 };
 #endif

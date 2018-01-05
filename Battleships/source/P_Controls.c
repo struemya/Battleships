@@ -18,5 +18,6 @@ void handleInput()
 		else if(keys & KEY_LEFT) Gameplay_handleInput(LEFT);
 		else if(keys & KEY_RIGHT) Gameplay_handleInput(RIGHT);
 		else if(keys & KEY_A) Gameplay_handleInput(SELECT);
+		else if(keys & KEY_B) Gameplay_handleInput(FLIP);
 
 }

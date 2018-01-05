@@ -3,8 +3,14 @@
 
 make 
 cp: cannot stat `/home/nds/files/Project/workspace/Battleships/build/../precompiled/*': No such file or directory
+Gameboard.c
+arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/Gameboard.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/Gameboard.c -o Gameboard.o
 Gameplay.c
 arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/Gameplay.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/Gameplay.c -o Gameplay.o
+main.c
+arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/main.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/main.c -o main.o
+P_Controls.c
+arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/P_Controls.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/P_Controls.c -o P_Controls.o
 linking Battleships.elf
 built ... Battleships.arm9
 

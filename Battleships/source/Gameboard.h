@@ -23,6 +23,7 @@ void clearBoard();
 void drawBoard(Gameboard* gameboard);
 void addShip(Gameboard* gameboard, Ship* ship);
 void tryToMoveShipTo(Gameboard* gameboard, Ship* ship, int x, int y);
+void tryToFlip(Ship* ship);
 void draw(Gameboard* gameboard);
 #endif
 
