@@ -1,0 +1,16 @@
+/*
+ * Gameplay.c
+ *
+ *  Created on: Jan 5, 2018
+ *      Author: nds
+ */
+#include "Gameplay.h"
+
+Gameboard* gameboard;
+void placeShips() {
+Ship* ship1 =new_Ship(2);
+handleInput();
+}
+void initGameboard(){
+	gameboard =new_Gameboard();
+}

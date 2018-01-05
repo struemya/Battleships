@@ -1,0 +1,24 @@
+/*
+ * Gameboard.c
+ *
+ *  Created on: Jan 5, 2018
+ *      Author: nds
+ */
+
+void addShip(Ship ship, int x, int y) {
+	ships[shipCount] =ship;
+	shipCount++;
+}
+void tryToMoveShipTo(Ship ship, int x, int y){
+	if(originDistance(ship,x,y)==1) {
+		int i;
+		bool overlapping;
+
+		for(i=0;i<shipCount;i++){
+			overlapping = isOverlapping(ships[i],ship);
+			if (overlapping) return;
+		}
+		ship.xOrigin =x;
+		ship.yOrigin =y;
+	}
+}

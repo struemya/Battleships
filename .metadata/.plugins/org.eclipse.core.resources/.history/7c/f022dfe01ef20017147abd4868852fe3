@@ -1,0 +1,19 @@
+/*
+ * Gameboard.h
+ *
+ *  Created on: Jan 5, 2018
+ *      Author: nds
+ */
+#include "Ship.h"
+
+typedef struct Gameboard Gameboard;
+
+struct Gameboard {
+	Ship ships[10];
+	int shipCount=0;
+};
+
+void addShip(Gameboard gameboard, int x, int y);
+void tryToMoveShipTo(Gameboard gameboard, Ship ship, int x, int y);
+
+

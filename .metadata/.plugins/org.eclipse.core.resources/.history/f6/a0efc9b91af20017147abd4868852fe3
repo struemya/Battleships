@@ -1,0 +1,18 @@
+/*
+ * Gameboard.c
+ *
+ *  Created on: Jan 5, 2018
+ *      Author: nds
+ */
+
+void addShip(int x, int y) {
+
+}
+void tryToMoveShipTo(Ship ship, int x, int y){
+	if(originDistance(ship,x,y)==1) {
+		int i;
+		for(i=0,i<shipCount,i++){
+			ships[i]
+		}
+	}
+}

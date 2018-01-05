@@ -48,7 +48,13 @@ P_Controls.o:  \
   /opt/devkitPro/libnds/include/nds/arm9/videoGL.h \
   /opt/devkitPro/libnds/include/nds/arm9/sprite.h \
   /opt/devkitPro/libnds/include/nds/system.h \
-  /opt/devkitPro/libnds/include/nds/arm9/decompress.h
+  /opt/devkitPro/libnds/include/nds/arm9/decompress.h \
+  /home/nds/files/Project/workspace/Battleships/source/BattlefieldDefines.h \
+  /home/nds/files/Project/workspace/Battleships/source/Gameplay.h \
+  /home/nds/files/Project/workspace/Battleships/source/Ship.h \
+  /home/nds/files/Project/workspace/Battleships/source/Gameboard.h \
+  /home/nds/files/Project/workspace/Battleships/source/P_Map10x10.h \
+  /home/nds/files/Project/workspace/Battleships/source/P_Graphics.h
 
 /home/nds/files/Project/workspace/Battleships/source/P_Controls.h:
 
@@ -147,3 +153,15 @@ P_Controls.o:  \
 /opt/devkitPro/libnds/include/nds/system.h:
 
 /opt/devkitPro/libnds/include/nds/arm9/decompress.h:
+
+/home/nds/files/Project/workspace/Battleships/source/BattlefieldDefines.h:
+
+/home/nds/files/Project/workspace/Battleships/source/Gameplay.h:
+
+/home/nds/files/Project/workspace/Battleships/source/Ship.h:
+
+/home/nds/files/Project/workspace/Battleships/source/Gameboard.h:
+
+/home/nds/files/Project/workspace/Battleships/source/P_Map10x10.h:
+
+/home/nds/files/Project/workspace/Battleships/source/P_Graphics.h:

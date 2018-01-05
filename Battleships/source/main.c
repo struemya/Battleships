@@ -5,12 +5,22 @@
 
 #include <nds.h>
 #include <stdio.h>
+#include "P_Initializer.h"
+#include "Gameplay.h"
+
 
 int main(void) {
 	
-    consoleDemoInit();
-    P_InitNDS();
 
-    while(1)
-        swiWaitForVBlank();	
+    consoleDemoInit();
+    printf("Start");
+    P_InitNDS();
+    initGameboard();
+    placeShips();
+    while(1) {
+    		handleInput();
+    		swiWaitForVBlank();
+    	}
+
+
 }

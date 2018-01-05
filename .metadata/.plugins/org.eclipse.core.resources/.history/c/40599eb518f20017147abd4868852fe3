@@ -1,0 +1,11 @@
+/*
+ * Gameboard.h
+ *
+ *  Created on: Jan 5, 2018
+ *      Author: nds
+ */
+
+void addShip(int x, int y);
+void tryToMoveShipTo(int x, int y);
+
+

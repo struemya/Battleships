@@ -1,0 +1,14 @@
+/*
+ * Gameboard.h
+ *
+ *  Created on: Jan 5, 2018
+ *      Author: nds
+ */
+#include "Ship.h"
+
+Ship ships[10];
+int shipCount=0;
+void addShip(int x, int y);
+void tryToMoveShipTo(Ship ship, int x, int y);
+
+
