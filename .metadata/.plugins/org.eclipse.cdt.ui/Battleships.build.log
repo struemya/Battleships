@@ -3,14 +3,4 @@
 
 make 
 cp: cannot stat `/home/nds/files/Project/workspace/Battleships/build/../precompiled/*': No such file or directory
-main.c
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/main.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/main.c -o main.o
-/home/nds/files/Project/workspace/Battleships/source/main.c: In function 'main':
-/home/nds/files/Project/workspace/Battleships/source/main.c:12: warning: implicit declaration of function 'P_InitNDS'
-linking Battleships.elf
-built ... Battleships.arm9
-
-ndstool -c /home/nds/files/Project/workspace/Battleships/Battleships.nds -9 /home/nds/files/Project/workspace/Battleships/Battleships.arm9 -b /opt/devkitPro/libnds/icon.bmp "Battleships;www.devkitpro.org;www.drunkencoders.com" 
-Nintendo DS rom tool 1.40 - Apr 13 2009
-by Rafael Vuijk, Dave Murphy, Alexei Karpenko
-built ... Battleships.nds
+make[1]: `/home/nds/files/Project/workspace/Battleships/Battleships.nds' is up to date.

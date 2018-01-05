@@ -4,12 +4,12 @@
 @=======================================================================
 @
 @	background, 256x192@8, 
-@	+ palette 256 entries, not compressed
+@	+ palette 253 entries, not compressed
 @	+ 81 tiles (t|f reduced) not compressed
 @	+ regular map (flat), not compressed, 32x24 
-@	Total size: 512 + 5184 + 1536 = 7232
+@	Total size: 506 + 5184 + 1536 = 7226
 @
-@	Time-stamp: 2018-01-03, 17:46:07
+@	Time-stamp: 2018-01-05, 12:13:35
 @	Exported by Cearn's GBA Image Transmogrifier, v0.8.3
 @	( http://www.coranac.com/projects/#grit )
 @
@@ -316,7 +316,7 @@ backgroundMap:
 
 	.section .rodata
 	.align	2
-	.global backgroundPal		@ 512 unsigned chars
+	.global backgroundPal		@ 508 unsigned chars
 backgroundPal:
 	.hword 0x72C3,0x121F,0x7FFF,0x6EC8,0x3659,0x5292,0x5A90,0x76E0
 	.hword 0x263C,0x5EAE,0x3E77,0x4E74,0x6ACA,0x2E5A,0x1E3D,0x4676
@@ -352,6 +352,6 @@ backgroundPal:
 	.hword 0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000
 	.hword 0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000
 	.hword 0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000
-	.hword 0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000,0x0000
+	.hword 0x0000,0x0000,0x0000,0x0000,0x0000
 
 @}}BLOCK(background)

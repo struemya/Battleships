@@ -49,7 +49,7 @@ P_Initializer.o:  \
   /opt/devkitPro/libnds/include/nds/arm9/sprite.h \
   /opt/devkitPro/libnds/include/nds/system.h \
   /opt/devkitPro/libnds/include/nds/arm9/decompress.h \
-  /home/nds/files/Project/workspace/Battleships/source/P_Map16x16.h \
+  /home/nds/files/Project/workspace/Battleships/source/P_Map10x10.h \
   /home/nds/files/Project/workspace/Battleships/source/P_Graphics.h
 
 /home/nds/files/Project/workspace/Battleships/source/P_Initializer.h:
@@ -150,6 +150,6 @@ P_Initializer.o:  \
 
 /opt/devkitPro/libnds/include/nds/arm9/decompress.h:
 
-/home/nds/files/Project/workspace/Battleships/source/P_Map16x16.h:
+/home/nds/files/Project/workspace/Battleships/source/P_Map10x10.h:
 
 /home/nds/files/Project/workspace/Battleships/source/P_Graphics.h:
