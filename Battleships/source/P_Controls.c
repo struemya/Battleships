@@ -23,6 +23,9 @@ void handleInput()
 		else if(keys & KEY_RIGHT) Gameplay_handleInput(RIGHT);
 		else if(keys & KEY_A) Gameplay_handleInput(SELECT);
 		else if(keys & KEY_B) Gameplay_handleInput(FLIP);
+
+
+
 		break;
 	case WAIT:
 		break;
@@ -33,13 +36,13 @@ void handleInput()
 		if(touch.px | touch.py) {
 			int x = touch.px;
 			int y = touch.py;
-			x = x % 32; //get Tile number
-			y = y % 32;
+			x = x / 8; //get Tile number
+			y = y / 8;
 			x = x - 7;
 			y = y - 3;
 			x = x / 2;
 			y = y / 2;
-
+			Gameplay_handle_attack(x,y);
 
 
 		}

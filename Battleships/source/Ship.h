@@ -15,7 +15,7 @@
 	int yOrigin;
 	int horizontal;
 	int length;
-	int* cellsDamaged; // [0,1,0,0,0] means that the second cell of the ship was hit
+	int cellsDamaged[5]; // [0,1,0,0,0] means that the second cell of the ship was hit
 	int destroyed;
 
 }Ship;

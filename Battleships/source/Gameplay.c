@@ -36,7 +36,10 @@ draw(gameboard);
 
 }
 void Gameplay_handle_attack(int x, int y) {
+	int res = attackBoard(gameboard,x,y);
 
+	SetSubMap10x10To(getIndex(x,y),1+res);
+	draw(gameboard);
 }
 
 void initGameboard(){
@@ -67,7 +70,7 @@ void Gameplay_handleInput(enum ACTION a)
         case SELECT:
         	if (!isTooClose(gameboard, activeShip)) {
 
-        		if(count==10) { //all ships placed
+        		if(count==9) { //all ships placed
         			nextState();
         			nextState();//skip Wait state
         		} else {

@@ -64,7 +64,8 @@ void P_Map10x10_configureBG3_Sub() {
 		swiCopy(backgroundMap, BG_MAP_RAM_SUB(26), backgroundMapLen);
 		swiCopy(backgroundPal, BG_PALETTE_SUB, backgroundPalLen);
 }
-void P_Map10x10_configureBG0_Sub() {BGCTRL[0] = BG_32x32 | BG_COLOR_256 | BG_MAP_BASE(25) | BG_TILE_BASE(4);
+void P_Map10x10_configureBG0_Sub() {
+	BGCTRL_SUB[0] = BG_32x32 | BG_COLOR_256 | BG_MAP_BASE(25) | BG_TILE_BASE(4);
 
 
 dmaCopy(emptyTile, (u8*)BG_TILE_RAM_SUB(4), 64);
@@ -180,7 +181,27 @@ void P_Map10x10_Init( int cols, int rows )
 #endif
 }
 
+void SetSubMap10x10To(int index10, int tileIndex){
 
+    //switch x and y
+    int x = index10 % MapCols;
+    int y = index10 / MapCols;
+    //now inverse x
+    //y = -(y-MapRows+1);
+    //index16 = x * MapRows + y;
+
+
+int value = tileIndex;
+
+
+//10x10->32*32 CONVERSION
+int index32;
+index32 =  x*2+7 + (y*2+3)*32;
+mapMemory_SUB[index32] = value;
+mapMemory_SUB[index32+1] = value;
+mapMemory_SUB[index32+32] = value;
+mapMemory_SUB[index32+32+1] = value;
+}
  void SetMap10x10To(int index10, int tileIndex)
  {
 	    //switch x and y

@@ -34,4 +34,6 @@ void P_Map10x10_configureBG2_Sub();
 void P_Map10x10_configureBG0();
 void P_Map10x10_configureBG3();
 void SetMap10x10To(int index10, int tileIndex);
+void SetSubMap10x10To(int index10, int tileIndex);
+int getIndex(int x, int y);
 

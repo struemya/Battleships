@@ -12,6 +12,8 @@ Ship* new_Ship(int length) {
 	ship->xOrigin =0;
 	ship->yOrigin =0;
 	ship->horizontal=1;
+	//ship->cellsDamaged = (int*) malloc(sizeof(int)*length);
+
 	int i =0;
 	for(i=0;i<length;i++) {
 		ship->cellsDamaged[i] =0;
@@ -28,16 +30,19 @@ void flip(Ship* ship) {
 }
 int attackShip(Ship* ship, int x, int y) {
 	int offset;
-	if (minDistance(ship, x, y)==0) {
-		if (x==(ship->xOrigin)) {
-			offset =abs(ship->yOrigin-y);
+	int i;
+	int shipX = ship->xOrigin;
+	int shipY = ship->yOrigin;
+
+	for(i=0;i<ship->length;i++) {
+		if(shipX==x && shipY==y) {
+			ship->cellsDamaged[i] =1;
+			return 1;
 		}
-		else offset =abs(ship->xOrigin-x);
-		ship->cellsDamaged[offset] =1;
-		return 1;
-	} else {
-		return 0;
+		incrementShipCoordinates(ship->horizontal,&shipX,&shipY);
 	}
+	return 0;
+
 }
 int isOverlapping(Ship* ship1, Ship* ship2) {
 		int shipX =ship2->xOrigin;
@@ -46,7 +51,7 @@ int isOverlapping(Ship* ship1, Ship* ship2) {
 		int i =0;
 		while(i<ship2->length) {
 			distance = minDistance(ship1,shipX,shipY);
-			if (distance==0) { //two ships cannot touch each other, hence they need a distance of at least 2
+			if (distance<=1) { //two ships cannot touch each other, hence they need a distance of at least 2
 				return 1;
 			}
 			incrementShipCoordinates(ship2->horizontal, &shipX, &shipY);
@@ -67,7 +72,7 @@ int minDistance(Ship* ship, int x, int y) {
 
 		int xMargin =abs(shipX-x);
 		int yMargin =abs(shipY-y);
-		if (xMargin <= 1 && yMargin <=1) temp = 0;
+		if (xMargin == 1 && yMargin ==1) temp = 1;
 		else temp =xMargin+yMargin;
 		distance =min(temp, distance);
 		incrementShipCoordinates(ship->horizontal, &shipX, &shipY);
@@ -91,7 +96,8 @@ int absMin(int a, int b) {
 	return min(a,b);
 }
 int min(int a, int b) {
-	return a<b?a:b;
+	if (a < b) return a;
+	else return b;
 }
 int abs(int a) {
 	if (a<0) return -a;

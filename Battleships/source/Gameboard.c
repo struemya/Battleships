@@ -31,12 +31,14 @@ void draw(Gameboard* gameboard) {
 		drawShip(gameboard->ships[i]);
 	}
 }
-void attackBoard(Gameboard* gameboard, int x, int y) {
+int attackBoard(Gameboard* gameboard, int x, int y) {
 	int i;
-
+	int res;
 	for(i=0;i<gameboard->shipCount;i++){
-		attackShip(gameboard->ships[i],x,y);
+		res = attackShip(gameboard->ships[i],x,y);
+		if(res) return res;
 	}
+	return 0;
 }
 void tryToFlip(Ship* ship) {
 	int x =ship->xOrigin;
