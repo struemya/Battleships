@@ -1,0 +1,32 @@
+/*
+ * Ship.h
+ *
+ *  Created on: Jan 5, 2018
+ *      Author: nds
+ */
+
+#include <stdbool.h>
+#include <stdlib.h>
+
+
+typedef struct {
+	int xOrigin;
+	int yOrigin;
+	bool horizontal;
+	int length;
+	bool* cellsDamaged; // [0,1,0,0,0] means that the second cell of the ship was hit
+	bool destroyed;
+
+} Ship;
+
+
+Ship* new_Ship(int length);
+void flip(Ship* ship);
+bool attack(Ship* ship, int x, int y);
+bool isOverlapping(Ship* ship1, Ship* ship2);
+int minDistance(Ship* ship, int x, int y);
+int originDistance(Ship* ship, int x, int y);
+void incrementShipCoordinates(bool horizontal, int* shipX,int* shipY);
+void drawShip(Ship* ship);
+int absMin(int a, int b);
+int abs(int a);

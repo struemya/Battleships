@@ -1,0 +1,43 @@
+/*
+ * Gameplay.c
+ *
+ *  Created on: Jan 5, 2018
+ *      Author: nds
+ */
+#include "Gameplay.h"
+
+Gameboard* gameboard;
+void placeShips() {
+Ship* ship1 =new_Ship(2);
+handleInput();
+}
+void initGameboard(){
+	gameboard =new_Gameboard();
+}
+
+void Gameplay_handleInput(enum ACTION a)
+{
+
+    switch (a)
+    {
+        case UP:
+            actionToSend = ACTION_ROTATE_L;
+            break;
+        case DOWN:
+            actionToSend = ACTION_ROTATE_R;
+            break;
+        case RIGHT:
+            actionToSend = ACTION_STRAFE_RIGHT;
+            break;
+        case LEFT:
+            actionToSend = ACTION_STRAFE_LEFT;
+            break;
+        case SELECT:
+            actionToSend = ACTION_MAKE_FALL;
+            break;
+        default:
+            break;
+    }
+
+
+}

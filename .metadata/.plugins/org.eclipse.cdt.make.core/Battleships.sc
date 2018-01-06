@@ -4,6 +4,7 @@
 <scannerInfo id="org.eclipse.cdt.make.core.discoveredScannerInfo">
 <instance id="cdt.managedbuild.config.gnu.exe.debug.589563212;cdt.managedbuild.config.gnu.exe.debug.589563212.;cdt.managedbuild.tool.gnu.c.compiler.exe.debug.1761809851;cdt.managedbuild.tool.gnu.c.compiler.input.1239598501">
 <collector id="org.eclipse.cdt.make.core.PerProjectSICollector">
+<includePath path="/home/nds/files/Project/workspace/Battleships/include" removed="true"/>
 <includePath path="/home/nds/files/Project/workspace/Template_arm9/include" removed="true"/>
 <includePath path="/home/nds/Downloads/workspace/Template_arm9/include" removed="true"/>
 <includePath path="/home/nds/test/workspace/Template_arm9/include" removed="true"/>
@@ -15,6 +16,7 @@
 <includePath path="/home/ruben/workspace/Template2/include" removed="true"/>
 <includePath path="/home/ruben/workspace/Template/include" removed="true"/>
 <includePath path="/opt/devkitPro/libnds/include"/>
+<includePath path="/home/nds/files/Project/workspace/Battleships/build"/>
 <includePath path="/home/nds/files/Project/workspace/Template_arm9/build"/>
 <includePath path="/home/nds/Downloads/workspace/Template_arm9/build"/>
 <includePath path="/home/nds/test/workspace/Template_arm9/build"/>

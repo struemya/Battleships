@@ -1,0 +1,42 @@
+/*
+ * Ship.h
+ *
+ *  Created on: Jan 5, 2018
+ *      Author: nds
+ */
+
+struct Ship{
+	int xOrigin;
+	int yOrigin;
+	bool horizontal;
+	int length;
+};
+
+bool isOverlapping(struct Ship ship1, struct Ship ship2) {
+
+}
+
+int minDistance(struct Ship ship, int x, int y) {
+	int i=0;
+	int distance=0;
+	int shipX =ship.xOrigin;
+	int shipY =ship.yOrigin;
+
+	while(i<length) {
+		distance = min(shipX-x, shipY-y);
+		incrementShipCoordinates(ship.horizontal, &shipX, &shipY);
+		i++;
+	}
+}
+void incrementShipCoordinates(bool horizontal, int* shipX,int* shipY) {
+	if (horizontal ==1) {
+		*shipX =*shipX+ 1;
+	} else {
+		*shipY =*shipY+ 1;
+	}
+}
+int absMin(int a, int b) {
+	if (a<0) a=-a;
+	if (b<0) b=-b;
+	return a<b?a:b;
+}
