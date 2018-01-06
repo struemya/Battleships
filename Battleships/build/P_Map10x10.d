@@ -50,7 +50,8 @@ P_Map10x10.o:  \
   /opt/devkitPro/libnds/include/nds/system.h \
   /opt/devkitPro/libnds/include/nds/arm9/decompress.h \
   /home/nds/files/Project/workspace/Battleships/source/P_Graphics.h \
-  /home/nds/files/Project/workspace/Battleships/build/background.h
+  /home/nds/files/Project/workspace/Battleships/build/background.h \
+  /home/nds/files/Project/workspace/Battleships/build/background2.h
 
 /home/nds/files/Project/workspace/Battleships/source/P_Map10x10.h:
 
@@ -153,3 +154,5 @@ P_Map10x10.o:  \
 /home/nds/files/Project/workspace/Battleships/source/P_Graphics.h:
 
 /home/nds/files/Project/workspace/Battleships/build/background.h:
+
+/home/nds/files/Project/workspace/Battleships/build/background2.h:
