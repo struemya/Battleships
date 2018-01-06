@@ -12,8 +12,8 @@
 int main(void) {
 	
 
-    consoleDemoInit();
-    printf("Start");
+   // consoleDemoInit();
+    //printf("Start");
     P_InitNDS();
     initGameboard();
     placeShips();

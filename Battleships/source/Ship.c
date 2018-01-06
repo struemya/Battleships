@@ -104,7 +104,11 @@ void drawShip(Ship* ship) {
 
 	for (i=0;i<ship->length;i++) {
 		int index10 = getIndex(shipX,shipY);
+		if(ship->cellsDamaged[i]==1){
+			SetMap10x10To(index10,2);
+		} else {
 		SetMap10x10To(index10,1);
+		}
 		incrementShipCoordinates(ship->horizontal, &shipX, &shipY);
 	}
 

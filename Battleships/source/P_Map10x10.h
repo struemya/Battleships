@@ -3,6 +3,7 @@
 #include "P_Graphics.h"
 
 u16* mapMemory;
+u16* mapMemory_SUB;
 int MapCols;
 int MapRows;
 
@@ -32,5 +33,5 @@ void P_Map10x10_configureBG2_Sub();
 
 void P_Map10x10_configureBG0();
 void P_Map10x10_configureBG3();
-void SetMap10x10To(int index10, bool full);
+void SetMap10x10To(int index10, int tileIndex);
 

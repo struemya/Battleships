@@ -23,7 +23,8 @@
 
 Ship* new_Ship(int length);
 void flip(Ship* ship);
-int attack(Ship* ship, int x, int y);
+
+int attackShip(Ship* ship, int x, int y);
 int isOverlapping(Ship* ship1, Ship* ship2);
 int minDistance(Ship* ship, int x, int y);
 int originDistance(Ship* ship, int x, int y);

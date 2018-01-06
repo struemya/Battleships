@@ -19,13 +19,24 @@ u8 emptyTile[64] =
 u8 fullTile[64] =
 {
 	255,255,255,255,255,255,255,255,
-	255,254,254,254,254,254,254,255,
-	255,254,255,255,255,255,254,255,
-	255,254,255,255,255,255,254,255,
-	255,254,255,255,255,255,254,255,
-	255,254,255,255,255,255,254,255,
-	255,254,254,254,254,254,254,255,
+	255,255,255,255,255,255,255,255,
+	255,255,255,255,255,255,255,255,
+	255,255,255,255,255,255,255,255,
+	255,255,255,255,255,255,255,255,
+	255,255,255,255,255,255,255,255,
+	255,255,255,255,255,255,255,255,
 	255,255,255,255,255,255,255,255
+};
+u8 destroyedTile[64] =
+{
+	254,254,254,254,254,254,254,254,
+	254,254,254,254,254,254,254,254,
+	254,254,254,254,254,254,254,254,
+	254,254,254,254,254,254,254,254,
+	254,254,254,254,254,254,254,254,
+	254,254,254,254,254,254,254,254,
+	254,254,254,254,254,254,254,254,
+	254,254,254,254,254,254,254,254
 };
 
 
@@ -43,8 +54,29 @@ void P_Map10x10_configureBG2()
     //Initialize pointer to the graphic memory
     //mapMemory = ...
     mapMemory = BG_GFX;
+    mapMemory_SUB = BG_GFX_SUB;
 }
+void P_Map10x10_configureBG3_Sub() {
+	BGCTRL_SUB[3] = BG_32x32 | BG_COLOR_256 | BG_MAP_BASE(26) | BG_TILE_BASE(0);
 
+		//Copy tiles, map and palette in the memory (use swicopy or memcpy)
+		swiCopy(backgroundTiles, BG_TILE_RAM_SUB(0), backgroundTilesLen);
+		swiCopy(backgroundMap, BG_MAP_RAM_SUB(26), backgroundMapLen);
+		swiCopy(backgroundPal, BG_PALETTE_SUB, backgroundPalLen);
+}
+void P_Map10x10_configureBG0_Sub() {BGCTRL[0] = BG_32x32 | BG_COLOR_256 | BG_MAP_BASE(25) | BG_TILE_BASE(4);
+
+
+dmaCopy(emptyTile, (u8*)BG_TILE_RAM_SUB(4), 64);
+dmaCopy(fullTile, (u8*)BG_TILE_RAM_SUB(4) + 64, 64);
+dmaCopy(destroyedTile, (u8*)BG_TILE_RAM_SUB(4) + 128, 64);
+
+BG_PALETTE_SUB[254] = ARGB16(1,31,0,0);
+BG_PALETTE_SUB[255] = ARGB16(1,0,31,0);
+
+
+mapMemory_SUB = (u16*)BG_MAP_RAM_SUB(25);
+}
 void P_Map10x10_configureBG2_Sub()
 {
 	//Configure BG 2 Sub. (Do not forget the BG_BMP_BASE configuration)
@@ -57,8 +89,8 @@ void P_Map10x10_configureBG2_Sub()
     REG_BG2PD_SUB = 256;
 
 
-  //  swiCopy(controlsPal, BG_PALETTE_SUB, controlsPalLen);
-   // swiCopy(controlsBitmap, BG_GFX_SUB, controlsBitmapLen);
+    //swiCopy(controlsPal, BG_PALETTE_SUB, controlsPalLen);
+    //swiCopy(controlsBitmap, BG_GFX_SUB, controlsBitmapLen);
 }
 
 void P_Map10x10_configureBG0()
@@ -88,10 +120,10 @@ void P_Map10x10_configureBG0()
 	//Hint: Use the macro BG_TILE_RAM to get the destination address
 	dmaCopy(emptyTile, (u8*)BG_TILE_RAM(4), 64);
 	dmaCopy(fullTile, (u8*)BG_TILE_RAM(4) + 64, 64);
-
+	dmaCopy(destroyedTile, (u8*)BG_TILE_RAM(4) + 128, 64);
 	//Assign components 254 and 255 as explained in the manual
 	BG_PALETTE[254] = ARGB16(1,31,0,0);
-	BG_PALETTE[255] = ARGB16(1,31,0,0);
+	BG_PALETTE[255] = ARGB16(1,0,31,0);
 
 	//Set the pointer mapMemory to the RAM location of the chosen MAP_BASE
 	//Hint: use the macro BG_MAP_RAM
@@ -143,12 +175,13 @@ void P_Map10x10_Init( int cols, int rows )
     //Configure BG0 for game
     P_Map10x10_configureBG0();
     // Configure Bottom background
-    //P_Map10x10_configureBG2_Sub();
+    P_Map10x10_configureBG3_Sub();
+    P_Map10x10_configureBG0_Sub();
 #endif
 }
 
 
- void SetMap10x10To(int index10, bool full)
+ void SetMap10x10To(int index10, int tileIndex)
  {
 	    //switch x and y
 	    int x = index10 % MapCols;
@@ -158,7 +191,7 @@ void P_Map10x10_Init( int cols, int rows )
 	    //index16 = x * MapRows + y;
 
 
-    int value = full ? 1 : 0;
+    int value = tileIndex;
 
 
     //10x10->32*32 CONVERSION
