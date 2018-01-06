@@ -15,7 +15,7 @@ int main(void) {
 
     consoleDemoInit();
 
-    //Initialize WiFi
+    //Initialise WiFi
     if(initWiFi())
     	printf("WiFi initialised!\n");
     else

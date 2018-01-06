@@ -11,7 +11,7 @@ int socket_id;
 
 
 // Flags indicating whether the WiFi or the
-// socket has been initialized
+// socket has been initialised
 
 bool socket_opened = false;
 bool WiFi_initialized = false;
@@ -19,7 +19,7 @@ bool WiFi_initialized = false;
 
 int initWiFi()
 {
-	//If WiFi already initialized return 0 (error)
+	//If WiFi already initialised return 0 (error)
 	if(WiFi_initialized == true)
 		return 0;
 
