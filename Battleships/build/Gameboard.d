@@ -1,8 +1,8 @@
 Gameboard.o:  \
- /home/nds/files/Project/workspace/Battleships/source/Gameboard.c \
-  /home/nds/files/Project/workspace/Battleships/source/Gameboard.h \
-  /home/nds/files/Project/workspace/Battleships/source/Ship.h \
-  /home/nds/files/Project/workspace/Battleships/source/P_Map10x10.h \
+ /home/nds/files/workspace/Battleships/Battleships/source/Gameboard.c \
+  /home/nds/files/workspace/Battleships/Battleships/source/Gameboard.h \
+  /home/nds/files/workspace/Battleships/Battleships/source/Ship.h \
+  /home/nds/files/workspace/Battleships/Battleships/source/P_Map10x10.h \
   /opt/devkitPro/libnds/include/nds.h \
   /opt/devkitPro/libnds/include/nds/libversion.h \
   /opt/devkitPro/libnds/include/nds/ndstypes.h \
@@ -51,13 +51,13 @@ Gameboard.o:  \
   /opt/devkitPro/libnds/include/nds/arm9/sprite.h \
   /opt/devkitPro/libnds/include/nds/system.h \
   /opt/devkitPro/libnds/include/nds/arm9/decompress.h \
-  /home/nds/files/Project/workspace/Battleships/source/P_Graphics.h
+  /home/nds/files/workspace/Battleships/Battleships/source/P_Graphics.h
 
-/home/nds/files/Project/workspace/Battleships/source/Gameboard.h:
+/home/nds/files/workspace/Battleships/Battleships/source/Gameboard.h:
 
-/home/nds/files/Project/workspace/Battleships/source/Ship.h:
+/home/nds/files/workspace/Battleships/Battleships/source/Ship.h:
 
-/home/nds/files/Project/workspace/Battleships/source/P_Map10x10.h:
+/home/nds/files/workspace/Battleships/Battleships/source/P_Map10x10.h:
 
 /opt/devkitPro/libnds/include/nds.h:
 
@@ -155,4 +155,4 @@ Gameboard.o:  \
 
 /opt/devkitPro/libnds/include/nds/arm9/decompress.h:
 
-/home/nds/files/Project/workspace/Battleships/source/P_Graphics.h:
+/home/nds/files/workspace/Battleships/Battleships/source/P_Graphics.h:
