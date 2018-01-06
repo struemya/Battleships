@@ -1,0 +1,17 @@
+/*
+ * BattlefieldDefines.h
+ *
+ *  Created on: Jan 5, 2018
+ *      Author: nds
+ */
+
+enum ACTION
+{
+    NONE,
+    EXIT,
+    LEFT,
+    DOWN,
+    UP,
+    RIGHT,
+    SELECT,
+};
