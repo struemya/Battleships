@@ -6,13 +6,14 @@
 #include <sys/types.h>
 #include <netinet/in.h>
 #include <sys/socket.h>
+#include <string.h>
 
 #define SSID	"MES-NDS"
 
 
-//WiFi initialization
+//WiFi initialisation
 int initWiFi();
-//Socket initialization
+//Socket initialisation
 int openSocket();
 //Receive data trough the socket
 int receiveData(char* data_buff, int bytes);
