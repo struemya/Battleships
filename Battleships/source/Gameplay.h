@@ -6,8 +6,8 @@
  */
 
 
-#ifndef GAMEPLAY_H_
-#define GAMEPLAY_H_
+#ifndef GAMEPLAY_H
+#define GAMEPLAY_H
 
 
 #include "Ship.h"
