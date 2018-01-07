@@ -1,0 +1,13 @@
+
+
+
+
+#ifndef P_CONTROLS_H_
+#define P_CONTROLS_H_
+
+
+#include <nds.h>
+void handleInput();
+
+#endif
+

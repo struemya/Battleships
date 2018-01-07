@@ -6,6 +6,7 @@
  */
 #include "Gameplay.h"
 #include "Gameboard.h"
+#include "Gamestate.h"
 
 Gameboard* gameboard;
 Ship* activeShip;
@@ -34,6 +35,13 @@ draw(gameboard);
 
 
 }
+void Gameplay_handle_attack(int x, int y) {
+	int res = attackBoard(gameboard,x,y);
+
+	SetSubMap10x10To(getIndex(x,y),1+res);
+	draw(gameboard);
+}
+
 void initGameboard(){
 	gameboard =new_Gameboard();
 }
@@ -61,7 +69,13 @@ void Gameplay_handleInput(enum ACTION a)
             break;
         case SELECT:
         	if (!isTooClose(gameboard, activeShip)) {
-        		placeShips();
+
+        		if(count==9) { //all ships placed
+        			nextState();
+        			nextState();//skip Wait state
+        		} else {
+        			placeShips();
+        		}
         		return;
         	}
 

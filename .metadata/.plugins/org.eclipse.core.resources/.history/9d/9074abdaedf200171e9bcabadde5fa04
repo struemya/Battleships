@@ -1,0 +1,11 @@
+
+#include <nds.h>
+#include "P_Controls.h"
+#include "BattlefieldDefines.h"
+#include "Gameplay.h"
+
+#ifndef P_CONTROLS_H_
+#define P_CONTROLS_H_
+void handleInput();
+#endif
+

@@ -2,8 +2,8 @@
 *.d
 
 # NDS build files
-*.nds
 *.arm9
+*.nds
 
 # Object files
 *.o

@@ -29,15 +29,8 @@ int main(void) {
 
     printf("Start");
 
-	//Initialise the main engine
-	P_Graphics_setup_main();
-
-	P_Map10x10_Init(10, 10);
-
-	//Audio_Init();
-	//Audio_PlayMusic();
-
-	initGameboard();
+    P_InitNDS();
+    initGameboard();
     placeShips();
 
     while(1) {

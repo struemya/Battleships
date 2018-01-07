@@ -15,7 +15,7 @@
 	int yOrigin;
 	int horizontal;
 	int length;
-	int* cellsDamaged; // [0,1,0,0,0] means that the second cell of the ship was hit
+	int cellsDamaged[5]; // [0,1,0,0,0] means that the second cell of the ship was hit
 	int destroyed;
 
 }Ship;
@@ -23,7 +23,8 @@
 
 Ship* new_Ship(int length);
 void flip(Ship* ship);
-int attack(Ship* ship, int x, int y);
+
+int attackShip(Ship* ship, int x, int y);
 int isOverlapping(Ship* ship1, Ship* ship2);
 int minDistance(Ship* ship, int x, int y);
 int originDistance(Ship* ship, int x, int y);

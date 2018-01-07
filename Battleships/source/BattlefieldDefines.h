@@ -17,4 +17,5 @@ enum ACTION
     SELECT,
     FLIP
 };
+
 #endif
