@@ -26,5 +26,6 @@ void tryToMoveShipTo(Gameboard* gameboard, Ship* ship, int x, int y);
 void tryToFlip(Ship* ship);
 int isTooClose(Gameboard* gameboard, Ship* ship);
 void draw(Gameboard* gameboard);
+int attackBoard(Gameboard* gameboard, int x, int y);
 #endif
 

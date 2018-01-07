@@ -12,7 +12,6 @@
 
 int main(void) {
 	
-
     consoleDemoInit();
 
     //Initialise WiFi
@@ -28,6 +27,7 @@ int main(void) {
     	printf("Socket error\n");
 
     printf("Start");
+
     P_InitNDS();
     initGameboard();
     placeShips();

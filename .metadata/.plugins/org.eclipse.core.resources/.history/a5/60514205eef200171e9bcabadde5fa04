@@ -1,0 +1,18 @@
+/*
+ * Gameplay.h
+ *
+ *  Created on: Jan 5, 2018
+ *      Author: nds
+ */
+#include "Ship.h"
+#include "Gameboard.h"
+#include "P_Controls.h"
+#include "BattlefieldDefines.h"
+#include "Gamestate.h"
+
+#ifndef GAMEPLAY_H_
+#define GAMEPLAY_H_
+void placeShips();
+void initGameboard();
+void Gameplay_handleInput(enum ACTION a);
+#endif
