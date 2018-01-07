@@ -1,1 +1,0 @@
-boat.o: boat.s
