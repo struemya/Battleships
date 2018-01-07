@@ -6,7 +6,8 @@
 #include <nds.h>
 #include <stdio.h>
 #include "WiFi_minilib.h"
-#include "P_Initializer.h"
+#include "P_Graphics.h"
+#include "P_Map10x10.h"
 #include "Gameplay.h"
 
 
