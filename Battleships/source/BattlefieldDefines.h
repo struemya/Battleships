@@ -4,8 +4,8 @@
  *  Created on: Jan 5, 2018
  *      Author: nds
  */
-#ifndef BATTLEFIELDDEFINES_H_
-#define BATTLEFIELDDEFINES_H_
+#ifndef BATTLEFIELDDEFINES_H
+#define BATTLEFIELDDEFINES_H
 enum ACTION
 {
     NONE,
