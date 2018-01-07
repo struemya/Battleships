@@ -6,13 +6,13 @@
 #include <nds.h>
 #include <stdio.h>
 #include "WiFi_minilib.h"
-#include "P_Initializer.h"
+#include "P_Graphics.h"
+#include "P_Map10x10.h"
 #include "Gameplay.h"
 
 
 int main(void) {
 	
-
     consoleDemoInit();
 
     //Initialise WiFi
@@ -28,8 +28,16 @@ int main(void) {
     	printf("Socket error\n");
 
     printf("Start");
-    P_InitNDS();
-    initGameboard();
+
+	//Initialise the main engine
+	P_Graphics_setup_main();
+
+	P_Map10x10_Init(10, 10);
+
+	//Audio_Init();
+	//Audio_PlayMusic();
+
+	initGameboard();
     placeShips();
 
     while(1) {

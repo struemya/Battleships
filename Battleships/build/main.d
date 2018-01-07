@@ -52,9 +52,8 @@ main.o: /home/nds/files/workspace/Battleships/Battleships/source/main.c \
   /opt/devkitPro/libnds/include/dswifi_version.h \
   /opt/devkitPro/libnds/include/netinet/in.h \
   /opt/devkitPro/libnds/include/sys/socket.h \
-  /home/nds/files/workspace/Battleships/Battleships/source/P_Initializer.h \
-  /home/nds/files/workspace/Battleships/Battleships/source/P_Map10x10.h \
   /home/nds/files/workspace/Battleships/Battleships/source/P_Graphics.h \
+  /home/nds/files/workspace/Battleships/Battleships/source/P_Map10x10.h \
   /home/nds/files/workspace/Battleships/Battleships/source/Gameplay.h \
   /home/nds/files/workspace/Battleships/Battleships/source/Ship.h \
   /home/nds/files/workspace/Battleships/Battleships/source/Gameboard.h \
@@ -167,11 +166,9 @@ main.o: /home/nds/files/workspace/Battleships/Battleships/source/main.c \
 
 /opt/devkitPro/libnds/include/sys/socket.h:
 
-/home/nds/files/workspace/Battleships/Battleships/source/P_Initializer.h:
+/home/nds/files/workspace/Battleships/Battleships/source/P_Graphics.h:
 
 /home/nds/files/workspace/Battleships/Battleships/source/P_Map10x10.h:
-
-/home/nds/files/workspace/Battleships/Battleships/source/P_Graphics.h:
 
 /home/nds/files/workspace/Battleships/Battleships/source/Gameplay.h:
 

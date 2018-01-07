@@ -3,11 +3,6 @@
 
 void P_Graphics_setup_main()
 {
-
-
-
-
-
 	//Graphics (Part 3)
 	//Enable a proper RAM memory bank for the main engine
 	VRAM_A_CR = VRAM_ENABLE //Enable
@@ -19,9 +14,9 @@ void P_Graphics_setup_main()
 
 	//Enable a proper RAM memory bank for sub engine
 	VRAM_C_CR = VRAM_ENABLE | VRAM_C_SUB_BG;
-		//Configure the sub engine in mode 5 (2D) and activate Background 2
-		REG_DISPCNT_SUB = MODE_5_2D | DISPLAY_BG2_ACTIVE;
 
+	//Configure the sub engine in mode 5 (2D) and activate Background 2
+	REG_DISPCNT_SUB = MODE_5_2D | DISPLAY_BG2_ACTIVE;
 }
 
 void P_Graphics_assignBuffer(enum BUFFER_TYPE bT, u16* buffer, int w, int h)
