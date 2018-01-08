@@ -50,7 +50,12 @@ P_Initializer.o:  \
   /opt/devkitPro/libnds/include/nds/arm9/sprite.h \
   /opt/devkitPro/libnds/include/nds/system.h \
   /opt/devkitPro/libnds/include/nds/arm9/decompress.h \
-  /home/nds/files/Project/workspace/Battleships/source/P_Graphics.h
+  /home/nds/files/Project/workspace/Battleships/source/P_Graphics.h \
+  /home/nds/files/Project/workspace/Battleships/source/P_Audio.h \
+  /opt/devkitPro/libnds/include/maxmod9.h \
+  /opt/devkitPro/libnds/include/mm_types.h \
+  /home/nds/files/Project/workspace/Battleships/build/soundbank.h \
+  /home/nds/files/Project/workspace/Battleships/build/soundbank_bin.h
 
 /home/nds/files/Project/workspace/Battleships/source/P_Initializer.h:
 
@@ -153,3 +158,13 @@ P_Initializer.o:  \
 /opt/devkitPro/libnds/include/nds/arm9/decompress.h:
 
 /home/nds/files/Project/workspace/Battleships/source/P_Graphics.h:
+
+/home/nds/files/Project/workspace/Battleships/source/P_Audio.h:
+
+/opt/devkitPro/libnds/include/maxmod9.h:
+
+/opt/devkitPro/libnds/include/mm_types.h:
+
+/home/nds/files/Project/workspace/Battleships/build/soundbank.h:
+
+/home/nds/files/Project/workspace/Battleships/build/soundbank_bin.h:

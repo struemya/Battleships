@@ -20,10 +20,18 @@
 
 }Ship;
 
-
+/**
+ * return a pointer to a ship witht the given length
+ */
 Ship* new_Ship(int length);
+/**
+ * flips the orientation of the ship
+ */
 void flip(Ship* ship);
-
+/**
+ * attacks the ship
+ * return 1 if hit, 0 if not hit, -1 if already hit
+ */
 int attackShip(Ship* ship, int x, int y);
 int isOverlapping(Ship* ship1, Ship* ship2);
 int minDistance(Ship* ship, int x, int y);

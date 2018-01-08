@@ -1,0 +1,37 @@
+#include "timers.h"
+#include "Gameplay.h"
+
+//Initialise the timers
+int x,y;
+int* resPointer;
+void timersInit(){
+	//Configure the timer
+	TIMER0_DATA = TIMER_FREQ_1024(2);
+	TIMER0_CR = TIMER_DIV_1024 | TIMER_IRQ_REQ | TIMER_ENABLE;
+
+	//Enable Interrupt for the timer and set the handler
+	irqSet(IRQ_TIMER0, &TIMER0_ISR);
+	irqEnable(IRQ_TIMER0);
+}
+
+
+void timerDisable() {
+	irqDisable(IRQ_TIMER0);
+}
+void toggle() {
+	timeout = timeout==0?1:0; //toggle timeout;
+
+}
+void setValues(int pX, int pY, int* res) {
+	x = pX;
+	y = pY;
+	resPointer = res;
+}
+//Timer0 ISR (blinking effect of the active ship)
+void TIMER0_ISR()
+{
+	toggle();
+	sendAndReceive(x,y,res); //send data again if response timed out
+
+
+}

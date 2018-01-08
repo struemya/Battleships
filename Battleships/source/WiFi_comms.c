@@ -1,4 +1,6 @@
+#include "timers.h"
 #include "WiFi_comms.h"
+
 
 // Sends ready signal and listens for ready signal from opponent.
 // First person ready gets to start. Returns 1 if starting.
@@ -32,7 +34,7 @@ int readyUp(){
 }
 // Sends the coordinates of a pressed square to the opponent.
 // Current function only works with x and y in range 0-9
-void sendCoords(int x, int y){
+void sendValues(int x, int y){
 	char data[2];
 
 	data[0] = (char)x+48;
@@ -42,27 +44,23 @@ void sendCoords(int x, int y){
 
 // Listens for and receives coordinates from the opponent
 // Current function only works with x and y in range 0-9
-void receiveCoords(int* x, int* y){
+int receiveValues(int* x, int* y){
 	char data_in[2];
-
+	int temp = timeout;
 	//Listen for data from opponent
-	while(receiveData(data_in, 2) != 2){
+	while(receiveData(data_in, 2) != 2 ){
 		//receiveData(data_in, 2);
+		if(timeout!=temp) return -1;
 	}
 	*x = data_in[0] - 48;
 	*y = data_in[1] - 48;
+	return 1;
 }
 
 // Sends "Hit" or "Miss" response in reaction to a guess from opponent
 // Hit = 1, Miss = 0
-void sendHitMiss(char HorM){
+void sendHitMiss(int out){
 	char data_out[1];
-	int out;
-	if(HorM == 'h') {
-		out = 1;
-	} else {
-		out = 0;
-	}
 	data_out[0] = (char)out+48;
 	sendData(data_out, 1);
 }
@@ -72,18 +70,11 @@ void sendHitMiss(char HorM){
 int receiveHitMiss(){
 	char data_in[1];
 	int hitOrMiss;
-	/*
-	while(data_in[0] != 'h' || data_in[0] != 'm'){
-		receiveData(data_in, 1);
-	}*/
-	while(receiveData(data_in, 1)!=1) {
-
+	//int temp = timeout;
+	//Listen for data from opponent
+	while(receiveData(data_in, 2) != 1){
+		//if(timeout!=temp) return -1;
 	}
 	hitOrMiss = data_in[0] - 48;
-
-	/*
-	if(data_in[0] == 'h') hitOrMiss = 1;
-	else hitOrMiss = 0;
-*/
 	return hitOrMiss;
 }

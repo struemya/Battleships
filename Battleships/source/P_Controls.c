@@ -42,6 +42,7 @@ void handleInput()
 			y = y - 3;
 			x = x / 2;
 			y = y / 2;
+			if(x<0 || x >9 || y<0 || y>9) break; //ignore false input
 			Gameplay_handle_attack(x,y);
 
 

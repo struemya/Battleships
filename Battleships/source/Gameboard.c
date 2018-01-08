@@ -36,7 +36,8 @@ int attackBoard(Gameboard* gameboard, int x, int y) {
 	int res;
 	for(i=0;i<gameboard->shipCount;i++){
 		res = attackShip(gameboard->ships[i],x,y);
-		if(res) return res;
+		if(res==1) return 1;
+		if(res==-1) return 2;
 	}
 	return 0;
 }

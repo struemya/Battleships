@@ -61,7 +61,13 @@ Gameplay.o:  \
   /opt/devkitPro/libnds/include/dswifi_version.h \
   /opt/devkitPro/libnds/include/netinet/in.h \
   /opt/devkitPro/libnds/include/sys/socket.h \
-  /home/nds/files/Project/workspace/Battleships/source/Gamestate.h
+  /home/nds/files/Project/workspace/Battleships/source/Gamestate.h \
+  /home/nds/files/Project/workspace/Battleships/source/P_Audio.h \
+  /opt/devkitPro/libnds/include/maxmod9.h \
+  /opt/devkitPro/libnds/include/mm_types.h \
+  /home/nds/files/Project/workspace/Battleships/build/soundbank.h \
+  /home/nds/files/Project/workspace/Battleships/build/soundbank_bin.h \
+  /home/nds/files/Project/workspace/Battleships/source/timers.h
 
 /home/nds/files/Project/workspace/Battleships/source/Gameplay.h:
 
@@ -186,3 +192,15 @@ Gameplay.o:  \
 /opt/devkitPro/libnds/include/sys/socket.h:
 
 /home/nds/files/Project/workspace/Battleships/source/Gamestate.h:
+
+/home/nds/files/Project/workspace/Battleships/source/P_Audio.h:
+
+/opt/devkitPro/libnds/include/maxmod9.h:
+
+/opt/devkitPro/libnds/include/mm_types.h:
+
+/home/nds/files/Project/workspace/Battleships/build/soundbank.h:
+
+/home/nds/files/Project/workspace/Battleships/build/soundbank_bin.h:
+
+/home/nds/files/Project/workspace/Battleships/source/timers.h:

@@ -18,7 +18,7 @@ void setLock(int pLock) {
 	if (!pLock) {
 		drawBorder(3); //draw blue border to show that it is your turn
 	} else {
-		drawBorder(2); //clear border
+		drawBorder(0); //clear border
 	}
 }
 enum STATE getState() {

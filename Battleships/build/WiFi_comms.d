@@ -1,7 +1,6 @@
 WiFi_comms.o:  \
  /home/nds/files/Project/workspace/Battleships/source/WiFi_comms.c \
-  /home/nds/files/Project/workspace/Battleships/source/WiFi_comms.h \
-  /home/nds/files/Project/workspace/Battleships/source/WiFi_minilib.h \
+  /home/nds/files/Project/workspace/Battleships/source/timers.h \
   /opt/devkitPro/libnds/include/nds.h \
   /opt/devkitPro/libnds/include/nds/libversion.h \
   /opt/devkitPro/libnds/include/nds/ndstypes.h \
@@ -50,14 +49,14 @@ WiFi_comms.o:  \
   /opt/devkitPro/libnds/include/nds/arm9/sprite.h \
   /opt/devkitPro/libnds/include/nds/system.h \
   /opt/devkitPro/libnds/include/nds/arm9/decompress.h \
+  /home/nds/files/Project/workspace/Battleships/source/WiFi_comms.h \
+  /home/nds/files/Project/workspace/Battleships/source/WiFi_minilib.h \
   /opt/devkitPro/libnds/include/dswifi9.h \
   /opt/devkitPro/libnds/include/dswifi_version.h \
   /opt/devkitPro/libnds/include/netinet/in.h \
   /opt/devkitPro/libnds/include/sys/socket.h
 
-/home/nds/files/Project/workspace/Battleships/source/WiFi_comms.h:
-
-/home/nds/files/Project/workspace/Battleships/source/WiFi_minilib.h:
+/home/nds/files/Project/workspace/Battleships/source/timers.h:
 
 /opt/devkitPro/libnds/include/nds.h:
 
@@ -154,6 +153,10 @@ WiFi_comms.o:  \
 /opt/devkitPro/libnds/include/nds/system.h:
 
 /opt/devkitPro/libnds/include/nds/arm9/decompress.h:
+
+/home/nds/files/Project/workspace/Battleships/source/WiFi_comms.h:
+
+/home/nds/files/Project/workspace/Battleships/source/WiFi_minilib.h:
 
 /opt/devkitPro/libnds/include/dswifi9.h:
 

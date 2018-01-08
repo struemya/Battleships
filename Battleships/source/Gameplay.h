@@ -25,4 +25,5 @@ void Gameplay_handleInput(enum ACTION a);
 void Gameplay_handle_attack(int x, int y);
 void Gameplay_wait_for_attack();
 void Gameplay_check_status();
+void sendAndReceive(int x, int y, int* res);
 #endif

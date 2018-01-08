@@ -7,16 +7,18 @@
 #include "Gameplay.h"
 #include "Gameboard.h"
 #include "Gamestate.h"
+#include "P_Audio.h"
+#include "timers.h"
 
 Gameboard* gameboard;
 Ship* activeShip;
 const int NUM_CELLS = 2*4+3*2+2*4+5;
-const int NUM_SHIPS = 2;
+const int NUM_SHIPS = 9;
 int count =0;
 int opponentHitCount = 0;
 int ownHitCount = 0;
-//int lengths[9]={2,2,2,2,3,3,4,4,5};
-int lengths[9]={2,2};
+int lengths[9]={2,2,2,2,3,3,4,4,5};
+//int lengths[9]={2,2};
 int starting;
 
 void placeShips() {
@@ -42,16 +44,39 @@ draw(gameboard);
 
 
 }
+void sendAndReceive(int x, int y, int* res) {
+	int status=-1;
+
+	while(status != 1) {
+		timersInit(); //start timer
+		sendValues(x,y);
+		int dummy;
+
+		status = receiveValues(res,&dummy); //if it returns one receiving was successful
+
+
+		timerDisable();
+	}
+
+
+
+
+}
 void Gameplay_handle_attack(int x, int y) {
 #ifdef WIFI
 	setLock(1);
-	sendCoords(x,y);
 
-	int res = 0;
-	res = receiveHitMiss();
 
-	opponentHitCount += res; //add 1 to the opponentHitCount if he was hit
-	SetSubMap10x10To(getIndex(x,y),1+res); //mark field as hit or missed
+	int res;
+	sendAndReceive(x,y,&res);
+
+	if(res==0 || res == 1) {
+			SetSubMap10x10To(getIndex(x,y),1+res); //mark field as hit or missed
+			Audio_PlaySoundEX(!res);
+			opponentHitCount += res; //add 1 to the opponentHitCount if he was hit
+		}
+
+
 	draw(gameboard);
 
 	Gameplay_wait_for_attack();
@@ -59,8 +84,9 @@ void Gameplay_handle_attack(int x, int y) {
 
 #ifndef WIFI
 	int res = attackBoard(gameboard,x,y);
-	if(res>=0) {
+	if(res==0 || res==1) {
 		SetSubMap10x10To(getIndex(x,y),1+res);
+		Audio_PlaySoundEX(!res);
 		opponentHitCount += res;
 	}
 	draw(gameboard);
@@ -81,16 +107,13 @@ void Gameplay_check_status() {
 void Gameplay_wait_for_attack() {
 	setLock(1); //disable the touch screen
 	int x,y;
-	receiveCoords(&x,&y);
+	receiveValues(&x,&y);
 	int res = attackBoard(gameboard,x,y);
-	ownHitCount+=res; //add 1 to ownHitCount if oppenent hit one of your ships
-	char c;
-	if(res) {
-		c = 'h'; //hit
-	} else {
-		c = 'm'; //miss
-	}
-	sendHitMiss(c);
+
+	if (res == 0 || res == 1) ownHitCount+=res; //add 1 to ownHitCount if oppenent hit one of your ships
+
+
+	sendValues(res,0);
 
 	draw(gameboard);
 
@@ -134,7 +157,7 @@ void Gameplay_handleInput(enum ACTION a)
         			starting = readyUp();
         			nextState();
         			if(!starting) { //if you are not starting you wait to be attacked
-        				setLock(1);
+        				//setLock(1);
         				Gameplay_wait_for_attack();
         			} else {
         				setLock(0);

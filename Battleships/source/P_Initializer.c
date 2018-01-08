@@ -1,5 +1,6 @@
 
 #include "P_Initializer.h"
+#include "P_Audio.h"
 #include "P_Map10x10.h"
 
 void P_InitNDS()
@@ -9,6 +10,6 @@ void P_InitNDS()
 
 	P_Map10x10_Init( 10, 10 );
 
-	//Audio_Init();
+	Audio_Init();
 	//Audio_PlayMusic();
 }
