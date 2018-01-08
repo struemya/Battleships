@@ -13,6 +13,7 @@ Gameboard* new_Gameboard() {
 	gameboard->shipCount =0;
 	return gameboard;
 }
+
 void addShip(Gameboard* gameboard, Ship* ship) {
 	gameboard->ships[gameboard->shipCount] =ship;
 	gameboard->shipCount++;
