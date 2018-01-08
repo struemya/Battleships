@@ -1,7 +1,7 @@
 /*
  */
 
-#include "WiFi_minilib.h"
+#include "WiFi_comms.h"
 
 // Sends the coordinates of a pressed square to the opponent.
 // Current function only works with x and y in range 0-9

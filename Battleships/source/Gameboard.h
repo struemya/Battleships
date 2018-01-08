@@ -4,8 +4,8 @@
  *  Created on: Jan 5, 2018
  *      Author: nds
  */
-#ifndef GAMEBOARD_H_
-#define GAMEBOARD_H_
+#ifndef GAMEBOARD_H
+#define GAMEBOARD_H
 #include "Ship.h"
 #include "P_Map10x10.h"
 

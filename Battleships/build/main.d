@@ -59,7 +59,8 @@ main.o: /home/nds/files/Project/workspace/Battleships/source/main.c \
   /home/nds/files/Project/workspace/Battleships/source/Ship.h \
   /home/nds/files/Project/workspace/Battleships/source/Gameboard.h \
   /home/nds/files/Project/workspace/Battleships/source/P_Controls.h \
-  /home/nds/files/Project/workspace/Battleships/source/BattlefieldDefines.h
+  /home/nds/files/Project/workspace/Battleships/source/BattlefieldDefines.h \
+  /home/nds/files/Project/workspace/Battleships/source/WiFi_comms.h
 
 /opt/devkitPro/libnds/include/nds.h:
 
@@ -182,3 +183,5 @@ main.o: /home/nds/files/Project/workspace/Battleships/source/main.c \
 /home/nds/files/Project/workspace/Battleships/source/P_Controls.h:
 
 /home/nds/files/Project/workspace/Battleships/source/BattlefieldDefines.h:
+
+/home/nds/files/Project/workspace/Battleships/source/WiFi_comms.h:

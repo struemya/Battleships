@@ -1,6 +1,5 @@
 
 #include "P_Initializer.h"
-#include "P_Graphics.h"
 
 void P_InitNDS()
 {
@@ -12,4 +11,3 @@ void P_InitNDS()
 	//Audio_Init();
 	//Audio_PlayMusic();
 }
-

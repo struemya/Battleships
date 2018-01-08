@@ -12,12 +12,15 @@
 
 int main(void) {
 	
+<<<<<<< HEAD
 
+=======
+    consoleDemoInit();
+>>>>>>> master
 
     //Initialise WiFi
-    if(initWiFi()) {
+    if(initWiFi())
     	printf("WiFi initialised!\n");
-    }
     else
     	printf("WiFi initialisation error\n");
 
