@@ -10,6 +10,9 @@
 
 #include "WiFi_minilib.h"
 
+// Sends ready signal and listens for ready signal from opponent.
+// First person ready gets to start. Returns 1 if starting.
+int readyUp();
 // Sends the coordinates of a pressed square to the opponent.
 void sendCoords(int x, int y);
 // Listens for and receives coordinates from the opponent

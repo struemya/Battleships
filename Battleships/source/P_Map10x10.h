@@ -38,4 +38,5 @@ void P_Map10x10_Init( int cols, int rows );
 void SetMap10x10To(int index10, int tileIndex);
 void SetSubMap10x10To(int index10, int tileIndex);
 int getIndex(int x, int y);
+void P_Map10x10_Init( int cols, int rows );
 

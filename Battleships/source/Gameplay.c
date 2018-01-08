@@ -20,28 +20,24 @@ int lengths[9]={2,2};
 int starting;
 
 void placeShips() {
+	Ship* ship =new_Ship(lengths[count++]);
 
-Ship* ship =new_Ship(lengths[count++]);
+	addShip(gameboard,ship);
 
-addShip(gameboard,ship);
+	//tryToMoveShipTo(gameboard,ship,0,1);
+	//tryToMoveShipTo(gameboard,ship,0,2);
+	//draw(gameboard);
+	activeShip =ship;
 
-//tryToMoveShipTo(gameboard,ship,0,1);
-//tryToMoveShipTo(gameboard,ship,0,2);
-//draw(gameboard);
-activeShip =ship;
+	/*
+	Ship* ship2 =new_Ship(3);
 
-/*
-Ship* ship2 =new_Ship(3);
-
-addShip(gameboard,ship2);
-tryToMoveShipTo(gameboard,ship2,1,0);
-tryToMoveShipTo(gameboard,ship,0,3);*/
-draw(gameboard);
-
-
-
-
+	addShip(gameboard,ship2);
+	tryToMoveShipTo(gameboard,ship2,1,0);
+	tryToMoveShipTo(gameboard,ship,0,3);*/
+	draw(gameboard);
 }
+
 void Gameplay_handle_attack(int x, int y) {
 #ifdef WIFI
 	setLock(1);

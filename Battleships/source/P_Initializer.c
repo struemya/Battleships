@@ -9,6 +9,6 @@ void P_InitNDS()
 
 	P_Map10x10_Init( 10, 10 );
 
-	//Audio_Init();
+	Audio_Init();
 	//Audio_PlayMusic();
 }
