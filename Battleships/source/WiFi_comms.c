@@ -35,33 +35,38 @@ void sendCoords(int x, int y){
 // Listens for and receives coordinates from the opponent
 // Current function only works with x and y in range 0-9
 void receiveCoords(int* x, int* y){
-	char data[2];
+	char data_in[2];
 
 	//Listen for data from opponent
-	if(receiveData(data, 2)>0){
-		*x = data[0] - 48;
-		*y = data[1] - 48;
+	while(receiveData(data_in, 2) != 2){
+		receiveData(data_in, 2);
 	}
+	*x = data_in[0] - 48;
+	*y = data_in[1] - 48;
 }
 
 // Sends "Hit" or "Miss" response in reaction to a guess from opponent
 // Hit = 1, Miss = 0
-void sendHitMiss(int hitOrMiss){
-	char data[1];
+void sendHitMiss(char HorM){
+	char data_out[1];
 
-	data[0] = (char)hitOrMiss+48;
-	sendData(data, 1);
+	data_out[0] = HorM;
+	sendData(data_out, 1);
 }
 
 // Listens for and receives "Hit" or "Miss" response
 // Hit = 1, Miss = 0
 int receiveHitMiss(){
-	char data[1];
+	char data_in[1];
 	int hitOrMiss;
 
-	if(receiveData(data, 1)>0){
-		hitOrMiss = data[0] - 48;
+	while(data_in[0] != 'h' || data_in[0] != 'm'){
+		receiveData(data_in, 1);
 	}
+	if(data_in[0] == 'h') hitOrMiss = 1;
+	else hitOrMiss = 0;
+
 	return hitOrMiss;
 }
+
 
