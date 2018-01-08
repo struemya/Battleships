@@ -9,9 +9,9 @@ int readyUp(){
 	int starting;
 	char data_in[1], data_out[1];
 
-	// Sends the signal
+	/*// Sends the signal
 	data_out[0] = 0;
-	sendData(data_out, 1);
+	sendData(data_out, 1);*/
   
   	if(receiveData(data_in, 1)>0){
 		switch(data_in[0]){

@@ -9,7 +9,6 @@
 #include "P_Initializer.h"
 #include "Gameplay.h"
 
-
 int main(void) {
 	
     consoleDemoInit();
