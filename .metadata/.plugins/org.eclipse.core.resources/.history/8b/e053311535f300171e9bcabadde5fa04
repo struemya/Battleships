@@ -50,9 +50,8 @@ void Gameplay_wait_for_attack() {
 	receiveCoords(&x,&y);
 	int res = attackBoard(gameboard,x,y);
 	sendHitMiss(res);
-
-	draw(gameboard);
 	setLock(0);
+
 }
 
 void initGameboard(){

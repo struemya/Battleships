@@ -37,7 +37,7 @@ draw(gameboard);
 }
 void Gameplay_handle_attack(int x, int y) {
 	sendCoords(x,y);
-	int res = receiveHitMiss();
+	int result = receiveHitMiss();
 	SetSubMap10x10To(getIndex(x,y),1+res); //mark field as hit or missed
 	draw(gameboard);
 	setLock(1);

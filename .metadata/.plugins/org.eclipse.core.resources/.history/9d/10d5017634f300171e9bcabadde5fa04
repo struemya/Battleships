@@ -9,12 +9,6 @@
 enum STATE state = PLACE;
 int lock; //lock touch screen while it is the opponents turn
 
-int getLock() {
-	return lock;
-}
-void setLock(int pLock) {
-	lock=pLock;
-}
 enum STATE getState() {
 	return state;
 }

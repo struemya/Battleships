@@ -30,7 +30,7 @@ void handleInput()
 	case WAIT:
 		break;
 	case PLAY:
-		if(getLock()) break; //skip input handling when locked
+
 		touchRead(&touch);
 		//Identify a valid touched coordinates and print them
 		if(touch.px | touch.py) {

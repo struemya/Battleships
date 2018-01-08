@@ -40,7 +40,6 @@ void Gameplay_handle_attack(int x, int y) {
 	int res = receiveHitMiss();
 	SetSubMap10x10To(getIndex(x,y),1+res); //mark field as hit or missed
 	draw(gameboard);
-	setLock(1);
 	Gameplay_wait_for_attack();
 
 
@@ -51,8 +50,6 @@ void Gameplay_wait_for_attack() {
 	int res = attackBoard(gameboard,x,y);
 	sendHitMiss(res);
 
-	draw(gameboard);
-	setLock(0);
 }
 
 void initGameboard(){

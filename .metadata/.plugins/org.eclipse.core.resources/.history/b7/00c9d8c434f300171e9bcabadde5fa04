@@ -13,8 +13,7 @@ enum STATE{
 	PLAY,
 	DONE
 };
-int getLock();
-void setLock(int pLock);
+
 enum STATE getState();
 void nextState();
 #endif /* GAMESTATE_H_ */
