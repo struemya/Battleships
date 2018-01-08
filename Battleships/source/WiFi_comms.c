@@ -9,15 +9,32 @@ int readyUp(){
 	int starting;
 	char data_in[1], data_out[1];
 
-	if(receiveData(data_in, 1)>0){
-	// If a message was received, you were not the first one ready
+	// Sends the signal
+	data_out[0] = 0;
+	sendData(data_out, 1);
+  
+  	if(receiveData(data_in, 1)>0){
+		switch(data_in[0]){
+		// If a message of 0 is received the receiver was the first to ready up
+		// It confirms this by sending a message of 1 to the other
+		case 0:
+			starting = 1;
+			data_out[0] = 1;
+			sendData(data_out, 1);
+			break;
+		// If a message of 1 is received the receiver was second ready
+		case 1:
+			starting = 0;
+			break;
+		}
+	/*// If a message was received, you were not the first one ready
 		starting = 0;
 	} else{
 	// If no message received you are first and are starting, you signal that
 		starting = 1;
 		// Sends the signal
 		data_out[0] = 0;
-		sendData(data_out, 1);
+		sendData(data_out, 1);*/
 	}
 	return starting;
 }

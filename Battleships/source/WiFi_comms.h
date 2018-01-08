@@ -16,7 +16,7 @@ int readyUp();
 // Sends the coordinates of a pressed square to the opponent.
 void sendCoords(int x, int y);
 // Listens for and receives coordinates from the opponent
-void receiveCoords();
+void receiveCoords(int* x, int* y);
 // Sends "Hit" or "Miss" response in reaction to a guess from opponent
 void sendHitMiss(char HorM);
 // Listens for and receives "Hit" or "Miss" response
