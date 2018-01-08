@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Battleships/source/P_Map16x16.c&apos; to &apos;P_Map10x10.c&apos;" description="Rename resource &apos;P_Map16x16.c&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="source/P_Map16x16.c" name="P_Map10x10.c" stamp="1515152407488" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Battleships/source/P_Map16x16.h&apos; to &apos;P_Map10x10.h&apos;" description="Rename resource &apos;P_Map16x16.h&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="source/P_Map16x16.h" name="P_Map10x10.h" stamp="1515152424864" updateReferences="true"/>
-</session>

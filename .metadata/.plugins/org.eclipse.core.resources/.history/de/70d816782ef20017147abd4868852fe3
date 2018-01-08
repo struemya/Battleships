@@ -1,9 +1,0 @@
-/*
- * Gameplay.h
- *
- *  Created on: Jan 5, 2018
- *      Author: nds
- */
-
-void placeShips();
-void initGameboard();
