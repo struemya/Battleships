@@ -16,8 +16,7 @@ void P_Graphics_setup_main()
 	VRAM_C_CR = VRAM_ENABLE | VRAM_C_SUB_BG;
 	REG_DISPCNT_SUB = MODE_0_2D | DISPLAY_BG0_ACTIVE | DISPLAY_BG3_ACTIVE;
 
-	//Configure the sub engine in mode 5 (2D) and activate Background 2
-	REG_DISPCNT_SUB = MODE_5_2D | DISPLAY_BG2_ACTIVE;
+
 }
 
 void P_Graphics_assignBuffer(enum BUFFER_TYPE bT, u16* buffer, int w, int h)

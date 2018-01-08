@@ -13,7 +13,7 @@
 int main(void) {
 	
 
-
+#ifdef WIFI
     //Initialise WiFi
     if(initWiFi()) {
     	printf("WiFi initialised!\n");
@@ -28,6 +28,7 @@ int main(void) {
     	printf("Socket error\n");
 
     printf("Start");
+#endif
 
     P_InitNDS();
     initGameboard();

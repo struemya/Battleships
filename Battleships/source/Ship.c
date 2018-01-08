@@ -29,13 +29,16 @@ void flip(Ship* ship) {
 	}
 }
 int attackShip(Ship* ship, int x, int y) {
-	int offset;
+
 	int i;
 	int shipX = ship->xOrigin;
 	int shipY = ship->yOrigin;
 
 	for(i=0;i<ship->length;i++) {
 		if(shipX==x && shipY==y) {
+			if(ship->cellsDamaged[i]==1) {
+				return -1; //if this cell has been attacked before return -1 to avoid counting this hit twice
+			}
 			ship->cellsDamaged[i] =1;
 			return 1;
 		}

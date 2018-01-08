@@ -1,5 +1,6 @@
 
 #include "P_Initializer.h"
+#include "P_Map10x10.h"
 
 void P_InitNDS()
 {

@@ -2,88 +2,10 @@
 **** Build of configuration Debug for project Battleships ****
 
 make 
+make[1]: Warning: File `WiFi_comms.d' has modification time 4.1e+02 s in the future
 cp: cannot stat `/home/nds/files/Project/workspace/Battleships/build/../precompiled/*': No such file or directory
-
-************************
-* Maxmod Utility v1.8e *
-************************
-
-Usage:
-  mmutil [options] input files ...
-
- Input may be MOD, S3M, XM, IT, and/or WAV
-
-.------------.----------------------------------------------------.
-| Option     | Description                                        |
-|------------|----------------------------------------------------|
-| -o<output> | Set output file.                                   |
-| -h<header> | Set header output file.                            |
-bin2s: could not open soundbank.bin: No such file or directory
-| -m         | Output MAS file rather than soundbank.             |
-| -d         | Use for NDS projects.                              |
-| -b         | Create test ROM. (use -d for .nds, otherwise .gba) |
-| -i         | Ignore sample flags.                               |
-| -v         | Enable verbose output.                             |
-| -p         | Set initial panning separation for MOD/S3M.        |
-`-----------------------------------------------------------------'
-
-.-----------------------------------------------------------------.
-| Examples:                                                       |
-|-----------------------------------------------------------------|
-| Create DS soundbank file (soundbank.bin) from input1.xm         |
-| and input2.it Also output header file (soundbank.h)             |
-|                                                                 |
-| mmutil -d input1.xm input2.it -osoundbank.bin -hsoundbank.h     |
-|-----------------------------------------------------------------|
-| Create test GBA ROM from two inputs                             |
-|                                                                 |
-| mmutil -b input1.mod input2.s3m -oTEST.gba                      |
-|-----------------------------------------------------------------|
-| Create test NDS ROM from three inputs                           |
-|                                                                 |
-| mmutil -d -b input1.xm input2.s3m testsound.wav                 |
-`-----------------------------------------------------------------'
- www.maxmod.org
-soundbank.bin
-grit /home/nds/files/Project/workspace/Battleships/data/background2.png -fts -obackground2
-background2.s
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/background2.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -x assembler-with-cpp -g -mthumb -mthumb-interwork -c background2.s -o background2.o
-grit /home/nds/files/Project/workspace/Battleships/data/background.png -fts -obackground
-background.s
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/background.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -x assembler-with-cpp -g -mthumb -mthumb-interwork -c background.s -o background.o
-grit /home/nds/files/Project/workspace/Battleships/data/boat.png -fts -oboat
-boat.s
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/boat.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -x assembler-with-cpp -g -mthumb -mthumb-interwork -c boat.s -o boat.o
-Gameboard.c
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/Gameboard.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/Gameboard.c -o Gameboard.o
 Gameplay.c
 arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/Gameplay.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/Gameplay.c -o Gameplay.o
-/home/nds/files/Project/workspace/Battleships/source/P_Initializer.c: In function 'P_InitNDS':
-Gamestate.c
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/Gamestate.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/Gamestate.c -o Gamestate.o
-/home/nds/files/Project/workspace/Battleships/source/P_Initializer.c:9: warning: implicit declaration of function 'P_Map10x10_Init'
-main.c
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/main.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/main.c -o main.o
-/home/nds/files/Project/workspace/Battleships/source/P_Map10x10.c: In function 'P_Map10x10_configureBG2':
-P_Controls.c
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/P_Controls.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/P_Controls.c -o P_Controls.o
-/home/nds/files/Project/workspace/Battleships/source/P_Map10x10.c:46: warning: large integer implicitly truncated to unsigned type
-P_Graphics.c
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/P_Graphics.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/P_Graphics.c -o P_Graphics.o
-/home/nds/files/Project/workspace/Battleships/source/P_Map10x10.c: In function 'P_Map10x10_configureBG2_Sub':
-P_Initializer.c
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/P_Initializer.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/P_Initializer.c -o P_Initializer.o
-/home/nds/files/Project/workspace/Battleships/source/P_Map10x10.c:86: warning: large integer implicitly truncated to unsigned type
-P_Map10x10.c
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/P_Map10x10.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/P_Map10x10.c -o P_Map10x10.o
-/home/nds/files/Project/workspace/Battleships/source/Ship.c: In function 'attackShip':
-Ship.c
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/Ship.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/Ship.c -o Ship.o
-/home/nds/files/Project/workspace/Battleships/source/Ship.c:32: warning: unused variable 'offset'
-WiFi_comms.c
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/WiFi_comms.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/WiFi_comms.c -o WiFi_comms.o
-WiFi_minilib.c
-arm-eabi-gcc -MMD -MP -MF /home/nds/files/Project/workspace/Battleships/build/WiFi_minilib.d -g -Wall -O0 -march=armv5te -mtune=arm946e-s -fomit-frame-pointer -ffast-math -mthumb -mthumb-interwork -I/home/nds/files/Project/workspace/Battleships/include -I/opt/devkitPro/libnds/include -I/opt/devkitPro/libnds/include -I/home/nds/files/Project/workspace/Battleships/build -DARM9 -c /home/nds/files/Project/workspace/Battleships/source/WiFi_minilib.c -o WiFi_minilib.o
 linking Battleships.elf
 built ... Battleships.arm9
 
@@ -91,3 +13,4 @@ ndstool -c /home/nds/files/Project/workspace/Battleships/Battleships.nds -9 /hom
 Nintendo DS rom tool 1.40 - Apr 13 2009
 by Rafael Vuijk, Dave Murphy, Alexei Karpenko
 built ... Battleships.nds
+make[1]: warning:  Clock skew detected.  Your build may be incomplete.

@@ -38,7 +38,17 @@ u8 destroyedTile[64] =
 	254,254,254,254,254,254,254,254,
 	254,254,254,254,254,254,254,254
 };
-
+u8 turnTile[64] =
+{
+	253,253,253,253,253,253,253,253,
+	253,253,253,253,253,253,253,253,
+	253,253,253,253,253,253,253,253,
+	253,253,253,253,253,253,253,253,
+	253,253,253,253,253,253,253,253,
+	253,253,253,253,253,253,253,253,
+	253,253,253,253,253,253,253,253,
+	253,253,253,253,253,253,253,253
+};
 
 void P_Map10x10_configureBG2()
 {
@@ -71,14 +81,15 @@ void P_Map10x10_configureBG0_Sub() {
 dmaCopy(emptyTile, (u8*)BG_TILE_RAM_SUB(4), 64);
 dmaCopy(fullTile, (u8*)BG_TILE_RAM_SUB(4) + 64, 64);
 dmaCopy(destroyedTile, (u8*)BG_TILE_RAM_SUB(4) + 128, 64);
+dmaCopy(turnTile, (u8*)BG_TILE_RAM_SUB(4) + 192, 64); //this tile is used to show that it is your turn
 
-
-
+BG_PALETTE_SUB[253] = ARGB16(1,0,0,31);
 BG_PALETTE_SUB[254] = ARGB16(1,31,0,0);
 BG_PALETTE_SUB[255] = ARGB16(1,0,31,0);
 
 
 mapMemory_SUB = (u16*)BG_MAP_RAM_SUB(25);
+
 }
 void P_Map10x10_configureBG2_Sub()
 {
@@ -160,19 +171,24 @@ void P_Map10x10_configureBG3()
 	swiCopy(background2Pal, BG_PALETTE, background2PalLen);
 
 }
+void drawBorder(int tileIndex) {
+	int i,j;
+	mapMemory_SUB[0] = 1;
+	for(i=0;i<32;i++) {
+		for(j=0;j<24;j++) {
+			if((i<5 || i>26)|| (j < 1 || j>22))
+				mapMemory_SUB[j*32+i] = tileIndex;
+			}
+	}
 
+}
 void P_Map10x10_Init( int cols, int rows )
 {
     MapCols=cols;
     MapRows=rows;
-#ifdef ROTOSCALE
-    //Configure BG2
-    P_Map10x10_configureBG2();
-    // Configure Bottom background
-    //P_Map10x10_configureBG2_Sub();
-#endif
 
-#ifdef TILES
+
+
     //Configure BG3 for background image
     P_Map10x10_configureBG3();
     //Configure BG0 for game
@@ -180,8 +196,10 @@ void P_Map10x10_Init( int cols, int rows )
     // Configure Bottom background
     P_Map10x10_configureBG3_Sub();
     P_Map10x10_configureBG0_Sub();
-#endif
+
+
 }
+
 
 void SetSubMap10x10To(int index10, int tileIndex){
 
