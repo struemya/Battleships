@@ -15,7 +15,7 @@
 #include "P_Controls.h"
 #include "BattlefieldDefines.h"
 #include "WiFi_comms.h"
-#define WIFI
+//#define WIFI
 
 
 

@@ -21,9 +21,7 @@ void Audio_PlaySoundEX( int i )
 	sound.rate = 1024;
 	//Set the volume to the maximum (range 0...255)
 	sound.volume = 255;
-	//Set the panning depending on the effect (0-left....255-right)
-	if(i == SFX_HITAUDIO)
-		sound.panning = 0;
+	//Pan the miss SFX to give effect of missing
 	if(i == SFX_MISSAUDIO)
 		sound.panning = 255;
 

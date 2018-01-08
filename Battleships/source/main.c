@@ -11,12 +11,7 @@
 
 int main(void) {
 	
-
-<<<<<<< HEAD
 #ifdef WIFI
-=======
-    /*
->>>>>>> WiFi
     //Initialise WiFi
     if(initWiFi()) {
     	printf("WiFi initialised!\n");
@@ -29,7 +24,6 @@ int main(void) {
     	printf("Socket open!\n");
     else
     	printf("Socket error\n");
-*/
 
     printf("Start");
 #endif
